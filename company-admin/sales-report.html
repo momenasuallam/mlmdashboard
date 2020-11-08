@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sales Reports</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="assets/bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="assets/dist/css/AdminLTE.min.css">
+  <!-- We have chosen the skin-blue for this starter
+        page. However, you can choose any other skin. Make sure you
+        apply the skin class to the body tag so the changes take effect. -->
+  <link rel="stylesheet" href="assets/dist/css/skins/skin-blue.min.css">
+  <link rel="stylesheet" href="assets/dist/css/mystyle.css">
+
+
+  <style>
+    @font-face {
+      font-family: "proxima-nova";
+      src: url(assets/dist/fonts/FontsFree-Net-ProximaNova-Regular.ttf);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    label,
+    a,
+    button,
+    span {
+      font-family: "proxima-nova" !important;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+
+    <!-- Main Header -->
+    <header class="main-header">
+
+      <!-- Logo -->
+      <a href="dashboard.html" class="logo">
+
+        <!-- logo for regular state and mobile devices -->
+        <span><img src="assets/dist/img/company-dashboard-logo.png"></span>
+        <!-- <span class="logo-lg">YOUR LOGO</span> -->
+      </a>
+
+      <!-- Header Navbar -->
+      <nav class="navbar navbar-static-top" role="navigation">
+        <!-- Sidebar toggle button-->
+        <div class="toggle-responsive">
+          <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </a>
+        </div>
+        <!-- Navbar left Menu -->
+        <div class="navbar-custom-menu" style="float:left;">
+          <h3 style="padding-left: 18px; padding-top: 10px;">Sales Report</h3>
+        </div>
+
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+
+          <ul class="nav navbar-nav">
+            <!-- User Account Menu -->
+            <li class="dropdown user user-menu hidden-small">
+              <!-- Menu Toggle Button -->
+              <a href="#">
+                <!-- The user image in the navbar-->
+                <div class="admin-profile-h">
+                  <div style="padding-right: 10px;">
+                    <p class="admin-name adminprof-no-mb">kadin Vaccaro</p>
+                    <p style="float: right;">Marketing</p>
+                  </div>
+                  <img src="assets/dist/img/user3-128x128.jpg" class="user-image" alt="User Image">
+                  <i class="fa fa-caret-down adminpro-icon-pt "></i>
+                </div>
+
+
+              </a>
+
+            </li>
+            <!-- Control Sidebar Toggle Button -->
+
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar" >
+
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+  
+        <!-- Sidebar Menu -->
+        <ul class="sidebar-menu" data-widget="tree">
+          <!-- Optionally, you can add icons to the links -->
+          <li class=""><a href="dashboard.html" ><img src="assets/dist/img/dashboard-icon.png"> <span >Dashboard</span></a></li>
+          <li class=""><a href="User-Search.html"><img src="assets/dist/img/search-icon.png"> <span>User Search</span></a></li>
+          <li class=""><a href="adminstrators.html"><img src="assets/dist/img/administrator-icon.png"> <span>Administrators</span></a></li>
+          <li class="treeview">
+            <a href="#"><img src="assets/dist/img/products-icon.png"> <span>Products</span>
+              <span class="pull-right-container">
+                  <i class="fa fa-angle-down pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="products.html">Active Products</a></li>
+              <li><a href="add-product.html">Add Products</a></li>
+            </ul>
+          </li>
+          <li class=""><a href="distribution-center.html"><img src="assets/dist/img/dc-icon.png"> <span>Distribution Centers</span></a></li>
+          <li class=""><a href="inventory.html"><img src="assets/dist/img/inventory-icon.png"> <span>Inventory</span></a></li>
+          <li class="treeview">
+              <a href="#"><img src="assets/dist/img/email-icon.png"> <span>Email Campaigns</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-down pull-right"></i>
+                  </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="system-emails.html">System Email</a></li>
+                <li><a href="email-broadcast.html">Email Boardcaster</a></li>
+              </ul>
+            </li>
+            <li class=""><a href="merchants.html"><img src="assets/dist/img/merchants-icon.png"> <span>Merchants</span></a></li>
+            <li class="treeview">
+                <a href="#"><img src="assets/dist/img/reports-tool-icon.png"> <span>Reports</span>
+                  <span class="pull-right-container">
+                      <i class="fa fa-angle-down pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="payout-reports.html">Payout Report</a></li>
+                  <li><a href="country-revenue.html">Country Revenue</a></li>
+                  <li><a href="rank-reports.html">Rank Report</a></li>
+                  <li><a href="sales-report.html">Sales Report</a></li>
+                  <li><a href="fraud-reports.html">Fraud Report</a></li>
+                </ul>
+              </li>
+              <li class="treeview">
+                  <a href="#"><img src="assets/dist/img/reports-tool-icon.png"> <span>Tools</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-down pull-right"></i>
+                      </span>
+                  </a>
+                  <ul class="treeview-menu">
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                    <li><a href="promotions.html">Promotion</a></li>
+                  </ul>
+                </li>
+            <li class=""><a href="support.html"><img src="assets/dist/img/support-icon.png"> <span>Support</span></a></li>
+        
+        </ul>
+        <!-- /.sidebar-menu -->
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper main-content">
+      <!-- Content Header (Page header) -->
+
+
+      <!-- Main content -->
+      <section class="content container-fluid">
+        <!-- Info boxes -->
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box" style="border-radius: 8px;">
+              <div class="info-box-content">
+                <div style="">
+                  <span class="info-box-text"
+                    style="float: right; color: #1F932A; font-weight:bold; padding-top: 10px;">+18%</span>
+                </div>
+                <span class="info-box-text" style="padding-top: 10px;">Product Sales</span>
+                <p class="info-box-number" style="padding-top: 8px;">$7,135,239.54</p>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box" style="border-radius: 8px;">
+              <div class="info-box-content">
+                <div style="">
+                  <span class="info-box-text"
+                    style="float: right; color: #FF4040; font-weight:bold; padding-top: 10px;">-6%</span>
+                </div>
+                <span class="info-box-text" style="padding-top: 10px;">Cost of Goods</span>
+                <p class="info-box-number" style="padding-top: 8px;">$560,927.58</p>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box" style="border-radius: 8px;">
+              <div class="info-box-content">
+                <div style="">
+                  <span class="info-box-text"
+                    style="float: right; color: #1F932A; font-weight:bold; padding-top: 10px;">+12%</span>
+                </div>
+                <span class="info-box-text" style="padding-top: 10px;">Commissions Paid</span>
+                <p class="info-box-number" style="padding-top: 8px;">$3,108,940.18</p>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box" style="border-radius: 8px;">
+              <div class="info-box-content">
+                <div style="">
+                  <span class="info-box-text"
+                    style="float: right; color: #1F932A; font-weight:bold; padding-top: 10px;">+13%</span>
+                </div>
+                <span class="info-box-text" style="padding-top: 10px;">Net Profit</span>
+                <p class="info-box-number" style="padding-top: 8px;">$3,465,371.78</p>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+
+        </div>
+        <!-- /.row -->
+        <div class="row">
+          <div class="col-md-8">
+            <div class="nav-tabs-custom">
+              <div class="box-header" style="padding:0px !important;">
+                <ul class="nav nav-tabs nav-border">
+                  <li><a href="#ordersource" data-toggle="tab">Order Source</a></li>
+                  <li class="active"><a href="#dailysales" data-toggle="tab">Daily Sales</a></li>
+                </ul>
+                <div class="box-tools hidden-box-tools-md" style="width: 50%; top: 10px !important;">
+                  <select class="form-control select2  order-history-header-widget"
+                    style="width: 275%; margin-right: 10px;">
+                    <option class="history-widget-style">Nov 1 - Nov 30</option>
+                    <option>Dec 1 - Dec 30</option>
+                  </select>
+                  <select class="form-control select2  order-history-header-widget"
+                    style="width: 275%; margin-right: 10px;">
+                    <option class="history-widget-style">CBD Dog Treats</option>
+                    <option>....</option>
+                  </select>
+                  <button type="button" class="btn btn-block btn-primary">Export</button>
+                </div>
+              </div>
+
+              <div class="tab-content" style="padding-top:0px">
+                <div class="tab-pane" id="ordersource">
+
+                </div>
+                <!-- /.tab-pane -->
+                <div class="active tab-pane" id="dailysales">
+                  <div class="row">
+                    <div class="col-md-12" style="padding: 0 5px !important;">
+
+                      <div class="box-body no-padding table-responsive">
+                        <table class="table ">
+                          <tr style="background: #F5F8FA;">
+                            <th class="table-header-tab table-pl" style="width:20%;">Date</th>
+                            <th class="table-header-tab" style="width:20%;">Product</th>
+                            <th class="table-header-tab" style="width:20%;">SKU</th>
+                            <th class="table-header-tab" style="width:20%;">Count</th>
+                            <th class="table-header-tab" style="width:20%;">Amount</th>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl"> 10/20/19</td>
+                            <td class="table-table-tab table-vl-middle">CBD Dog Treats</td>
+                            <td class="table-table-tab table-vl-middle">cbdogtreat61</td>
+                            <td class="table-table-tab table-vl-middle">1,067</td>
+                            <td class="table-table-tab table-vl-middle">$34,638.45</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl"> 10/20/19</td>
+                            <td class="table-table-tab table-vl-middle">CBD Dog Treats</td>
+                            <td class="table-table-tab table-vl-middle">cbdogtreat61</td>
+                            <td class="table-table-tab table-vl-middle">1,067</td>
+                            <td class="table-table-tab table-vl-middle">$34,638.45</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl"> 10/20/19</td>
+                            <td class="table-table-tab table-vl-middle">CBD Dog Treats</td>
+                            <td class="table-table-tab table-vl-middle">cbdogtreat61</td>
+                            <td class="table-table-tab table-vl-middle">1,067</td>
+                            <td class="table-table-tab table-vl-middle">$34,638.45</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl"> 10/20/19</td>
+                            <td class="table-table-tab table-vl-middle">CBD Dog Treats</td>
+                            <td class="table-table-tab table-vl-middle">cbdogtreat61</td>
+                            <td class="table-table-tab table-vl-middle">1,067</td>
+                            <td class="table-table-tab table-vl-middle">$34,638.45</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl"> 10/20/19</td>
+                            <td class="table-table-tab table-vl-middle">CBD Dog Treats</td>
+                            <td class="table-table-tab table-vl-middle">cbdogtreat61</td>
+                            <td class="table-table-tab table-vl-middle">1,067</td>
+                            <td class="table-table-tab table-vl-middle">$34,638.45</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl"> 10/20/19</td>
+                            <td class="table-table-tab table-vl-middle">CBD Dog Treats</td>
+                            <td class="table-table-tab table-vl-middle">cbdogtreat61</td>
+                            <td class="table-table-tab table-vl-middle">1,067</td>
+                            <td class="table-table-tab table-vl-middle">$34,638.45</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl"> 10/20/19</td>
+                            <td class="table-table-tab table-vl-middle">CBD Dog Treats</td>
+                            <td class="table-table-tab table-vl-middle">cbdogtreat61</td>
+                            <td class="table-table-tab table-vl-middle">1,067</td>
+                            <td class="table-table-tab table-vl-middle">$34,638.45</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl"> 10/20/19</td>
+                            <td class="table-table-tab table-vl-middle">CBD Dog Treats</td>
+                            <td class="table-table-tab table-vl-middle">cbdogtreat61</td>
+                            <td class="table-table-tab table-vl-middle">1,067</td>
+                            <td class="table-table-tab table-vl-middle">$34,638.45</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl"> 10/20/19</td>
+                            <td class="table-table-tab table-vl-middle">CBD Dog Treats</td>
+                            <td class="table-table-tab table-vl-middle">cbdogtreat61</td>
+                            <td class="table-table-tab table-vl-middle">1,067</td>
+                            <td class="table-table-tab table-vl-middle">$34,638.45</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl"> 10/20/19</td>
+                            <td class="table-table-tab table-vl-middle">CBD Dog Treats</td>
+                            <td class="table-table-tab table-vl-middle">cbdogtreat61</td>
+                            <td class="table-table-tab table-vl-middle">1,067</td>
+                            <td class="table-table-tab table-vl-middle">$34,638.45</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl"> 10/20/19</td>
+                            <td class="table-table-tab table-vl-middle">CBD Dog Treats</td>
+                            <td class="table-table-tab table-vl-middle">cbdogtreat61</td>
+                            <td class="table-table-tab table-vl-middle">1,067</td>
+                            <td class="table-table-tab table-vl-middle">$34,638.45</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl"> 10/20/19</td>
+                            <td class="table-table-tab table-vl-middle">CBD Dog Treats</td>
+                            <td class="table-table-tab table-vl-middle">cbdogtreat61</td>
+                            <td class="table-table-tab table-vl-middle">1,067</td>
+                            <td class="table-table-tab table-vl-middle">$34,638.45</td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="box-footer" style="display:block; position: relative;">
+                        <h3 class="box-footer-txt">Showing Results 1-15 of 36</h3>
+          
+                        <div class="box-tools box-f-tool-b">
+                          <ul class="pagination pagination-sm no-margin pull-right">
+                            <li><a href="#"><</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#" style="color: black;">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">...</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                  </div>
+                </div>
+                <!-- /.tab-pane -->
+              </div>
+              <!-- /.tab-pane -->
+
+            </div>
+            <!-- /.tab-content -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-4">
+            <div class="box">
+              <div class="box-header">
+                <h3 class="box-title" style="float: left !important;">Affiliate to Customer Ratio</h3>
+              </div>
+              <div class="box-body" style="padding: 0px;">
+                <div style="padding: 20px; text-align: center;">
+                  <div class="svg-item">
+                    <svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
+                      <circle class="donut-hole" cx="20" cy="20" r="15.91549430918954" fill="#fff"></circle>
+                      <circle class="donut-ring" cx="20" cy="20" r="15.91549430918954" fill="transparent"
+                        stroke-width="6"></circle>
+                      <circle class="donut-segment donut-segment-2" cx="20" cy="20" r="15.91549430918954"
+                        fill="transparent" stroke-width="6" stroke-dasharray="37 63" stroke-dashoffset="0"></circle>
+                      <g class="donut-text donut-text-1">
+
+                        <text y="50%" transform="translate(0, 2)">
+                          <tspan x="50%" text-anchor="middle" class="donut-percent">37%</tspan>
+                        </text>
+                      </g>
+                    </svg>
+                    <label style="font-weight: 600;">Affiliates</label>
+                  </div>
+                  <div class="svg-item">
+                    <svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
+                      <circle class="donut-hole" cx="20" cy="20" r="15.91549430918954" fill="#fff"></circle>
+                      <circle class="donut-ring" cx="20" cy="20" r="15.91549430918954" fill="transparent"
+                        stroke-width="6"></circle>
+                      <circle class="donut-segment donut-segment-3" cx="20" cy="20" r="15.91549430918954"
+                        fill="transparent" stroke-width="6" stroke-dasharray="63 37" stroke-dashoffset="-40"></circle>
+                      <g class="donut-text donut-text-2">
+
+                        <text y="50%" transform="translate(0, 2)">
+                          <tspan x="50%" text-anchor="middle" class="donut-percent">63%</tspan>
+                        </text>
+                      </g>
+                    </svg>
+                    <label style="font-weight: 600;">Customers</label>
+                  </div>
+                </div>
+
+                <div class="donut-footer">
+                  <div>
+                    <label style="float: left; color: #7F8FA4;"><i class="fa fa-circle-o text-org"
+                        style="width: 15px;"></i> Active Affiliates:</label>
+                    <span class="pull-right" style="color: #354052; font-size:16px; font-weight:600;">103,965</span>
+                  </div>
+
+                  <div>
+                    <label style="float: left; color: #7F8FA4;"><i class="fa fa-circle-o text-gree"
+                        style="width: 15px;"></i> Active Customers:</label>
+                    <span class="pull-right" style="color: #354052; font-size:16px; font-weight:600;">351,965</span>
+                  </div>
+                </div>
+              </div>
+              <!-- /.box-body -->
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col-md-4">
+            <div class="box">
+              <div class="box-header res-mb-sp">
+                <h3 class="box-title" style="float: left !important;">Today's Sale</h3>
+                <div class="box-tools pull-right" style="    display: table-column-group;">
+                  <h2 style="margin: 0px;">552</h2>
+                  <span class="info-box-text"
+                    style="float: right; color: #1F932A; font-weight:bold; padding-top: 10px;">+12%</span>
+
+                </div>
+              </div>
+
+              <div class="box-body" style="padding: 0px; display: grid;">
+                <div class="res-sp-hide-sb-2" style="padding: 20px 20px 6px 20px; text-align: center; padding-left: 15px;">
+                  <div class="bars-c">
+                    <div style=" left:0px;height:66px;"></div>
+                    <div style="left:10px;height:113px;"></div>
+                    <div style="left:20px;height:97px;"></div>
+                    <div style="left:30px;height:113px;"></div>
+                    <div style="left:40px;height:127px;"></div>
+                    <div style=" left:50px;height:113px;"></div>
+                    <div style="left:60px;height:97px;"></div>
+                    <div style="left:70px;height:127px;"></div>
+                    <div style="left:80px;height:142px;"></div>
+                    <div style="left:90px;height:97px;"></div>
+                    <div style=" left:100px;height:113px;"></div>
+                    <div style="left:110px;height:127px;"></div>
+                    <div style="left:120px;height:180px;"></div>
+                    <div style="left:130px;height:142px;"></div>
+                    <div style="left:140px;height:127px;"></div>
+                    <div style=" left:150px;height:142px;"></div>
+                    <div style="left:160px;height:97px;"></div>
+                    <div style="left:170px;height:127px;"></div>
+                    <div style="left:180px;height:113px;"></div>
+                    <div style="left:190px;height:81px;"></div>
+                    <div style=" left:200px;height:97px;"></div>
+                    <div style="left:210px;height:66px;"></div>
+                    <div style="left:220px;height:81px;"></div>
+                    <div style="left:230px;height:66px;"></div>
+                    <div style="left:240px;height:97px;"></div>
+                    <div style=" left:250px;height:66px;"></div>
+                    <div style="left:260px;height:97px;"></div>
+                    <div style="left:270px;height:81px;"></div>
+                    <div style="left:280px;height:113px;"></div>
+                    <div style="left:290px;height:127px;"></div>
+                    <div style="left:300px;height:97px;"></div>
+                  </div>
+                  <div style="margin-top: 10px;">
+                    <span style="color: #7F8FA4; font-size: 12px; margin-right: 10px;">BEST DAY <label
+                        style="color: #354052; font-size:16px; font-weight: 600;">552</label></span>
+                         <span style="color: #7F8FA4; font-size: 12px;">AVERAGE
+                      <label style="color: #354052; font-size:16px; font-weight: 600;">351</label></span>
+                  </div>
+                </div>
+
+                <div class="donut-footer">
+                 <div class="row">
+                  <div class="col-lg-10 col-md-9 col-sm-9">
+                    <!-- Progress bars -->
+                    <div class="clearfix">
+                      <span class="pull-left" style="color: #7F8FA4;">This Month</span>
+                    </div>
+                    <div class="progress xs">
+                      <div class="progress-bar progress-bar-blue1" style="width: 112%;"></div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-4" style="padding: 0px; margin-top: 10px;">
+                    <label class="sr-side-txt">7,094</label>
+                  </div>
+                 </div>
+                 <div class="row">
+                  <div class="col-lg-10 col-md-9 col-sm-9">
+                    <div class="clearfix">
+                      <span class="pull-left" style="color: #7F8FA4;">Last Month</span>
+                      
+                    </div>
+                    <div class="progress xs">
+                      <div class="progress-bar progress-bar-purple1" style="width: 70%;"></div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-md-3 col-sm-3" style="padding: 0px; margin-top: 10px;">
+                    <label class="sr-side-txt">11,564</label>
+                  </div>
+                 </div>
+                  
+                  
+                </div>
+              </div>
+              <!-- /.box-body -->
+            </div>
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+
+
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <div class="control-sidebar-bg"></div>
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- REQUIRED JS SCRIPTS -->
+
+  <!-- jQuery 3 -->
+  <script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap 3.3.7 -->
+  <script src="assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!--App -->
+  <script src="assets/dist/js/adminlte.min.js"></script>
+
+  <!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. -->
+</body>
+
+</html>

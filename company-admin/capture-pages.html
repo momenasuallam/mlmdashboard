@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Capture Pages</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="assets/bower_components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="assets/dist/css/mystyle.css">
+    <link rel="stylesheet" href="assets/dist/css/AdminLTE.min.css">
+    <!-- We have chosen the skin-blue for this starter
+          page. However, you can choose any other skin. Make sure you
+          apply the skin class to the body tag so the changes take effect. -->
+    <link rel="stylesheet" href="assets/dist/css/skins/skin-blue.min.css">
+   
+     <!-- Select2 -->
+  <link rel="stylesheet" href="assets/bower_components/select2/dist/css/select2.min.css">
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="assets/plugins/iCheck/all.css">
+   
+<style>
+  @font-face {
+    font-family: "proxima-nova";
+    src: url(assets/dist/fonts/FontsFree-Net-ProximaNova-Regular.ttf);
+}
+h1, h2, h3, h4, h5, h6, p, label, a, button, span {
+  font-family: "proxima-nova" !important;
+}
+label {
+  font-size: 14px;
+  font-weight: 500;
+}
+</style>
+
+      </head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <!-- Main Header -->
+  <header class="main-header">
+
+    <!-- Logo -->
+    <a href="dashboard.html" class="logo">
+
+      <!-- logo for regular state and mobile devices -->
+      <span><img src="assets/dist/img/company-dashboard-logo.png"></span>
+     <!-- <span class="logo-lg">YOUR LOGO</span> -->
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+    <div class="toggle-responsive">
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button" >
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </a>
+    </div>
+       <!-- Navbar left Menu -->
+       <div class="navbar-custom-menu" style="float:left;">
+        <h3 style="padding-left: 18px; padding-top: 10px;">Capture Pages</h3>
+        </div>
+     
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+
+        <ul class="nav navbar-nav">
+          <!-- User Account Menu -->
+          <li class="dropdown user user-menu hidden-small">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <!-- The user image in the navbar-->
+              <div class="admin-profile-h">   
+                <div style="padding-right: 10px;">
+                  <p class="admin-name adminprof-no-mb">kadin Vaccaro</p>
+                  <p style="float: right;">Marketing</p>
+                </div>
+                <img src="assets/dist/img/user3-128x128.jpg" class="user-image" alt="User Image">
+                <i class="fa fa-caret-down adminpro-icon-pt "></i>
+              </div>  
+            </a>
+          
+         
+         
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar" >
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <!-- Optionally, you can add icons to the links -->
+        <li class=""><a href="dashboard.html" ><img src="assets/dist/img/dashboard-icon.png"> <span >Dashboard</span></a></li>
+        <li class=""><a href="User-Search.html"><img src="assets/dist/img/search-icon.png"> <span>User Search</span></a></li>
+        <li class=""><a href="adminstrators.html"><img src="assets/dist/img/administrator-icon.png"> <span>Administrators</span></a></li>
+        <li class="treeview">
+          <a href="#"><img src="assets/dist/img/products-icon.png"> <span>Products</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-down pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="products.html">Active Products</a></li>
+            <li><a href="add-product.html">Add Products</a></li>
+          </ul>
+        </li>
+        <li class=""><a href="distribution-center.html"><img src="assets/dist/img/dc-icon.png"> <span>Distribution Centers</span></a></li>
+        <li class=""><a href="inventory.html"><img src="assets/dist/img/inventory-icon.png"> <span>Inventory</span></a></li>
+        <li class="treeview">
+            <a href="#"><img src="assets/dist/img/email-icon.png"> <span>Email Campaigns</span>
+              <span class="pull-right-container">
+                  <i class="fa fa-angle-down pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="system-emails.html">System Email</a></li>
+              <li><a href="email-broadcast.html">Email Boardcaster</a></li>
+            </ul>
+          </li>
+          <li class=""><a href="merchants.html"><img src="assets/dist/img/merchants-icon.png"> <span>Merchants</span></a></li>
+          <li class="treeview">
+              <a href="#"><img src="assets/dist/img/reports-tool-icon.png"> <span>Reports</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-down pull-right"></i>
+                  </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="payout-reports.html">Payout Report</a></li>
+                <li><a href="country-revenue.html">Country Revenue</a></li>
+                <li><a href="rank-reports.html">Rank Report</a></li>
+                <li><a href="sales-report.html">Sales Report</a></li>
+                <li><a href="fraud-reports.html">Fraud Report</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+                <a href="#"><img src="assets/dist/img/reports-tool-icon.png"> <span>Tools</span>
+                  <span class="pull-right-container">
+                      <i class="fa fa-angle-down pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="events.html">Events</a></li>
+                  <li><a href="news.html">News</a></li>
+                  <li><a href="resources.html">Resources</a></li>
+                  <li><a href="videos.html">Videos</a></li>
+                  <li><a href="promotions.html">Promotion</a></li>
+                </ul>
+              </li>
+          <li class=""><a href="support.html"><img src="assets/dist/img/support-icon.png"> <span>Support</span></a></li>
+      
+      </ul>
+      <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper ">
+    <!-- Content Header (Page header) -->
+      <!-- Content Header (Page header) -->
+      <section class="content-header" style="padding: 0px; background-color: #fff !important;">
+        <ul class="nav nav-tabs nav-border nav-tabs-fit-med">
+          <li class="active"><a href="#settings" data-toggle="tab">Settings</a></li>
+          <li><a href="#template" data-toggle="tab">Templates</a></li>
+          <li><a href="#pages" data-toggle="tab">Pages</a></li>
+          
+        </ul>
+        
+      </section>
+
+    <!-- Main content -->
+    <section class="content container-fluid">
+
+      <!-- /.col -->
+      <div class="col-md-12" style="padding: 0px;">
+        <div class="nav-tabs-custom" style="background: transparent;">
+       
+          <div class="tab-content" style="background: transparent;">
+            <div class="active tab-pane" id="settings">
+                <div class="col-md-12" style="padding: 0px;">
+                    <div class="box box-default" style="border-top: none;">
+                      <!-- /.box-header -->
+                      <div class="box-body">
+                        <form>
+                            <div class="form-row col-md-12" style="padding: 0px; padding-left: 15px; margin-bottom: 10px; display: grid;" >
+                                <label>Domain</label>
+                              </div>
+        
+                              <div class="form-row col-md-12" style="padding: 0px;" >
+                                <div  class="form-group col-md-3"   >
+                                  <input type="text" class="form-control" value="company.com" style="color: #7F8FA4;" >
+                                </div>
+                               
+                            <div  class="form-group col-md-3"   >
+                                <button class="btn btn-primary btn-block">Create Domain</button>
+                                </div>
+
+                            <div  class="form-group col-md-6 res-cui-lp" style="padding: 0px;" >
+                                <label style="color: #7F8FA4 !important; margin-top: 10px;">Ticket: <a style="color: #0599CA;">#1000001</a></label>
+                                        
+                                </div>
+
+                              </div>
+                              <div class="form-row col-md-12" style="padding: 0px;" >
+                                <hr class="cui-line">
+                              </div>
+                      
+    
+                          <div class="form-row col-md-12" style="padding: 0px; padding-left: 15px; margin-bottom: 20px; display: grid;" >
+                            <label>Corpoarte Website Logo</label>
+                          </div>
+    
+                          <div class="form-row col-md-12" style="padding: 0px;" >
+                            <div  class="form-group col-md-1"   >
+                              <img src="assets/dist/img/cw-logo.png">
+                            </div>
+                            
+                              <div  class="form-group col-md-2"   >
+                                <button class="btn btn-primary">Upload Photo</button>
+                                </div>
+                          </div>
+    
+                          <div class="form-row col-md-12" style="padding: 0px;" >
+                            <hr class="cui-line">
+                          </div>
+                           
+                          <div class="form-row" style="padding: 0px;" >
+                            <div  class="form-group col-md-3"   >
+                              <label for="">Website Title</label>
+                              <input type="text" class="form-control" value="companya" style="color: #7F8FA4;" >
+                            </div>
+                              <div  class="form-group col-md-3" style="margin-top: 24px;"  >
+                                <button class="btn btn-primary">Update</button>
+                                 </div>
+                          </div>
+                        </form>
+                            
+                      <!-- /.box-body -->
+                   
+                    </div>
+                    <!-- /.box -->
+                   </div>
+                  
+                  </div>
+            </div>
+
+           
+
+            <div class="tab-pane" id="template">
+               <div class="box ">
+                   <div class="box-body">
+                    <div class="row"> 
+                          
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                         <div class="box" >
+                          <div class="box-body box-profile mybor" style="padding: 0px;">
+                            <img class="img-responsive" style="border-radius: 0%; padding: 5px; width:100%;" src="assets/dist/img/temp1.png" alt="User profile picture">
+                
+                            <ul class="list-group list-group-unbordered dc-info-us" style="margin-bottom: 0px !important; padding: 10px;" >
+                              <li class="list-group-item text-center" style="padding: 0px; margin-top: 10px;">
+                                <p style="color: #7F8FA4;" style="margin-bottom: 0px;">Diamond Template</p>
+                              </li>
+                            </ul>
+                            
+                            <div style="padding: 0px 10px 10px 10px; display: flex;">
+                              <button class="btn btn-success btn-primary-f btn-block" style="margin-right: 5px;">Preview</button>
+                              <button class="btn btn-primary btn-primary-f btn-block" style="margin-top: 0px;">Edit</button>
+                            </div>
+                           
+                          </div>
+                          <!-- /.box-body -->
+                        </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="box" >
+                             <div class="box-body box-profile mybor" style="padding: 0px;">
+                               <img class="img-responsive" style="border-radius: 0%; padding: 5px; width:100%;" src="assets/dist/img/temp1.png" alt="User profile picture">
+                   
+                               <ul class="list-group list-group-unbordered dc-info-us" style="margin-bottom: 0px !important; padding: 10px;" >
+                                 <li class="list-group-item text-center" style="padding: 0px; margin-top: 10px;">
+                                   <p style="color: #7F8FA4;" style="margin-bottom: 0px;">Diamond Template</p>
+                                 </li>
+                               </ul>
+                               
+                               <div style="padding: 0px 10px 10px 10px; display: flex;">
+                                 <button class="btn btn-success btn-primary-f btn-block" style="margin-right: 5px;">Preview</button>
+                                 <button class="btn btn-primary btn-primary-f btn-block" style="margin-top: 0px;">Edit</button>
+                               </div>
+                              
+                             </div>
+                             <!-- /.box-body -->
+                           </div>
+                           </div>
+                           <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="box" >
+                             <div class="box-body box-profile mybor" style="padding: 0px;">
+                               <img class="img-responsive" style="border-radius: 0%; padding: 5px; width:100%;" src="assets/dist/img/temp1.png" alt="User profile picture">
+                   
+                               <ul class="list-group list-group-unbordered dc-info-us" style="margin-bottom: 0px !important; padding: 10px;" >
+                                 <li class="list-group-item text-center" style="padding: 0px; margin-top: 10px;">
+                                   <p style="color: #7F8FA4;" style="margin-bottom: 0px;">Diamond Template</p>
+                                 </li>
+                               </ul>
+                               
+                               <div style="padding: 0px 10px 10px 10px; display: flex;">
+                                 <button class="btn btn-success btn-primary-f btn-block" style="margin-right: 5px;">Preview</button>
+                                 <button class="btn btn-primary btn-primary-f btn-block" style="margin-top: 0px;">Edit</button>
+                               </div>
+                              
+                             </div>
+                             <!-- /.box-body -->
+                           </div>
+                           </div>
+                           <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="box" >
+                             <div class="box-body box-profile mybor" style="padding: 0px;">
+                               <img class="img-responsive" style="border-radius: 0%; padding: 5px; width:100%;" src="assets/dist/img/temp1.png" alt="User profile picture">
+                   
+                               <ul class="list-group list-group-unbordered dc-info-us" style="margin-bottom: 0px !important; padding: 10px;" >
+                                 <li class="list-group-item text-center" style="padding: 0px; margin-top: 10px;">
+                                   <p style="color: #7F8FA4;" style="margin-bottom: 0px;">Diamond Template</p>
+                                 </li>
+                               </ul>
+                               
+                               <div style="padding: 0px 10px 10px 10px; display: flex;">
+                                 <button class="btn btn-success btn-primary-f btn-block" style="margin-right: 5px;">Preview</button>
+                                 <button class="btn btn-primary btn-primary-f btn-block" style="margin-top: 0px;">Edit</button>
+                               </div>
+                              
+                             </div>
+                             <!-- /.box-body -->
+                           </div>
+                           </div>
+                           <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="box" >
+                             <div class="box-body box-profile mybor" style="padding: 0px;">
+                               <img class="img-responsive" style="border-radius: 0%; padding: 5px; width:100%;" src="assets/dist/img/temp1.png" alt="User profile picture">
+                   
+                               <ul class="list-group list-group-unbordered dc-info-us" style="margin-bottom: 0px !important; padding: 10px;" >
+                                 <li class="list-group-item text-center" style="padding: 0px; margin-top: 10px;">
+                                   <p style="color: #7F8FA4;" style="margin-bottom: 0px;">Diamond Template</p>
+                                 </li>
+                               </ul>
+                               
+                               <div style="padding: 0px 10px 10px 10px; display: flex;">
+                                 <button class="btn btn-success btn-primary-f btn-block" style="margin-right: 5px;">Preview</button>
+                                 <button class="btn btn-primary btn-primary-f btn-block" style="margin-top: 0px;">Edit</button>
+                               </div>
+                              
+                             </div>
+                             <!-- /.box-body -->
+                           </div>
+                           </div>
+                           <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="box" >
+                             <div class="box-body box-profile mybor" style="padding: 0px;">
+                               <img class="img-responsive" style="border-radius: 0%; padding: 5px; width:100%;" src="assets/dist/img/temp1.png" alt="User profile picture">
+                   
+                               <ul class="list-group list-group-unbordered dc-info-us" style="margin-bottom: 0px !important; padding: 10px;" >
+                                 <li class="list-group-item text-center" style="padding: 0px; margin-top: 10px;">
+                                   <p style="color: #7F8FA4;" style="margin-bottom: 0px;">Diamond Template</p>
+                                 </li>
+                               </ul>
+                               
+                               <div style="padding: 0px 10px 10px 10px; display: flex;">
+                                 <button class="btn btn-success btn-primary-f btn-block" style="margin-right: 5px;">Preview</button>
+                                 <button class="btn btn-primary btn-primary-f btn-block" style="margin-top: 0px;">Edit</button>
+                               </div>
+                              
+                             </div>
+                             <!-- /.box-body -->
+                           </div>
+                           </div>
+                           <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="box" >
+                             <div class="box-body box-profile mybor" style="padding: 0px;">
+                               <img class="img-responsive" style="border-radius: 0%; padding: 5px; width:100%;" src="assets/dist/img/temp1.png" alt="User profile picture">
+                   
+                               <ul class="list-group list-group-unbordered dc-info-us" style="margin-bottom: 0px !important; padding: 10px;" >
+                                 <li class="list-group-item text-center" style="padding: 0px; margin-top: 10px;">
+                                   <p style="color: #7F8FA4;" style="margin-bottom: 0px;">Diamond Template</p>
+                                 </li>
+                               </ul>
+                               
+                               <div style="padding: 0px 10px 10px 10px; display: flex;">
+                                 <button class="btn btn-success btn-primary-f btn-block" style="margin-right: 5px;">Preview</button>
+                                 <button class="btn btn-primary btn-primary-f btn-block" style="margin-top: 0px;">Edit</button>
+                               </div>
+                              
+                             </div>
+                             <!-- /.box-body -->
+                           </div>
+                           </div>
+                           <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="box" >
+                             <div class="box-body box-profile mybor" style="padding: 0px;">
+                               <img class="img-responsive" style="border-radius: 0%; padding: 5px; width:100%;" src="assets/dist/img/temp1.png" alt="User profile picture">
+                   
+                               <ul class="list-group list-group-unbordered dc-info-us" style="margin-bottom: 0px !important; padding: 10px;" >
+                                 <li class="list-group-item text-center" style="padding: 0px; margin-top: 10px;">
+                                   <p style="color: #7F8FA4;" style="margin-bottom: 0px;">Diamond Template</p>
+                                 </li>
+                               </ul>
+                               
+                               <div style="padding: 0px 10px 10px 10px; display: flex;">
+                                 <button class="btn btn-success btn-primary-f btn-block" style="margin-right: 5px;">Preview</button>
+                                 <button class="btn btn-primary btn-primary-f btn-block" style="margin-top: 0px;">Edit</button>
+                               </div>
+                              
+                             </div>
+                             <!-- /.box-body -->
+                           </div>
+                           </div>
+                       
+                     </div>
+                   </div>
+               </div>
+            </div>
+            <!-- /.tab-pane -->
+         
+            <div class="tab-pane" id="pages">
+              <!-- row-->
+     <div class="row">
+       <div class="col-md-12" style="padding: 5px 0px !important;
+       background-color: #fff;
+       border-radius: 8px;">
+         <div class="box" style="border-top: none; margin-bottom: 0px;">
+           <div class="box-header">
+             <h3 class="box-title">Pages</h3>
+           </div>
+           </div>
+           <!-- /.box-header -->
+           <div class="box-body no-padding table-responsive">
+             <table class="table ">
+               <tr style="background: #F5F8FA;">
+                 <th class="table-header-tab table-pl" >Template Name</th>
+                 <th class="table-header-tab" >Url</th>
+                 <th class="table-header-tab" >Created By</th>
+                 <th class="table-header-tab" >Created At</th>
+                 <th class="table-header-tab" >Status</th>
+                 <th class="table-header-tab" >Action</th>
+               </tr>
+               <tr>
+                 <td class="table-table-tab tab-table-Id table-vl-middle table-pl" >Russian Capture Pages</td>
+                 <td class="table-table-tab table-vl-middle" >/cp1</td>
+                 <td class="table-table-tab table-vl-middle" >waqas11</td>
+                 <td class="table-table-tab table-vl-middle" >04/19/20</td>
+                 <td class="table-table-tab table-vl-middle" ><span class="label label-danger">INACTIVE</span></td>
+                 <td class="table-table-tab table-vl-middle" ><span>
+                   <button class="btn btn-success btn-primary-f" style="padding-left: 18px; padding-right: 19px;">Active</button>
+                   <button class="btn btn-danger btn-primary-f">Edit</button>
+                   <button class="btn btn-primary btn-primary-f">Delete</button>
+                 </span></td>
+               </tr>
+               <tr>
+                <td class="table-table-tab tab-table-Id table-vl-middle table-pl" >Russian Capture Pages</td>
+                <td class="table-table-tab table-vl-middle" >/cp2</td>
+                <td class="table-table-tab table-vl-middle" >waqas11</td>
+                <td class="table-table-tab table-vl-middle" >04/19/20</td>
+                <td class="table-table-tab table-vl-middle" ><span class="label label-success">ACTIVE</span></td>
+                <td class="table-table-tab table-vl-middle" ><span>
+                  <button class="btn btn-warning btn-primary-f">Deactive</button>
+                  <button class="btn btn-danger btn-primary-f">Edit</button>
+                  <button class="btn btn-primary btn-primary-f">Delete</button>
+                </span></td>
+              </tr>
+              <tr>
+                <td class="table-table-tab tab-table-Id table-vl-middle table-pl" >Russian Capture Pages</td>
+                <td class="table-table-tab table-vl-middle" >/cp3</td>
+                <td class="table-table-tab table-vl-middle" >waqas11</td>
+                <td class="table-table-tab table-vl-middle" >04/19/20</td>
+                <td class="table-table-tab table-vl-middle" ><span class="label label-success">ACTIVE</span></td>
+                <td class="table-table-tab table-vl-middle" ><span>
+                  <button class="btn btn-warning btn-primary-f">Deactive</button>
+                  <button class="btn btn-danger btn-primary-f">Edit</button>
+                  <button class="btn btn-primary btn-primary-f">Delete</button>
+                </span></td>
+              </tr>
+
+             </table>
+           </div>
+           <!-- /.box-body -->
+         </div>
+         <!-- /.box -->
+       </div>
+           </div>
+
+
+            
+            
+          
+            <!-- /.tab-pane -->
+            
+          </div>
+          <!-- /.tab-content -->
+        </div>
+        <!-- /.nav-tabs-custom -->
+      </div>
+      <!-- /.col -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+
+ 
+ 
+  <!-- Add the sidebar's background. This div must be placed
+  immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED JS SCRIPTS -->
+
+<!-- jQuery 3 -->
+<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- App -->
+<script src="assets/dist/js/adminlte.min.js"></script>
+
+<!-- Select2 -->
+<script src="assets/bower_components/select2/dist/js/select2.full.min.js"></script>
+<!-- InputMask -->
+<script src="assets/plugins/input-mask/jquery.inputmask.js"></script>
+<script src="assets/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="assets/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. -->
+     <script>
+      $(function () {
+        //Initialize Select2 Elements
+        $('.select2').select2()
+        //iCheck for checkbox and radio inputs
+        $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+          checkboxClass: 'icheckbox_minimal-blue',
+          radioClass   : 'iradio_minimal-blue'
+        })
+        //Red color scheme for iCheck
+        $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+          checkboxClass: 'icheckbox_minimal-red',
+          radioClass   : 'iradio_minimal-red'
+        })
+        //Flat red color scheme for iCheck
+        $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+          checkboxClass: 'icheckbox_flat-green',
+          radioClass   : 'iradio_flat-green'
+        })
+  
+      })
+    </script>
+
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. -->
+</body>
+</html>

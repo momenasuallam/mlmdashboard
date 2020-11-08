@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My Earning</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="assets/bower_components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="assets/dist/css/AdminLTE.min.css">
+    <!-- We have chosen the skin-blue for this starter
+          page. However, you can choose any other skin. Make sure you
+          apply the skin class to the body tag so the changes take effect. -->
+    <link rel="stylesheet" href="assets/dist/css/skins/skin-blue.min.css">
+    <link rel="stylesheet" href="assets/dist/css/mystyle.css">
+   
+<style>
+  @font-face {
+    font-family: "proxima-nova";
+    src: url(assets/dist/fonts/FontsFree-Net-ProximaNova-Regular.ttf);
+}
+h1, h2, h3, h4, h5, h6, p, label, a, button, span {
+  font-family: "proxima-nova" !important;
+}
+label {
+  font-size: 14px;
+  font-weight: 500;
+}
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+   
+    display: inline-block;
+    color: #000;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border: 0.5px solid #05C1FF;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: #05C1FF;
+    position: absolute;
+    top: 8px;
+    left: 3px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+</style>
+
+      </head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <!-- Main Header -->
+  <header class="main-header">
+
+    <!-- Logo -->
+    <a href="dashboard.html" class="logo">
+
+      <!-- logo for regular state and mobile devices -->
+      <span><img src="assets/dist/img/company-dashboard-logo.png"></span>
+     <!-- <span class="logo-lg">YOUR LOGO</span> -->
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+    <div class="toggle-responsive">
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button" >
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </a>
+    </div>
+       <!-- Navbar left Menu -->
+       <div class="navbar-custom-menu" style="float:left;">
+        <h3 class="user-ohd-heading" style="padding-left: 18px; padding-top: 10px;">My Earning</h3>
+        </div>
+     
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+
+        <ul class="nav navbar-nav">
+          <!-- User Account Menu -->
+          <li class="dropdown user user-menu hidden-small">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <!-- The user image in the navbar-->
+              <div class="admin-profile-h">   
+                <div style="padding-right: 10px;">
+                  <p class="admin-name adminprof-no-mb">John MacDonocan</p>
+                  <p style="float: right;">#3853141</p>
+                </div>
+                <img src="assets/dist/img/user-bo.png" class="user-image" alt="User Image">
+                <i class="fa fa-caret-down adminpro-icon-pt "></i>
+              </div>  
+            </a>
+          
+         
+         
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar" >
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <!-- Optionally, you can add icons to the links -->
+        <li class=""><a href="dashboard.html" ><img src="assets/dist/img/dashboard-icon.png"> <span >Dashboard</span></a></li>
+        <li class="treeview">
+          <a href="#"><img src="assets/dist/img/myacc-icon.png"> <span>My Account</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-down pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="autoship.html">Autoship</a></li>
+            <li><a href="credit-wallet.html">Credit Wallet</a></li>
+            <li><a href="my-orders.html">Order History</a></li>
+            <li><a href="payout-options.html">Payment Options</a></li>
+            <li><a href="settings.html">Setting</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#"><img src="assets/dist/img/team-icon.png"> <span>My Team</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-down pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="binary-tree.html">Binary Tree</a></li>
+            <li><a href="enrolle-tree.html">Enrolle Tree</a></li>
+            <li><a href="list-view.html">List View</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#"><img src="assets/dist/img/website-icon.png"> <span>My Website</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-down pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="my-website-ru.html">Replicated Sites</a></li>
+            <li><a href="my-website-cp.html">Lead Capture Pages</a></li>
+          </ul>
+        </li>
+        <li class=""><a href="training.html"><img src="assets/dist/img/traning-icon.png"> <span>Training</span></a></li>
+        <li class=""><a href="contact-manager.html"><img src="assets/dist/img/contact-manager-icon.png"> <span>Contact Manager</span></a></li>
+        <li class=""><a href="leaderboard.html"><img src="assets/dist/img/leaderboard-icon.png"> <span>Leaderboard</span></a></li>
+        <li class=""><a href="my-earnings.html"><img src="assets/dist/img/earning-icon.png"> <span>Earning</span></a></li>
+        <li class=""><a href="rank.html"><img src="assets/dist/img/rank-icon.png"> <span>Rank</span></a></li>
+        <li class="treeview">
+          <a href="#"><img src="assets/dist/img/website-icon.png"> <span>Tools</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-down pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="statistics.html">Statistics</a></li>
+            <li><a href="advertising.html">Advertising</a></li>
+          </ul>
+        </li>
+        <li class=""><a href="shop.html"><img src="assets/dist/img/shop-icon.png"> <span>Shop</span></a></li>
+        <li class=""><a href="support.html"><img src="assets/dist/img/contact-us-icon.png"> <span>Support</span></a></li>
+      </ul>
+      <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper ">
+    <!-- Content Header (Page header) -->
+      <!-- Content Header (Page header) -->
+      <section class="content-header" style="padding: 0px; background-color: #fff !important;">
+        <ul class="nav nav-tabs nav-border nav-tabs-fit-med">
+          <li><a href="#earningrecords" data-toggle="tab">Earning Records</a></li>
+          <li class="active"><a href="#paymentop" data-toggle="tab">Select Payment Option</a></li>
+          <li><a href="#transferearning" data-toggle="tab">Transfer Earnings</a></li>
+          <li><a href="#payplan" data-toggle="tab">View Pay Plan Description</a></li>
+        </ul>
+        
+      </section>
+
+    <!-- Main content -->
+    <section class="content container-fluid">
+       
+      <!-- /.col -->
+      <div class="col-md-12" style="padding: 0px;">
+        <div class="nav-tabs-custom" style="background: transparent;">
+          <div class="tab-content" style="background: transparent;">
+            <div class=" tab-pane" id="earningrecords">
+              <div class="row">
+                  <!-- /.row -->
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                      <div class="info-box box-st-green">
+                        <div class="info-box-content">
+                          <span class="info-box-text" style="padding-top: 10px; text-transform: capitalize;">Earning Last 2 days</span>
+                          <p class="info-box-number" style="padding-top: 8px;">$19,387</p>
+                        </div>
+                        <!-- /.info-box-content -->
+                      </div>
+                      <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+            
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                      <div class="info-box box-st-green">
+                        <div class="info-box-content">
+                          <span class="info-box-text" style="padding-top: 10px; text-transform: capitalize;">Earning Last 30 days</span>
+                          <p class="info-box-number" style="padding-top: 8px;">$540,619</p>
+                        </div>
+                        <!-- /.info-box-content -->
+                      </div>
+                      <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+            
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                      <div class="info-box box-st-green">
+                        <div class="info-box-content">
+                          <span class="info-box-text" style="padding-top: 10px; text-transform: capitalize;">Total Earnings</span>
+                          <p class="info-box-number" style="padding-top: 8px;">$1,345,968</p>
+                        </div>
+                        <!-- /.info-box-content -->
+                      </div>
+                      <!-- /.info-box -->
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                      <div class="info-box box-st-green">
+                        <div class="info-box-content">
+                      <div class="col-md-12" style="padding: 0px;">
+                        <div style="float: left;">
+                          <span class="info-box-text" style=" text-transform: capitalize;">Credit Wallet</span>
+                        </div>
+                        <div style="float: right;">
+                          <span><img src="assets/dist/img/cw-icon.png"></span>
+                        </div>
+                      </div>
+                          <p class="info-box-number" style="padding-top: 8px;">$1,345,968</p>
+                        </div>
+                        <!-- /.info-box-content -->
+                      </div>
+                      <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+                  </div>
+                  <div class="col-md-12 mb-20" style="padding: 5px 0px !important;
+                  background-color: #fff;
+                  border-radius: 8px;">
+                    <div class="box" style="border-top: none; margin-bottom: 0px;">
+                      <div class="box-header">
+                        <h3 class="box-title">Earning Growth</h3>
+                        <div class="box-tools hidden-box-tools" style="top: 10px;">
+                          <select class="form-control select2  order-history-header-widget" style="margin-right: 10px;">
+                            <option class="history-widget-style" >2019-2020</option>
+                            <option>...</option>
+                          </select>
+                        
+                        </div>
+                      </div>
+                      </div>
+                      <!-- /.box-header -->
+                      <div class="box-body no-padding">
+                        
+                      </div>
+                 
+                      <!-- /.box-body -->
+                    </div>
+                  <div class="col-md-12" style="padding: 5px 0px !important;
+                  background-color: #fff;
+                  border-radius: 8px;">
+                    <div class="box" style="border-top: none; margin-bottom: 0px;">
+                      <div class="box-header">
+                        <h3 class="box-title">Inventory Levels</h3>
+                        <div class="box-tools hidden-box-tools" style="top: 10px;">
+                          <select class="form-control select2  order-history-header-widget" style="margin-right: 10px;">
+                            <option class="history-widget-style" >Nov 1 - Nov 30</option>
+                            <option>Dec 1 - Dec 30</option>
+                          </select>
+                          <button class="btn btn-primary btn-primary-f">Export</button>
+                        </div>
+                      </div>
+                      </div>
+                      <!-- /.box-header -->
+                      <div class="box-body no-padding table-responsive">
+                        <table class="table ">
+                          <tr style="background: #F5F8FA;">
+                            <th class="table-header-tab table-pl" >Pay Period</th>
+                            <th class="table-header-tab">Type</th>
+                            <th class="table-header-tab">Day Paid</th>
+                            <th class="table-header-tab" >Earned</th>
+                            <th class="table-header-tab" >Transfered</th>
+                            <th class="table-header-tab" >Paid</th>
+                           </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl" >10/15/20 - 10/22/20</td>
+                            <td class="table-table-tab table-vl-middle" >Weekly</td>
+                            <td class="table-table-tab table-vl-middle" >04/29/20</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl" >10/15/20 - 10/22/20</td>
+                            <td class="table-table-tab table-vl-middle" >Weekly</td>
+                            <td class="table-table-tab table-vl-middle" >04/29/20</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl" >10/15/20 - 10/22/20</td>
+                            <td class="table-table-tab table-vl-middle" >Weekly</td>
+                            <td class="table-table-tab table-vl-middle" >04/29/20</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl" >10/15/20 - 10/22/20</td>
+                            <td class="table-table-tab table-vl-middle" >Weekly</td>
+                            <td class="table-table-tab table-vl-middle" >04/29/20</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl" >10/15/20 - 10/22/20</td>
+                            <td class="table-table-tab table-vl-middle" >Weekly</td>
+                            <td class="table-table-tab table-vl-middle" >04/29/20</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl" >10/15/20 - 10/22/20</td>
+                            <td class="table-table-tab table-vl-middle" >Weekly</td>
+                            <td class="table-table-tab table-vl-middle" >04/29/20</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl" >10/15/20 - 10/22/20</td>
+                            <td class="table-table-tab table-vl-middle" >Weekly</td>
+                            <td class="table-table-tab table-vl-middle" >04/29/20</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl" >10/15/20 - 10/22/20</td>
+                            <td class="table-table-tab table-vl-middle" >Weekly</td>
+                            <td class="table-table-tab table-vl-middle" >04/29/20</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl" >10/15/20 - 10/22/20</td>
+                            <td class="table-table-tab table-vl-middle" >Weekly</td>
+                            <td class="table-table-tab table-vl-middle" >04/29/20</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                            <td class="table-table-tab table-vl-middle" >$1,500.00</td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="box-footer" style="display:block; position: relative;">
+                        <h3 class="box-footer-txt">Showing Results 1-10 of 36</h3>
+          
+                        <div class="box-tools box-f-tool-b">
+                          <ul class="pagination pagination-sm no-margin pull-right">
+                            <li><a href="#"><</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">...</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /.box-body -->
+                    </div>
+                   
+                </div>
+              
+               
+              
+              <!-- /.row -->
+            </div>
+
+            </div>
+            <!-- /.tab-pane -->
+            <div class="active tab-pane" id="paymentop">
+              <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">Company A Makes It Easy To Get Paid!</h3>
+                </div>
+                <div class="box-body" style="padding-top: 0px;">
+                  <p>IMPORTANT: To Claim Your Commissions, You MUST Select One of the Following Options. You Will not receive your commissions until you select how you would like to be paid.</p>
+                  </div>
+
+              </div>
+              <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">Payout option 1</h3>
+                </div>
+                <div class="box-body" style="padding:0px 0px 20px 0px;">
+                 <div style="padding:20px;">
+                  <form action="#">
+                    <p>
+                      <input type="radio" id="test1" name="radio-group" checked>
+                      <label for="test1">NIGERIA - Commissions Deposited To Your Bank
+                      </label>
+                      <div style="padding-left: 27px;">
+                        <p style="opacity: 0.5;">By selecting this option you will receive a deposit directly into your Nigerian Bank account. Your deposit will come from our head of operations in Nigeria and may take up to 2-3 business days for your deposit to arrive.
+                          <br>  <br>
+                          *Please be aware that there is 5% withholding fee which is deducted and remitted to the Nigerian Government for income tax. This is not a fee that MyDailyChoice collects. For example, if you earn 38500.00, 1925.00 would be withheld for income tax.
+                          <br> <br>
+                          Please fill out the information below to start receiving your commissions:
+                          
+                             </p>
+                             <div class="form-row col-md-12" style="padding: 0px; margin-left: -15px;">
+                              <div  class="form-group  col-md-4"  >
+                                <label for="">Name on Account</label>
+                                <input type="text" class="form-control" id="">
+                              </div>
+                              <div  class="form-group col-md-4"  >
+                                <label for="">Bank Name </label>
+                                <input type="text" class="form-control" value="">
+                              </div>
+                              <div  class="form-group col-md-4"  >
+                                <label for="">Amount#</label>
+                                <input type="text" class="form-control" value="">
+                              </div>
+                            </div>
+                            <div class="form-row col-md-12" style="padding: 0px; margin-left: -15px;">
+                              <div  class="form-group  col-md-4"  >
+                                <label for="">Bank Location</label>
+                                <input type="text" class="form-control" id="">
+                              </div>
+                              <div  class="form-group col-md-4"  >
+                                <label for="">Country ID# (For Income Tax) </label>
+                                <input type="text" class="form-control" value="">
+                              </div>
+                              
+                            </div>
+                      </div>
+                      
+                    </p>
+                   
+                  
+                    <span style="margin-top: 25px;">
+                      
+                      <button class="btn btn-primary">Save</button>
+                    </span>
+                  </form>
+                 </div>
+                  </div>
+
+              </div>
+              <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">Payout option 2</h3>
+                </div>
+                <div class="box-body" style="padding:0px 0px 20px 0px;">
+                 <div style="padding:20px;">
+                  <form action="#">
+                    <p>
+                      <input type="radio" id="test1" name="radio-group" checked>
+                      <label for="test1" style="font-weight: 600;">Payoneer - Prepaid Debit MasterCard
+
+                      </label>
+                      <div style="padding-left: 27px;">
+                        <p  style="font-weight: 600;">Provided By <img src="assets/dist/img/payoneer-icon.png"></p>
+                    
+                        <p style="opacity: 0.5;">  Company A offers its members a new fast, secure and cost effective payment method. Now you can get paid directly to a Company APrepaid MasterCard®, which can be used online or in stores, or to withdraw cash in your local currency at an ATM! No bank account or credit checks are required. The registration for this card must be initiated from the link below in order for you to later receive commissions paid directly into your new Company A Prepaid MasterCard®.
+                        </p>
+
+                        <p style="color: #05C1FF;">Click Here To Sign Up Now!</p>
+
+                        <p style="opacity: 0.5;">If you have already signed up then check back shortly to see your status</p>
+                        
+                        
+                        </div>
+                      
+                    </p>
+                   
+                  
+                    <span style="margin-top: 25px;">
+                      
+                      <button class="btn btn-primary">Save</button>
+                    </span>
+                  </form>
+                 </div>
+                  </div>
+
+              </div>
+              <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">Payout option 3</h3>
+                </div>
+                <div class="box-body" style="padding:0px 0px 20px 0px;">
+                 <div style="padding:20px;">
+                  <form action="#">
+                    <p>
+                      <input type="radio" id="test1" name="radio-group" checked>
+                      <label for="test1" style="font-weight: 600;">Bitcoin - Have Your Commissions Paid Directly Into Your Favorite Bitcoin Wallet
+
+                      </label>
+                      <div style="padding-left: 27px;">
+                        <p style="color: #7F8FA4;">Setting up a Bitcoin Wallet: <span style="color: #05C1FF;">https://bitcoin.org/en/choose-your-wallet</span>
+                            <br><br>
+                          To learn more about Bitcoin: <span style="color: #05C1FF;">https://bitcoin.org/en/faq</span>
+                          <br><br>
+                          Please Provide Your Bitcoin Wallet Address:
+
+                        </p>
+                        
+                      
+                        <p style="color: #7F8FA4;">*Please be aware that there is a 0.0007 "Bitcoin Fee” which is deducted by our payment processor. This is not a fee that Company A collects. For example, if 1 Bitcoin is worth 7700.00,000, the fee to receive your commissions (any amount) would be 5390.00.
+                          <br><br>
+                          <span style="color: red; font-weight: 600;">DISCLAIMER:</span> Bitcoin and Digital Currencies are considered high-risk and are not governed by Central Banks. If you decide to choose this payment option, Company A, Inc. is not responsible for any losses or gains that occur. Make sure all of your information is ACCURATE. If you put in the wrong Bitcoin Wallet Address, and your commission is sent there, we will NOT be able to reclaim it. That means you will LOSE the commission.</p>
+                        
+                        
+                        </div>
+                      
+                    </p>
+                   
+                  
+                    <span style="margin-top: 25px;">
+                      
+                      <button class="btn btn-primary">Save</button>
+                    </span>
+                  </form>
+                 </div>
+                  </div>
+
+              </div>
+              <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">Payout option 4</h3>
+                </div>
+                <div class="box-body" style="padding:0px 0px 20px 0px;">
+                 <div style="padding:20px;">
+                  <form action="#">
+                    <p>
+                      <input type="radio" id="test1" name="radio-group" checked>
+                      <label for="test1" style="font-weight: 600;">Global eWallert
+
+                      </label>
+                      <div style="padding-left: 27px;">
+                        <p style="color: #7F8FA4;">
+                         <span style="color: #354052; font-weight: 600;">Powered by i-payout</span>	<br>
+Company A offers its members a new fast, secure and cost effective payment method.
+<br><br>
+<span style="color: #354052; font-weight: 600;">Available withdrawal methods:</span><br>
+Bank Transfer<br>
+Wire Transfer<br>
+Prepaid Card<br>
+Paper Checks<br>
+Qiwi<br>
+Bitcoin<br>
+Virtual Gift Card<br>
+Your Global eWallet account has been successfully registered. i-payout is NOT your current Payment Option.
+
+ 
+
+                        </p>
+                      
+                        
+                        </div>
+                      
+                    </p>
+                   
+                  
+                    <span style="margin-top: 25px;">
+                      
+                      <button class="btn btn-primary">Save</button>
+                    </span>
+                  </form>
+                 </div>
+                  </div>
+
+              </div>
+            </div>
+            <div class="tab-pane" id="transferearning">
+            
+            </div>
+            <div class="tab-pane" id="payplan">
+            
+            </div>
+            </div>
+            <!-- /.tab-pane -->
+            
+          </div>
+          <!-- /.tab-content -->
+        </div>
+        <!-- /.nav-tabs-custom -->
+      </div>
+      <!-- /.col -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+
+ 
+ 
+  <!-- Add the sidebar's background. This div must be placed
+  immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED JS SCRIPTS -->
+
+<!-- jQuery 3 -->
+<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- App -->
+<script src="assets/dist/js/adminlte.min.js"></script>
+
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. -->
+</body>
+</html>

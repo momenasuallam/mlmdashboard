@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Payout Reports</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="assets/bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="assets/dist/css/AdminLTE.min.css">
+  <!-- fullCalendar -->
+  <link rel="stylesheet" href="assets/bower_components/fullcalendar/dist/fullcalendar.min.css">
+  <link rel="stylesheet" href="assets/bower_components/fullcalendar/dist/fullcalendar.print.min.css" media="print">
+  <!-- We have chosen the skin-blue for this starter
+        page. However, you can choose any other skin. Make sure you
+        apply the skin class to the body tag so the changes take effect. -->
+  <link rel="stylesheet" href="assets/dist/css/skins/skin-blue.min.css">
+  <link rel="stylesheet" href="assets/dist/css/mystyle.css">
+
+
+  <style>
+    @font-face {
+      font-family: "proxima-nova";
+      src: url(assets/dist/fonts/FontsFree-Net-ProximaNova-Regular.ttf);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    label,
+    a,
+    button,
+    span {
+      font-family: "proxima-nova" !important;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+
+    <!-- Main Header -->
+    <header class="main-header">
+
+      <!-- Logo -->
+      <a href="dashboard.html" class="logo">
+
+        <!-- logo for regular state and mobile devices -->
+        <span><img src="assets/dist/img/company-dashboard-logo.png"></span>
+        <!-- <span class="logo-lg">YOUR LOGO</span> -->
+      </a>
+
+      <!-- Header Navbar -->
+      <nav class="navbar navbar-static-top" role="navigation">
+        <!-- Sidebar toggle button-->
+        <div class="toggle-responsive">
+          <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </a>
+        </div>
+        <!-- Navbar left Menu -->
+        <div class="navbar-custom-menu" style="float:left;">
+          <h3 style="padding-left: 18px; padding-top: 10px;">Payout Report</h3>
+        </div>
+
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+
+          <ul class="nav navbar-nav">
+            <!-- User Account Menu -->
+            <li class="dropdown user user-menu hidden-small">
+              <!-- Menu Toggle Button -->
+              <a href="#">
+                <!-- The user image in the navbar-->
+                <div class="admin-profile-h">
+                  <div style="padding-right: 10px;">
+                    <p class="admin-name adminprof-no-mb">kadin Vaccaro</p>
+                    <p style="float: right;">Marketing</p>
+                  </div>
+                  <img src="assets/dist/img/user3-128x128.jpg" class="user-image" alt="User Image">
+                  <i class="fa fa-caret-down adminpro-icon-pt "></i>
+                </div>
+
+
+              </a>
+
+            </li>
+            <!-- Control Sidebar Toggle Button -->
+
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar" >
+
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+  
+        <!-- Sidebar Menu -->
+        <ul class="sidebar-menu" data-widget="tree">
+          <!-- Optionally, you can add icons to the links -->
+          <li class=""><a href="dashboard.html" ><img src="assets/dist/img/dashboard-icon.png"> <span >Dashboard</span></a></li>
+          <li class=""><a href="User-Search.html"><img src="assets/dist/img/search-icon.png"> <span>User Search</span></a></li>
+          <li class=""><a href="adminstrators.html"><img src="assets/dist/img/administrator-icon.png"> <span>Administrators</span></a></li>
+          <li class="treeview">
+            <a href="#"><img src="assets/dist/img/products-icon.png"> <span>Products</span>
+              <span class="pull-right-container">
+                  <i class="fa fa-angle-down pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="products.html">Active Products</a></li>
+              <li><a href="add-product.html">Add Products</a></li>
+            </ul>
+          </li>
+          <li class=""><a href="distribution-center.html"><img src="assets/dist/img/dc-icon.png"> <span>Distribution Centers</span></a></li>
+          <li class=""><a href="inventory.html"><img src="assets/dist/img/inventory-icon.png"> <span>Inventory</span></a></li>
+          <li class="treeview">
+              <a href="#"><img src="assets/dist/img/email-icon.png"> <span>Email Campaigns</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-down pull-right"></i>
+                  </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="system-emails.html">System Email</a></li>
+                <li><a href="email-broadcast.html">Email Boardcaster</a></li>
+              </ul>
+            </li>
+            <li class=""><a href="merchants.html"><img src="assets/dist/img/merchants-icon.png"> <span>Merchants</span></a></li>
+            <li class="treeview">
+                <a href="#"><img src="assets/dist/img/reports-tool-icon.png"> <span>Reports</span>
+                  <span class="pull-right-container">
+                      <i class="fa fa-angle-down pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="payout-reports.html">Payout Report</a></li>
+                  <li><a href="country-revenue.html">Country Revenue</a></li>
+                  <li><a href="rank-reports.html">Rank Report</a></li>
+                  <li><a href="sales-report.html">Sales Report</a></li>
+                  <li><a href="fraud-reports.html">Fraud Report</a></li>
+                </ul>
+              </li>
+              <li class="treeview">
+                  <a href="#"><img src="assets/dist/img/reports-tool-icon.png"> <span>Tools</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-down pull-right"></i>
+                      </span>
+                  </a>
+                  <ul class="treeview-menu">
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                    <li><a href="promotions.html">Promotion</a></li>
+                  </ul>
+                </li>
+            <li class=""><a href="support.html"><img src="assets/dist/img/support-icon.png"> <span>Support</span></a></li>
+        
+        </ul>
+        <!-- /.sidebar-menu -->
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper main-content">
+      <!-- Content Header (Page header) -->
+
+
+      <!-- Main content -->
+      <section class="content container-fluid">
+        <!-- Info boxes -->
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box" style="border-radius: 8px;">
+              <div class="info-box-content">
+                <div style="">
+                  <span class="info-box-text"
+                    style="float: right; color: #1F932A; font-weight:bold; padding-top: 10px;">+18%</span>
+                </div>
+                <span class="info-box-text" style="padding-top: 10px;">Last Week Payout </span>
+                <p class="info-box-number" style="padding-top: 8px;">$135,239.54</p>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box" style="border-radius: 8px;">
+              <div class="info-box-content">
+                <div style="">
+                  <span class="info-box-text"
+                    style="float: right; color: #FF4040; font-weight:bold; padding-top: 10px;">-6%</span>
+                </div>
+                <span class="info-box-text" style="padding-top: 10px;">Last Month Payout</span>
+                <p class="info-box-number" style="padding-top: 8px;">$560,927.58</p>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box" style="border-radius: 8px;">
+              <div class="info-box-content">
+                <div style="">
+                  <span class="info-box-text"
+                    style="float: right; color: #1F932A; font-weight:bold; padding-top: 10px;">+12%</span>
+                </div>
+                <span class="info-box-text" style="padding-top: 10px;">YTD Payout</span>
+                <p class="info-box-number" style="padding-top: 8px;">$7,267,054.94</p>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box" style="border-radius: 8px;">
+              <div class="info-box-content">
+                <div style="">
+                  <!--<span class="info-box-text"
+                   style="float: right; color: #1F932A; font-weight:bold; padding-top: 10px;">+13%</span> -->
+                </div>
+                <span class="info-box-text" style="padding-top: 10px;">Total Lifetime Payout</span>
+                <p class="info-box-number" style="padding-top: 8px;">$42,830,651.84</p>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+
+        </div>
+        <!-- /.row -->
+        <div class="row">
+          <div class="col-md-8">
+            <div class="col-md-12" style="padding: 5px 0px !important;
+                      background-color: #fff;
+                      border-radius: 8px;">
+              <div class="box" style="border-top: none; margin-bottom: 0px;">
+                <div class="box-header">
+                  <h3 class="box-title">Country Revenue</h3>
+                  <div class="box-tools hidden-box-tools">
+                    <select class="form-control select2  order-history-header-widget">
+                      <option class="history-widget-style">Nov 1 - Nov 30</option>
+                      <option>Dec 1 - Dec 30</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- Map box -->
+              <div class="box box-solid" style="background-color: #fff;">
+
+                <div class="box-body">
+                  <div id="world-map" style="height: 250px; width: 100%;"></div>
+                </div>
+                <!-- /.box-body-->
+
+              </div>
+              <!-- /.box -->
+
+              <!-- /.box-header -->
+              <div class="box-body no-padding table-responsive">
+                <table class="table ">
+                  <tr style="background: #F5F8FA;">
+                    <th class="table-header-tab table-pl">Country</th>
+                    <th class="table-header-tab">Revenue</th>
+                    <th class="table-header-tab">Average Monthly</th>
+                    <th class="table-header-tab">Total Payout</th>
+                    <th class="table-header-tab">% </th>
+                  </tr>
+                  <tr>
+                    <td class="table-table-tab table-vl-middle table-pl f-bold">
+                      <span><i class="fa fa-circle-o text-red" style="width: 15px;"></i> United States</span>
+                    </td>
+                    <td class="table-table-tab table-vl-middle">$10,787.56</td>
+                    <td class="table-table-tab table-vl-middle">$10,564.54</td>
+                    <td class="table-table-tab table-vl-middle">$10,564.54</td>
+                    <td class="table-table-tab table-vl-middle">39</td>
+                  </tr>
+                  <tr>
+                    <td class="table-table-tab table-vl-middle table-pl f-bold">
+                      <span><i class="fa fa-circle-o text-blue" style="width: 15px;"></i> Ghana</span>
+                    </td>
+                    <td class="table-table-tab table-vl-middle">$10,787.56</td>
+                    <td class="table-table-tab table-vl-middle">$10,564.54</td>
+                    <td class="table-table-tab table-vl-middle">$10,564.54</td>
+                    <td class="table-table-tab table-vl-middle">39</td>
+                  </tr>
+                  <tr>
+                    <td class="table-table-tab table-vl-middle table-pl f-bold">
+                      <span><i class="fa fa-circle-o text-gree" style="width: 15px;"></i> Canada</span>
+                    </td>
+                    <td class="table-table-tab table-vl-middle">$10,787.56</td>
+                    <td class="table-table-tab table-vl-middle">$10,564.54</td>
+                    <td class="table-table-tab table-vl-middle">$10,564.54</td>
+                    <td class="table-table-tab table-vl-middle">39</td>
+                  </tr>
+                  <tr>
+                    <td class="table-table-tab table-vl-middle table-pl f-bold">
+                      <span><i class="fa fa-circle-o text-purple" style="width: 15px;"></i> Mexico</span>
+                    </td>
+                    <td class="table-table-tab table-vl-middle">$10,787.56</td>
+                    <td class="table-table-tab table-vl-middle">$10,564.54</td>
+                    <td class="table-table-tab table-vl-middle">$10,564.54</td>
+                    <td class="table-table-tab table-vl-middle">39</td>
+                  </tr>
+                  <tr>
+                    <td class="table-table-tab table-vl-middle table-pl f-bold">
+                      <span><i class="fa fa-circle-o text-yellow" style="width: 15px;"></i> Nigeria</span>
+                    </td>
+                    <td class="table-table-tab table-vl-middle">$10,787.56</td>
+                    <td class="table-table-tab table-vl-middle">$10,564.54</td>
+                    <td class="table-table-tab table-vl-middle">$10,564.54</td>
+                    <td class="table-table-tab table-vl-middle">39</td>
+                  </tr>
+
+
+
+                </table>
+              </div>
+              <div class="box-footer" style="display:block; position: relative;">
+                <h3 class="box-footer-txt">Showing Results 1-10 of 80</h3>
+
+                <div class="box-tools box-f-tool-b">
+                  <ul class="pagination pagination-sm no-margin pull-right">
+                    <li><a href="#">
+                        <</a> </li> <li><a href="#">1</a></li>
+                    <li><a href="#" style="color: black;">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">...</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">></a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- /.box-body -->
+            </div>
+            <div class="col-md-12" style="padding: 5px 0px !important;
+        background-color: #fff;
+        border-radius: 8px; margin-top: 20px;">
+              <div class="box" style="border-top: none; margin-bottom: 0px;">
+                <div class="box-header">
+                  <h3 class="box-title">Payout Report</h3>
+                  <div class="box-tools hidden-box-tools">
+                    <select class="form-control select2  order-history-header-widget" style="margin-right: 10px;">
+                      <option class="history-widget-style">Nov 1 - Nov 30</option>
+                      <option>Dec 1 - Dec 30</option>
+                    </select>
+
+                    <button class="btn btn-primary btn-primary-f">Export</button>
+                  </div>
+                </div>
+              </div>
+              <!-- /.box-header -->
+              <div class="box-body no-padding table-responsive">
+                <table class="table ">
+                  <tr style="background: #F5F8FA;">
+                    <th class="table-header-tab table-pl">Payout Period</th>
+                    <th class="table-header-tab">Sales Revenue</th>
+                    <th class="table-header-tab">Volume</th>
+                    <th class="table-header-tab">Payout</th>
+                    <th class="table-header-tab">% of Volume</th>
+                    <th class="table-header-tab">% of Sales</th>
+                  </tr>
+                  <tr>
+                    <td class="table-table-tab table-vl-middle table-pl">06/14/20</td>
+                    <td class="table-table-tab table-vl-middle">$1,592,204.94</td>
+                    <td class="table-table-tab table-vl-middle">680,240</td>
+                    <td class="table-table-tab table-vl-middle">$135,239.64</td>
+                    <td class="table-table-tab table-vl-middle">4.47%</td>
+                    <td class="table-table-tab table-vl-middle">5.47%</td>
+                  </tr>
+                  <tr>
+                    <td class="table-table-tab table-vl-middle table-pl">06/14/20</td>
+                    <td class="table-table-tab table-vl-middle">$1,592,204.94</td>
+                    <td class="table-table-tab table-vl-middle">680,240</td>
+                    <td class="table-table-tab table-vl-middle">$135,239.64</td>
+                    <td class="table-table-tab table-vl-middle">4.47%</td>
+                    <td class="table-table-tab table-vl-middle">5.47%</td>
+                  </tr>
+                  <tr>
+                    <td class="table-table-tab table-vl-middle table-pl">06/14/20</td>
+                    <td class="table-table-tab table-vl-middle">$1,592,204.94</td>
+                    <td class="table-table-tab table-vl-middle">680,240</td>
+                    <td class="table-table-tab table-vl-middle">$135,239.64</td>
+                    <td class="table-table-tab table-vl-middle">4.47%</td>
+                    <td class="table-table-tab table-vl-middle">5.47%</td>
+                  </tr>
+                  <tr>
+                    <td class="table-table-tab table-vl-middle table-pl">06/14/20</td>
+                    <td class="table-table-tab table-vl-middle">$1,592,204.94</td>
+                    <td class="table-table-tab table-vl-middle">680,240</td>
+                    <td class="table-table-tab table-vl-middle">$135,239.64</td>
+                    <td class="table-table-tab table-vl-middle">4.47%</td>
+                    <td class="table-table-tab table-vl-middle">5.47%</td>
+                  </tr>
+                  <tr>
+                    <td class="table-table-tab table-vl-middle table-pl">06/14/20</td>
+                    <td class="table-table-tab table-vl-middle">$1,592,204.94</td>
+                    <td class="table-table-tab table-vl-middle">680,240</td>
+                    <td class="table-table-tab table-vl-middle">$135,239.64</td>
+                    <td class="table-table-tab table-vl-middle">4.47%</td>
+                    <td class="table-table-tab table-vl-middle">5.47%</td>
+                  </tr>
+                  <tr>
+                    <td class="table-table-tab table-vl-middle table-pl">06/14/20</td>
+                    <td class="table-table-tab table-vl-middle">$1,592,204.94</td>
+                    <td class="table-table-tab table-vl-middle">680,240</td>
+                    <td class="table-table-tab table-vl-middle">$135,239.64</td>
+                    <td class="table-table-tab table-vl-middle">4.47%</td>
+                    <td class="table-table-tab table-vl-middle">5.47%</td>
+                  </tr>
+                  <tr>
+                    <td class="table-table-tab table-vl-middle table-pl">06/14/20</td>
+                    <td class="table-table-tab table-vl-middle">$1,592,204.94</td>
+                    <td class="table-table-tab table-vl-middle">680,240</td>
+                    <td class="table-table-tab table-vl-middle">$135,239.64</td>
+                    <td class="table-table-tab table-vl-middle">4.47%</td>
+                    <td class="table-table-tab table-vl-middle">5.47%</td>
+                  </tr>
+                  <tr>
+                    <td class="table-table-tab table-vl-middle table-pl">06/14/20</td>
+                    <td class="table-table-tab table-vl-middle">$1,592,204.94</td>
+                    <td class="table-table-tab table-vl-middle">680,240</td>
+                    <td class="table-table-tab table-vl-middle">$135,239.64</td>
+                    <td class="table-table-tab table-vl-middle">4.47%</td>
+                    <td class="table-table-tab table-vl-middle">5.47%</td>
+                  </tr>
+                  <tr>
+                    <td class="table-table-tab table-vl-middle table-pl">06/14/20</td>
+                    <td class="table-table-tab table-vl-middle">$1,592,204.94</td>
+                    <td class="table-table-tab table-vl-middle">680,240</td>
+                    <td class="table-table-tab table-vl-middle">$135,239.64</td>
+                    <td class="table-table-tab table-vl-middle">4.47%</td>
+                    <td class="table-table-tab table-vl-middle">5.47%</td>
+                  </tr>
+                  <tr>
+                    <td class="table-table-tab table-vl-middle table-pl">06/14/20</td>
+                    <td class="table-table-tab table-vl-middle">$1,592,204.94</td>
+                    <td class="table-table-tab table-vl-middle">680,240</td>
+                    <td class="table-table-tab table-vl-middle">$135,239.64</td>
+                    <td class="table-table-tab table-vl-middle">4.47%</td>
+                    <td class="table-table-tab table-vl-middle">5.47%</td>
+                  </tr>
+
+                </table>
+              </div>
+              <!-- /.box-body -->
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col-md-4" style="padding: 0px;">
+            <div class="col-md-12 pr-res-side-2">
+              <div class="box" style="border-top: none;">
+                <div class="box-header">
+                  <h3 class="box-title">Payment Type</h3>
+                  <div class="box-tools hidden-box-tools" style="top: 10px;">
+                    <div class="fc-right">
+                      <div class="fc-button-group"><button type="button"
+                          class="fc-month-button fc-button fc-state-default fc-corner-left">Week</button><button
+                          type="button"
+                          class="fc-agendaWeek-button fc-button fc-state-default fc-state-active">Month</button><button
+                          type="button"
+                          class="fc-agendaDay-button fc-button fc-state-default fc-corner-right">Year</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body" style="padding: 0px;">
+                  <div style="padding: 20px 20px 0px 20px;">
+                    <div style="padding: 20px;">
+                      <svg viewBox="0 0 32 32" style="
+                      width: 100%;
+                      height: 100%;
+                      border-radius:50%;
+                      ">
+                        <g stroke-width="10">
+                          <circle cx="16" cy="16" r="16" stroke-dasharray="39 100" stroke-dashoffset="96"
+                            stroke="#DE1463" style="
+      fill: transparent;
+  "></circle>
+
+                          <circle cx="16" cy="16" r="16" stroke-dasharray="39 100" stroke-dashoffset="1"
+                            stroke="#FFD400" style="
+      fill: transparent;
+  "></circle>
+                          <circle cx="16" cy="16" r="16" stroke-dasharray="20 100" stroke-dashoffset="38"
+                            stroke="#40587D" style="
+      fill: transparent;
+  "></circle>
+                          <circle cx="16" cy="16" r="16" stroke-dasharray="15 100" stroke-dashoffset="-5"
+                            stroke="#289DF5" style="
+      fill: transparent;
+  "></circle>
+                          <circle cx="16" cy="16" r="16" stroke-dasharray="25 100" stroke-dashoffset="-20"
+                            stroke="#45B854" style="
+      fill: transparent;
+  "></circle>
+                          <circle cx="16" cy="16" r="16" stroke-dasharray="11 100" stroke-dashoffset="-260"
+                            stroke="#8033D2" style="
+      fill: transparent;
+  "></circle>
+
+                        </g>
+
+                      </svg>
+                      <h2 class="pie-donut-2-txt">$132,095.62</h2>
+                    </div>
+                  </div>
+                  <div class="donut-footer">
+                    <table>
+                      <tr>
+                        <th style="width: 40%;"></th>
+                        <th style="width: 30%; text-align: center;"></th>
+                        <th style="float: right; width: 30%;"></th>
+                      </tr>
+                      <tr>
+                        <td><label style="font-weight: 600;">
+                            <i class="fa fa-circle-o text-gree" style="width: 15px;"></i>Direct Deposit</label></td>
+                        <td style="text-align: center;"><label style="color: #7F8FA4;"> $10,304.56</label></td>
+                        <td style="float: right;"><label style="font-weight: 600;">39%</label></td>
+                      </tr>
+                      <tr>
+                        <td><label style="font-weight: 600;">
+                            <i class="fa fa-circle-o text-blue" style="width: 15px;"></i>Payoneer</label></td>
+                        <td style="text-align: center;"><label style="color: #7F8FA4;"> $10,304.56</label></td>
+                        <td style="float: right;"><label style="font-weight: 600;">27%</label></td>
+                      </tr>
+                      <tr>
+                        <td><label style="font-weight: 600;">
+                            <i class="fa fa-circle-o text-yellow" style="width: 15px;"></i>ACH</label></td>
+                        <td style="text-align: center;"><label style="color: #7F8FA4;"> $9,304.56</label></td>
+                        <td style="float: right;"><label style="font-weight: 600;">16%</label></td>
+                      </tr>
+                      <tr>
+                        <td><label style="font-weight: 600;">
+                            <i class="fa fa-circle-o text-blue" style="width: 15px;"></i>iPayout</label></td>
+                        <td style="text-align: center;"><label style="color: #7F8FA4;"> $9,304.56</label></td>
+                        <td style="float: right;"><label style="font-weight: 600;">29%</label></td>
+                      </tr>
+                      <tr>
+                        <td><label style="font-weight: 600;">
+                            <i class="fa fa-circle-o text-gree" style="width: 15px;"></i>Hyperwallet</label></td>
+                        <td style="text-align: center;"><label style="color: #7F8FA4;"> $10,304.56</label></td>
+                        <td style="float: right;"><label style="font-weight: 600;">40%</label></td>
+                      </tr>
+                      <tr>
+                        <td><label style="font-weight: 600;">
+                            <i class="fa fa-circle-o text-purple" style="width: 15px;"></i>BTC</label></td>
+                        <td style="text-align: center;"><label style="color: #7F8FA4;"> $10,304.56</label></td>
+                        <td style="float: right;"><label style="font-weight: 600;">11%</label></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <!-- /.box-body -->
+              </div>
+              <!-- /.box -->
+            </div>
+            <div class="col-md-12 pr-res-side-2">
+              <div class="box" style="border-top: none;">
+                <div class="box-header">
+                  <h3 class="box-title">Top 10 Earners</h3>
+                  <div class="box-tools hidden-box-tools" style="top: 10px;">
+                    <div class="fc-right">
+                      <div class="fc-button-group"><button type="button"
+                          class="fc-month-button fc-button fc-state-default fc-corner-left">Week</button><button
+                          type="button"
+                          class="fc-agendaWeek-button fc-button fc-state-default fc-state-active">Month</button><button
+                          type="button"
+                          class="fc-agendaDay-button fc-button fc-state-default fc-corner-right">Year</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body no-padding table-responsive">
+                  <table class="table ">
+                    <tr style="background: #F5F8FA;">
+                      <th class="table-header-tab table-pl">#</th>
+                      <th class="table-header-tab">Name</th>
+                      <th class="table-header-tab">Total Earning</th>
+                    </tr>
+                    <tr>
+                      <td class="table-table-tab table-pl table-vl-middle"><span><img
+                            src="assets/dist/img/super.png"></span></td>
+                      <td class="table-table-tab" style="font-weight:bold !important;"><span><img
+                            src="assets/dist/img/user1.png" style="margin-right: 15px;;"></span>Nolan Aminoff</td>
+                      <td class="table-table-tab table-vl-middle">$1,354,034</td>
+                    </tr>
+                    <tr>
+                      <td class="table-table-tab table-pl table-vl-middle">2</td>
+                      <td class="table-table-tab" style="font-weight:bold !important;"><span><img
+                            src="assets/dist/img/user2.png" style="margin-right: 15px;;"></span>Lydia Calzoni</td>
+                      <td class="table-table-tab table-vl-middle">$1,354,034</td>
+                    </tr>
+
+                    <tr>
+                      <td class="table-table-tab table-pl table-vl-middle">3</td>
+                      <td class="table-table-tab" style="font-weight:bold !important;"><span><img
+                            src="assets/dist/img/user3.png" style="margin-right: 15px;;"></span>Terry Bergson</td>
+                      <td class="table-table-tab table-vl-middle">$1,354,034</td>
+                    </tr>
+
+                    <tr>
+                      <td class="table-table-tab table-pl table-vl-middle">4</td>
+                      <td class="table-table-tab" style="font-weight:bold !important;"><span><img
+                            src="assets/dist/img/user4.png" style="margin-right: 15px;;"></span>Kianna Rosser</td>
+                      <td class="table-table-tab table-vl-middle">$1,354,034</td>
+                    </tr>
+                    <tr>
+                      <td class="table-table-tab table-pl table-vl-middle">5</td>
+                      <td class="table-table-tab" style="font-weight:bold !important;"><span><img
+                            src="assets/dist/img/user5.png" style="margin-right: 15px;;"></span>Copper Franci</td>
+                      <td class="table-table-tab table-vl-middle">$1,354,034</td>
+                    </tr>
+                    <tr>
+                      <td class="table-table-tab table-pl table-vl-middle">6</td>
+                      <td class="table-table-tab" style="font-weight:bold !important;"><span><img
+                            src="assets/dist/img/user1.png" style="margin-right: 15px;;"></span>Nolan Aminoff</td>
+                      <td class="table-table-tab table-vl-middle">$1,354,034</td>
+                    </tr>
+                    <tr>
+                      <td class="table-table-tab table-pl table-vl-middle">7</td>
+                      <td class="table-table-tab" style="font-weight:bold !important;"><span><img
+                            src="assets/dist/img/user2.png" style="margin-right: 15px;;"></span>Lydia Calzoni</td>
+                      <td class="table-table-tab table-vl-middle">$1,354,034</td>
+                    </tr>
+
+                    <tr>
+                      <td class="table-table-tab table-pl table-vl-middle">8</td>
+                      <td class="table-table-tab" style="font-weight:bold !important;"><span><img
+                            src="assets/dist/img/user3.png" style="margin-right: 15px;;"></span>Terry Bergson</td>
+                      <td class="table-table-tab table-vl-middle">$1,354,034</td>
+                    </tr>
+                    <tr>
+                      <td class="table-table-tab table-pl table-vl-middle">9</td>
+                      <td class="table-table-tab" style="font-weight:bold !important;"><span><img
+                            src="assets/dist/img/user2.png" style="margin-right: 15px;;"></span>Lydia Calzoni</td>
+                      <td class="table-table-tab table-vl-middle">$1,354,034</td>
+                    </tr>
+
+
+
+
+                  </table>
+                </div>
+                <!-- /.box-body -->
+              </div>
+              <!-- /.box -->
+            </div>
+          </div>
+
+        </div>
+        <!-- /.row -->
+
+
+
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <div class="control-sidebar-bg"></div>
+  </div>
+  <!-- ./wrapper -->
+
+
+
+  <!-- jQuery 3 -->
+  <script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="assets/bower_components/jquery-ui/jquery-ui.min.js"></script>
+  <!--App -->
+<script src="assets/dist/js/adminlte.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button);
+  </script>
+  <!-- Bootstrap 3.3.7 -->
+  <script src="assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- Morris.js charts -->
+
+  <!-- jvectormap -->
+  <script src="assets/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+  <script src="assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="assets/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="assets/bower_components/moment/min/moment.min.js"></script>
+  <script src="assets/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <!-- datepicker -->
+  <!-- Bootstrap WYSIHTML5 -->
+  <script src="assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+
+  <!--  -->
+  <script src="assets/dist/js/pages/dashboard.js"></script>
+
+
+  <!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. -->
+</body>
+
+</html>

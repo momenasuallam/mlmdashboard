@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Compensation Setup</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="assets/bower_components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="assets/dist/css/mystyle.css">
+    <link rel="stylesheet" href="assets/dist/css/AdminLTE.min.css">
+    <!-- We have chosen the skin-blue for this starter
+          page. However, you can choose any other skin. Make sure you
+          apply the skin class to the body tag so the changes take effect. -->
+    <link rel="stylesheet" href="assets/dist/css/skins/skin-blue.min.css">
+   
+     <!-- Select2 -->
+  <link rel="stylesheet" href="assets/bower_components/select2/dist/css/select2.min.css">
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="assets/plugins/iCheck/all.css">
+   
+<style>
+  @font-face {
+    font-family: "proxima-nova";
+    src: url(assets/dist/fonts/FontsFree-Net-ProximaNova-Regular.ttf);
+}
+h1, h2, h3, h4, h5, h6, p, label, a, button, span {
+  font-family: "proxima-nova" !important;
+}
+label {
+  font-size: 14px;
+  font-weight: 500;
+}
+input[type=checkbox], 
+input[type=radio]{
+  position: absolute;
+  overflow: hidden;
+ /* clip: rect(0 0 0 0); */
+  height: 20px;
+  width: 15px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+input[type=checkbox] + label,
+input[type=radio] + label {
+  padding-left: 0px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  vertical-align: top;
+  cursor: pointer;
+  line-height: 15px;
+}
+input[type=checkbox] + label::before {
+	content: "✓";
+	color:#000;
+	font-size: 1.2em;
+	border: 2px solid #000;
+	border-radius: 20px;
+	/*margin-left: -20px;*/
+	margin-right: 5px;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	text-align: center;
+	vertical-align:middle;
+	line-height: 22px;
+	background: #fff;
+  }
+/*********green focus************/
+
+
+input[type=checkbox] + label.pega::before {
+    content: "✔";
+    color:#fff;
+    font-size:1em;
+    border: 1px solid #959595;
+    border-radius: 20px;
+    margin-right: 5px;
+
+    width: 20px;
+    height: 20px;
+    line-height:22px;
+    display: inline-block;
+    text-align: center;
+    background: #fff;
+    box-shadow: inset 0 4px 3px -3px rgba(0,0,0,0.3);
+  }
+  input[type=checkbox]:focus + label.pega::before,
+  input[type=radio]:focus + label.pega::before{  
+    box-shadow: inset 0 4px 3px -3px rgba(0,0,0,0.3), 0 0 3pt 2pt #3083fb;
+  }
+
+
+input[type=checkbox]:checked + label.pega::before {
+    color: #fff;
+    background: #000;
+  }
+
+
+  input[type=checkbox] + label.pega1::before {
+    content: "✔";
+    color:#fff;
+    font-size:1em;
+    border: 1px solid #959595;
+    border-radius: 0px;
+    margin-right: 5px;
+    
+    width: 20px;
+    height: 20px;
+    line-height:22px;
+    display: inline-block;
+    text-align: center;
+    background: #fff;
+    box-shadow: inset 0 4px 3px -3px rgba(0,0,0,0.3);
+  }
+  input[type=checkbox]:focus + label.pega::before,
+  input[type=radio]:focus + label.pega::before{  
+    box-shadow: inset 0 4px 3px -3px rgba(0,0,0,0.3), 0 0 3pt 2pt #3083fb;
+  }
+
+
+input[type=checkbox]:checked + label.pega1::before {
+    color: #fff;
+    background: #000;
+  }
+
+
+  
+  input[type=checkbox] + label.pega2::before {
+    content: "✔";
+    color:#fff;
+    font-size:1em;
+    border: 1px solid #959595;
+    border-radius: 0px;
+    margin-right: 5px;
+    
+    width: 20px;
+    height: 20px;
+    line-height:22px;
+    display: inline-block;
+    text-align: center;
+    background: #fff;
+    box-shadow: inset 0 4px 3px -3px rgba(0,0,0,0.3);
+  }
+  input[type=checkbox]:focus + label.pega::before,
+  input[type=radio]:focus + label.pega::before{  
+    box-shadow: inset 0 4px 3px -3px rgba(0,0,0,0.3), 0 0 3pt 2pt #3083fb;
+  }
+
+
+input[type=checkbox]:checked + label.pega2::before {
+    color: #000;
+    background: #fff;
+  }
+
+    
+  input[type=checkbox] + label.pega3::before {
+    content: "✔";
+    color:#fff;
+    font-size:1em;
+    border: 1px solid #68707D;
+    border-radius: 0px;
+    margin-right: 5px;
+    
+    width: 20px;
+    height: 20px;
+    line-height:22px;
+    display: inline-block;
+    text-align: center;
+    background: #fff;
+    box-shadow: inset 0 4px 3px -3px rgba(0,0,0,0.3);
+  }
+  input[type=checkbox]:focus + label.pega::before,
+  input[type=radio]:focus + label.pega::before{  
+    box-shadow: inset 0 4px 3px -3px rgba(0,0,0,0.3), 0 0 3pt 2pt #3083fb;
+  }
+
+
+input[type=checkbox]:checked + label.pega3::before {
+    color: #68707D;
+    background: #fff;
+  }
+</style>
+
+      </head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <!-- Main Header -->
+  <header class="main-header">
+
+    <!-- Logo -->
+    <a href="dashboard.html" class="logo">
+
+      <!-- logo for regular state and mobile devices -->
+      <span><img src="assets/dist/img/company-dashboard-logo.png"></span>
+     <!-- <span class="logo-lg">YOUR LOGO</span> -->
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+    <div class="toggle-responsive">
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button" >
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </a>
+    </div>
+       <!-- Navbar left Menu -->
+       <div class="navbar-custom-menu" style="float:left;">
+        <h3 style="padding-left: 18px; padding-top: 10px;">Compensation Setup</h3>
+        </div>
+     
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+
+        <ul class="nav navbar-nav">
+          <!-- User Account Menu -->
+          <li class="dropdown user user-menu hidden-small">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <!-- The user image in the navbar-->
+              <div class="admin-profile-h">   
+                <div style="padding-right: 10px;">
+                  <p class="admin-name adminprof-no-mb">kadin Vaccaro</p>
+                  <p style="float: right;">Marketing</p>
+                </div>
+                <img src="assets/dist/img/user3-128x128.jpg" class="user-image" alt="User Image">
+                <i class="fa fa-caret-down adminpro-icon-pt "></i>
+              </div>  
+            </a>
+          
+         
+         
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar" >
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <!-- Optionally, you can add icons to the links -->
+        <li class=""><a href="dashboard.html" ><img src="assets/dist/img/dashboard-icon.png"> <span >Dashboard</span></a></li>
+        <li class=""><a href="User-Search.html"><img src="assets/dist/img/search-icon.png"> <span>User Search</span></a></li>
+        <li class=""><a href="adminstrators.html"><img src="assets/dist/img/administrator-icon.png"> <span>Administrators</span></a></li>
+        <li class="treeview">
+          <a href="#"><img src="assets/dist/img/products-icon.png"> <span>Products</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-down pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="products.html">Active Products</a></li>
+            <li><a href="add-product.html">Add Products</a></li>
+          </ul>
+        </li>
+        <li class=""><a href="distribution-center.html"><img src="assets/dist/img/dc-icon.png"> <span>Distribution Centers</span></a></li>
+        <li class=""><a href="inventory.html"><img src="assets/dist/img/inventory-icon.png"> <span>Inventory</span></a></li>
+        <li class="treeview">
+            <a href="#"><img src="assets/dist/img/email-icon.png"> <span>Email Campaigns</span>
+              <span class="pull-right-container">
+                  <i class="fa fa-angle-down pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="system-emails.html">System Email</a></li>
+              <li><a href="email-broadcast.html">Email Boardcaster</a></li>
+            </ul>
+          </li>
+          <li class=""><a href="merchants.html"><img src="assets/dist/img/merchants-icon.png"> <span>Merchants</span></a></li>
+          <li class="treeview">
+              <a href="#"><img src="assets/dist/img/reports-tool-icon.png"> <span>Reports</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-down pull-right"></i>
+                  </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="payout-reports.html">Payout Report</a></li>
+                <li><a href="country-revenue.html">Country Revenue</a></li>
+                <li><a href="rank-reports.html">Rank Report</a></li>
+                <li><a href="sales-report.html">Sales Report</a></li>
+                <li><a href="fraud-reports.html">Fraud Report</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+                <a href="#"><img src="assets/dist/img/reports-tool-icon.png"> <span>Tools</span>
+                  <span class="pull-right-container">
+                      <i class="fa fa-angle-down pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="events.html">Events</a></li>
+                  <li><a href="news.html">News</a></li>
+                  <li><a href="resources.html">Resources</a></li>
+                  <li><a href="videos.html">Videos</a></li>
+                  <li><a href="promotions.html">Promotion</a></li>
+                </ul>
+              </li>
+          <li class=""><a href="support.html"><img src="assets/dist/img/support-icon.png"> <span>Support</span></a></li>
+      
+      </ul>
+      <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper ">
+    <!-- Content Header (Page header) -->
+      <!-- Content Header (Page header) -->
+      <section class="content-header" style="padding: 0px; background-color: #fff !important;">
+        <ul class="nav nav-tabs nav-border nav-tabs-fit-med">
+  
+          <li  class="active"><a href="#Bonus" data-toggle="tab">Bonus</a></li>
+          <li><a href="#reward" data-toggle="tab">Reward</a></li>
+          <li><a href="#rank" data-toggle="tab">Rank</a></li>
+          <li><a href="#mlmplan" data-toggle="tab">MLM Plan</a></li>
+          <li><a href="#customreq" data-toggle="tab">Custom Request</a></li>
+          <li><a href="#defaultr" data-toggle="tab">Default Referer</a></li>
+        </ul>
+        
+      </section>
+
+    <!-- Main content -->
+    <section class="content container-fluid">
+
+      <!-- /.col -->
+      <div class="col-md-12" style="padding: 0px;">
+        <div class="nav-tabs-custom" style="background: transparent;">
+       
+          <div class="tab-content" style="background: transparent;">
+            <div class="active tab-pane" id="Bonus">
+              <div class="col-md-12" style="padding: 0px;">
+                <div class="box box-default" style="border-top: none;">
+                  <div class="box-header" style="padding-left: 30px;">
+                    <h3 class="box-title">Bonus Setting</h3>
+  
+                  </div>
+                  <!-- /.box-header -->
+                  <div class="box-body" style="">
+                    <form>
+                         <div class="form-row col-md-12" style="padding: 0px;" >
+                            <div  class="form-group col-md-2" style=" margin-top: 4px;">
+                                <span>
+                                    <input type="checkbox" id="checkbox0" class="css-checkbox" checked="checked" style="display: none;">
+                                    <label for="checkbox0" name="checkbox0" class="pega1">Direct Bouns <label>
+                                </span>
+                            </div>
+                            <div class="form-group" style="margin-top: -14px;">
+                              <label for="" class="col-sm-1 control-label" style="width: 50px; margin-top: 5px;">Payout:</label>
+                              <div class="col-sm-2" style="">
+                                <select id="" class="form-control select2" style="width: 100% !important;">
+                                  <option >Weekly</option>
+                                  <option>.....</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-group" >
+                              <label for="" class="col-sm-1 control-label" style="width: 50px; margin-top: 5px;">Bouns:</label>
+                              <div class="col-sm-2" style="display: flex;">
+                                <input type="text" class="form-control" placeholder="10">
+                                <span style="margin-top: 8px; margin-left: 5px; color: #68707D;"><b>%</b></span>
+                              </div>
+                            </div>
+                           
+                            <div  class="form-group col-md-4" style="margin-top: 5px;">
+                              <span>
+                                <input type="checkbox" id="checkbox0" class="css-checkbox" checked="checked" style="display: none;">
+                                <label for="checkbox0" name="checkbox0" class="pega3">  Used fixed amount instead of percentage <label>
+                                
+                              </span>
+                            
+                          </div>
+                          
+                          </div>
+                          <div class="form-row col-md-12" style="padding: 0px;" >
+                            <hr class="cui-line" style="margin: 12px;">
+                          </div>
+                          <div class="form-row col-md-12" style="padding: 0px;" >
+                            <div  class="form-group col-md-2" style=" margin-top: 4px;">
+                                <span>
+                                    <input type="checkbox" id="checkbox0" class="css-checkbox" checked="checked" style="display: none;">
+                                    <label for="checkbox0" name="checkbox0" class="pega2">Matching Bouns <label>
+                                </span>
+                            </div>
+                            <div class="form-group" style="margin-top: -14px;">
+                              <label for="" class="col-sm-1 control-label" style="width: 50px; margin-top: 5px;">Payout:</label>
+                              <div class="col-sm-2" style="">
+                                <select id="" class="form-control select2" style="width: 100% !important;">
+                                  <option >Weekly</option>
+                                  <option>.....</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-group" >
+                              <label for="" class="col-sm-1 control-label" style="width: 50px; margin-top: 5px;">Bouns:</label>
+                              <div class="col-sm-2" style="display: flex;">
+                                <input type="text" class="form-control" placeholder="10">
+                                <span style="margin-top: 8px; margin-left: 5px; color: #68707D;"><b>%</b></span>
+                              </div>
+                            </div>
+                           
+                            <div  class="form-group col-md-4" style="margin-top: 5px;">
+                              <span>
+                                <input type="checkbox" id="checkbox0" class="css-checkbox" checked="checked" style="display: none;">  
+                                <label for="checkbox0" name="checkbox0" class="pega3">  Used fixed amount instead of percentage <label>
+                                
+                              </span>
+                            
+                          </div>
+                          
+                          </div>
+                          <div class="form-row col-md-12" style="padding: 0px;" >
+                            <hr class="cui-line" style="margin: 12px;">
+                          </div>
+
+                          <div class="form-row col-md-12" style="padding: 0px;" >
+                            <div  class="form-group col-md-2" style=" margin-top: 4px;">
+                                <span>
+                                    <input type="checkbox" id="checkbox0" class="css-checkbox" checked="checked" style="display: none;">
+                                    <label for="checkbox0" name="checkbox0" class="pega1">Level Bouns <label>
+                                </span>
+                            </div>
+                            <div class="form-group" style="margin-top: -14px;">
+                              <label for="" class="col-sm-1 control-label" style="width: 50px; margin-top: 5px;">Payout:</label>
+                              <div class="col-sm-2" style="">
+                                <select id="" class="form-control select2" style="width: 100% !important;">
+                                  <option >Weekly</option>
+                                  <option>.....</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-group"style="margin-top: 20px;" >
+                              <span ><a class="tab-table-Id">Set Level Bouns</a></span>
+                            </div>
+                           
+                           
+                          
+                          </div>
+                          <div class="form-row col-md-12" style="padding: 0px;" >
+                            <hr class="cui-line" style="margin: 12px;">
+                          </div>
+                          <div class="form-row col-md-12" style="padding: 0px;" >
+                            <div  class="form-group col-md-2" style=" margin-top: 4px;">
+                                <span>
+                                    <input type="checkbox" id="checkbox0" class="css-checkbox" checked="checked" style="display: none;">
+                                    <label for="checkbox0" name="checkbox0" class="pega2">Retaik Bouns <label>
+                            </div>
+                            <div class="form-group" style="margin-top: -14px;">
+                              <label for="" class="col-sm-1 control-label" style="width: 50px; margin-top: 5px;">Payout:</label>
+                              <div class="col-sm-2" style="">
+                                <select id="" class="form-control select2" style="width: 100% !important;">
+                                  <option >Weekly</option>
+                                  <option>.....</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-group" >
+                              <label for="" class="col-sm-1 control-label" style="width: 50px; margin-top: 5px;">Bouns:</label>
+                              <div class="col-sm-2" style="display: flex;">
+                                <input type="text" class="form-control" placeholder="10">
+                                <span style="margin-top: 8px; margin-left: 5px; color: #68707D;"><b>%</b></span>
+                              </div>
+                            </div>
+                           
+                            <div  class="form-group col-md-4" style="margin-top: 5px;">
+                              <span>
+                                <input type="checkbox" id="checkbox0" class="css-checkbox" checked="checked" style="display: none;">
+                                <label for="checkbox0" name="checkbox0" class="pega3">  Used fixed amount instead of percentage <label>
+                                
+                              </span>
+                            
+                          </div>
+                          
+                          </div>
+                          <div class="form-row col-md-12" style="padding: 0px;" >
+                            <hr class="cui-line" style="margin: 12px;">
+                          </div>
+                          <div class="form-row col-md-12" style="padding: 0px;" >
+                            <div  class="form-group col-md-2" style=" margin-top: 4px;">
+                                <span>
+                                    <input type="checkbox" id="checkbox0" class="css-checkbox" checked="checked" style="display: none;">
+                                    <label for="checkbox0" name="checkbox0" class="pega1">Rank Bouns <label>
+                                </span>
+                            </div>
+                            <div class="form-group" style="margin-top: -14px;">
+                              <label for="" class="col-sm-1 control-label" style="width: 50px; margin-top: 5px;">Payout:</label>
+                              <div class="col-sm-2" style="">
+                                <select id="" class="form-control select2" style="width: 100% !important;">
+                                  <option >Weekly</option>
+                                  <option>.....</option>
+                                </select>
+                              </div>
+                            </div>
+                           
+                          
+                          </div>
+                     
+                    </form>
+                        
+                  <!-- /.box-body -->
+               
+                </div>
+                <!-- /.box -->
+                <span style="float:right; margin-top:10px;"><button class="btn btn-primary btn-primary-f">Update</button></span>
+               </div>
+              
+              </div>
+            </div>
+
+            <div class="tab-pane" id="reward">
+              <!-- row-->
+              <div class="row">
+                <div class="col-md-12" style="">
+                  <div class="box box-default" style="border-top: none;">
+                    <div class="box-header" style="padding-left: 30px;">
+                      <h3 class="box-title">Reward</h3>
+    
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body" style="">
+                      <form>
+                           <div class="form-row col-md-12" style="padding: 0px;" >
+                              <div  class="form-group col-md-12" style=" margin-top: 4px;">
+                                  <span>
+                                      <input type="checkbox" id="checkbox0" class="css-checkbox" checked="checked" style="display: none;">
+                                      <label for="checkbox0" name="checkbox0" class="pega1">PV based reward qualification <label>
+                                  </span>
+                              </div>
+                            </div>
+                            <div class="form-row col-md-12" style="padding: 0px; padding-left: 90px;" >
+                              <div class="form-group" style="margin-bottom: 0px;">
+                                <label for="" class="col-sm-1 control-label" style="width: 50px; margin-top: 5px;">Bonus:</label>
+                                <div class="col-sm-3" style="">
+                                  <input type="text" class="form-control" placeholder="1000">
+                                </div>
+                              </div>
+                              <div class="form-group" style="margin-bottom: 0px;">
+                                <label for="" class="col-sm-1 control-label" style="width: 35px; margin-top: 5px;">PV:</label>
+                                <div class="col-sm-3">
+                                  <input type="text" class="form-control" placeholder="1000">
+                                </div>
+                              </div>
+                              <div class="form-group" style="margin-bottom: 0px;">
+                                <label for="" class="col-sm-1 control-label" style="width: 128px; margin-top: 5px; padding-right:0px;">Time Limit (if any):</label>
+                                <div class="col-sm-3">
+                                  <input type="text" class="form-control" placeholder="1000">
+                                </div>
+                              </div>    
+                            </div>
+                            
+                            <div class="form-row col-md-12" style="padding: 0px; padding-top:15px" >
+                              <div  class="form-group col-md-12" style=" margin-top: 4px;">
+                                  <span>
+                                      <input type="checkbox" id="checkbox0" class="css-checkbox" checked="checked" style="display: none;">
+                                      <label for="checkbox0" name="checkbox0" class="pega1">GV based reward qualification <label>
+                                  </span>
+                              </div>
+                            </div>
+                            <div class="form-row col-md-12" style="padding: 0px; padding-left: 90px;" >
+                              <div class="form-group" style="margin-bottom: 0px;">
+                                <label for="" class="col-sm-1 control-label" style="width: 50px; margin-top: 5px;">Bonus:</label>
+                                <div class="col-sm-3" style="">
+                                  <input type="text" class="form-control" placeholder="1000">
+                                </div>
+                              </div>
+                              <div class="form-group" style="margin-bottom: 0px;">
+                                <label for="" class="col-sm-1 control-label" style="width: 35px; margin-top: 5px;">GV:</label>
+                                <div class="col-sm-3">
+                                  <input type="text" class="form-control" placeholder="1000">
+                                </div>
+                              </div>
+                              <div class="form-group" style="margin-bottom: 0px;">
+                                <label for="" class="col-sm-1 control-label" style="width: 128px; margin-top: 5px; padding-right:0px;">Time Limit (if any):</label>
+                                <div class="col-sm-3">
+                                  <input type="text" class="form-control" placeholder="1000">
+                                </div>
+                              </div>    
+                            </div>
+
+                            <div class="form-row col-md-12" style="padding: 0px; padding-top:15px" >
+                              <div  class="form-group col-md-12" style=" margin-top: 4px;">
+                                  <span>
+                                      <input type="checkbox" id="checkbox0" class="css-checkbox" checked="checked" style="display: none;">
+                                      <label for="checkbox0" name="checkbox0" class="pega1">PV & GV based reward qualification <label>
+                                  </span>
+                              </div>
+                            </div>
+                            <div class="form-row col-md-12" style="padding: 0px; padding-left: 90px; margin-bottom: 15px;" >
+                              <div class="form-group" style="margin-bottom: 0px;">
+                                <label for="" class="col-sm-1 control-label" style="width: 50px; margin-top: 5px;">Bonus:</label>
+                                <div class="col-sm-3" style="">
+                                  <input type="text" class="form-control" placeholder="1000">
+                                </div>
+                              </div>
+                              <div class="form-group" style="margin-bottom: 0px;">
+                                <label for="" class="col-sm-1 control-label" style="width: 35px; margin-top: 5px;">PV:</label>
+                                <div class="col-sm-3">
+                                  <input type="text" class="form-control" placeholder="1000">
+                                </div>
+                              </div>
+                            
+                            </div>
+                            <div class="form-row col-md-12" style="padding: 0px; padding-left: 90px;" >
+                              <div class="form-group" style="margin-bottom: 0px;">
+                                <label for="" class="col-sm-1 control-label res-reward-time-label">Time Limit:</label>
+                                <div class="col-sm-3">
+                                  <input type="text" class="form-control" placeholder="1000">
+                                </div>
+                              </div>
+                              <div class="form-group" style="margin-bottom: 0px;">
+                                <label for="" class="col-sm-1 control-label" style="width: 35px; margin-top: 5px;">GV:</label>
+                                <div class="col-sm-3">
+                                  <input type="text" class="form-control" placeholder="1000">
+                                </div>
+                              </div>    
+                            </div>
+                            
+                           
+                       
+                      </form>
+                          
+                    <!-- /.box-body -->
+                 
+                  </div>
+                  <!-- /.box -->
+                  <span style="float:right; margin-top:10px;"><button class="btn btn-primary btn-primary-f">Update</button></span>
+                 </div>
+                
+                </div>
+                </div>
+           </div>
+          
+         
+           <div class="tab-pane" id="rank">
+            <!-- row-->
+            <div class="row">
+              <div class="col-md-8" style="padding: 5px 0px !important; margin-bottom: 15px;
+              background-color: #fff;
+              border-radius: 8px;">
+                <div class="box" style="border-top: none; margin-bottom: 0px;">
+                  <div class="box-header">
+                    <h3 class="box-title">Rank</h3>
+                    <div class="box-tools hidden-box-tools" >
+                     
+                    <button class="btn btn-primary btn-primary-f">Create Rank</button>
+                    </div>
+                  </div>
+                  </div>
+                  <!-- /.box-header -->
+                  <div class="box-body no-padding table-responsive">
+                    <table class="table ">
+                      <tr style="background: #F5F8FA;">
+                        <th class="table-header-tab table-pl" style="width: 13%;" >Rank</th>
+                        <th class="table-header-tab" style="width: 15%;">Score</th>
+                        <th class="table-header-tab" style="width: 15%;">Rule</th>
+                        <th class="table-header-tab" style="width: 15%;">Status</th>
+                        <th class="table-header-tab" style="width: 38%;" >Action</th>
+                      </tr>
+                      <tr>
+                        <td class="table-table-tab tab-table-Id table-vl-middle table-pl" >Silver</td>
+                        <td class="table-table-tab table-vl-middle" >10</td>
+                        <td class="table-table-tab table-vl-middle" >RuleNumber1</td>
+                        <td class="table-table-tab table-vl-middle" ><span class="label label-danger">INACTIVE</span></td>
+                        <td class="table-table-tab table-vl-middle" ><span>
+                          <button class="btn btn-success btn-primary-f" style="padding-left: 24px; padding-right: 24px;">Activate</button>
+                          <button class="btn btn-primary btn-primary-f" style="padding-left: 20px; padding-right: 20px;">Edit</button>
+                          <button class="btn btn-danger btn-primary-f" style="padding-left: 20px; padding-right: 20px;">Delete</button>
+                      </span></td>
+                      </tr>
+                      <tr>
+                          <td class="table-table-tab tab-table-Id table-vl-middle table-pl" >Platium</td>
+                          <td class="table-table-tab table-vl-middle" >1,000</td>
+                          <td class="table-table-tab table-vl-middle" >RuleNumber1</td>
+                          <td class="table-table-tab table-vl-middle" ><span class="label label-success">ACTIVE</span></td>
+                          <td class="table-table-tab table-vl-middle" ><span>
+                            <button class="btn btn-warning btn-primary-f" style="padding-left: 18px; padding-right: 18px;">Deactivate</button>
+                            <button class="btn btn-primary btn-primary-f" style="padding-left: 20px; padding-right: 20px;">Edit</button>
+                            <button class="btn btn-danger btn-primary-f" style="padding-left: 20px; padding-right: 20px;">Delete</button>
+                        
+                          </span></td>
+                        </tr>
+                        <tr>
+                          <td class="table-table-tab tab-table-Id table-vl-middle table-pl" >Bronze</td>
+                          <td class="table-table-tab table-vl-middle" >10,000</td>
+                          <td class="table-table-tab table-vl-middle" >RuleNumber1</td>
+                          <td class="table-table-tab table-vl-middle" ><span class="label label-success">ACTIVE</span></td>
+                          <td class="table-table-tab table-vl-middle" ><span>
+                            <button class="btn btn-warning btn-primary-f" style="padding-left: 18px; padding-right: 18px;">Deactivate</button>
+                            <button class="btn btn-primary btn-primary-f" style="padding-left: 20px; padding-right: 20px;">Edit</button>
+                            <button class="btn btn-danger btn-primary-f" style="padding-left: 20px; padding-right: 20px;">Delete</button>
+                        
+                          </span></td>
+                        </tr>
+                        <tr>
+                          <td class="table-table-tab tab-table-Id table-vl-middle table-pl" >Gold</td>
+                          <td class="table-table-tab table-vl-middle" >100,000</td>
+                          <td class="table-table-tab table-vl-middle" >RuleNumber1</td>
+                          <td class="table-table-tab table-vl-middle" ><span class="label label-danger">INACTIVE</span></td>
+                          <td class="table-table-tab table-vl-middle" ><span>
+                            <button class="btn btn-success btn-primary-f" style="padding-left: 24px; padding-right: 24px;">Activate</button>
+                            <button class="btn btn-primary btn-primary-f" style="padding-left: 20px; padding-right: 20px;">Edit</button>
+                            <button class="btn btn-danger btn-primary-f" style="padding-left: 20px; padding-right: 20px;">Delete</button>
+                        
+                          </span></td>
+                        </tr>
+                       
+                    
+       
+                    </table>
+                  </div>
+                  <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+                <div class="col-md-4">
+                  <div class="col-md-12" style="padding: 0px !important;">
+                      <div class="box box-info">
+                        <div class="box-header">
+                          <h3 class="box-title">Rank Rules</h3>
+                        </div>
+                        <div class="box-body" style="padding: 0px 20px 20px 20px;">
+                          <form>
+                            <div class="form-group">
+                              <label>Rank Rules</label>
+                              <select class="form-control select2 inventory-input-st" style="width: 100%; opacity: .5;">
+                                <option selected="selected">RuleNumber1</option>
+                                <option>....</option>
+                                <option>....</option>
+                              </select>
+                            </div>
+                            
+                            <div class="form-group">
+                              <label>Rank Qualification</label>
+                              <input class="form-control" placeholder="PV based rank qualification">
+                            </div>
+                               
+                          <div class="col-md-12 mb-10">
+                            <span style=""><a class="tab-table-Id">PV based Rank qualification</a></span>
+                          </div>
+                          <div class="form-group col-md-12" style="padding: 0px; margin-bottom: 10px;">
+                            <div class="col-md-5 control-label" style="padding-left: 50px; padding-top: 6px;">
+                              <label>Payout:</label>
+                            </div>
+                            <div class="col-md-7">
+                              <input class="form-control" placeholder="1000">
+                            </div>
+                          </div>
+
+                          <div class="form-group col-md-12" style="padding: 0px; margin-bottom: 10px;">
+                            <div class="col-md-5 control-label" style="padding-left: 50px; padding-top: 6px;">
+                              <label>PV:</label>
+                            </div>
+                            <div class="col-md-7">
+                              <input class="form-control" placeholder="1000">
+                            </div>
+                          </div>
+                         
+                          <div class="form-group col-md-12" style="padding: 0px; margin-bottom: 10px;">
+                            <div class="col-md-5 control-label" style="padding: 0px;padding-top: 6px;">
+                              <label>Time Lmit (if any):</label>
+                            </div>
+                            <div class="col-md-7">
+                              <input class="form-control" placeholder="1000">
+                            </div>
+                          </div>
+                          <div class="form-group col-md-12" style="padding: 0px; margin-bottom: 10px;">
+                            <div class="col-md-5 control-label" style="padding-left: 50px; padding-top: 6px;">
+                              <label>Score:</label>
+                            </div>
+                            <div class="col-md-7">
+                              <input class="form-control" placeholder="1000">
+                            </div>
+                          </div>
+                          
+                             
+                        <div class="col-md-12 mb-10">
+                          <span style=""><a class="tab-table-Id">GV based reward qualification</a></span>
+                        </div>
+                        <div class="form-group col-md-12" style="padding: 0px; margin-bottom: 10px;">
+                          <div class="col-md-5 control-label" style="padding-left: 50px; padding-top: 6px;">
+                            <label>Payout:</label>
+                          </div>
+                          <div class="col-md-7">
+                            <input class="form-control" placeholder="1000">
+                          </div>
+                        </div>
+
+                        <div class="form-group col-md-12" style="padding: 0px; margin-bottom: 10px;">
+                          <div class="col-md-5 control-label" style="padding-left: 50px; padding-top: 6px;">
+                            <label>PV:</label>
+                          </div>
+                          <div class="col-md-7">
+                            <input class="form-control" placeholder="1000">
+                          </div>
+                        </div>
+                       
+                        <div class="form-group col-md-12" style="padding: 0px; margin-bottom: 10px;">
+                          <div class="col-md-5 control-label" style="padding: 0px;padding-top: 6px;">
+                            <label>Time Lmit (if any):</label>
+                          </div>
+                          <div class="col-md-7">
+                            <input class="form-control" placeholder="1000">
+                          </div>
+                        </div>
+                        <div class="form-group col-md-12" style="padding: 0px; margin-bottom: 10px;">
+                          <div class="col-md-5 control-label" style="padding-left: 50px; padding-top: 6px;">
+                            <label>Score:</label>
+                          </div>
+                          <div class="col-md-7">
+                            <input class="form-control" placeholder="1000">
+                          </div>
+                        </div>
+
+                        <div class="col-md-12 mb-10">
+                          <span style=""><a class="tab-table-Id">PV & GV based reward qualification</a></span>
+                        </div>
+                        <div class="form-group col-md-12" style="padding: 0px; margin-bottom: 10px;">
+                          <div class="col-md-5 control-label" style="padding-left: 50px; padding-top: 6px;">
+                            <label>Payout:</label>
+                          </div>
+                          <div class="col-md-7">
+                            <input class="form-control" placeholder="1000">
+                          </div>
+                        </div>
+
+                        <div class="form-group col-md-12" style="padding: 0px; margin-bottom: 10px;">
+                          <div class="col-md-5 control-label" style="padding-left: 50px; padding-top: 6px;">
+                            <label>PV:</label>
+                          </div>
+                          <div class="col-md-7">
+                            <input class="form-control" placeholder="1000">
+                          </div>
+                        </div>
+
+                        <div class="form-group col-md-12" style="padding: 0px; margin-bottom: 10px;">
+                          <div class="col-md-5 control-label" style="padding-left: 50px; padding-top: 6px;">
+                            <label>GV:</label>
+                          </div>
+                          <div class="col-md-7">
+                            <input class="form-control" placeholder="1000">
+                          </div>
+                        </div>
+                       
+                        <div class="form-group col-md-12" style="padding: 0px; margin-bottom: 10px;">
+                          <div class="col-md-5 control-label" style="padding: 0px;padding-top: 6px;">
+                            <label>Time Lmit (if any):</label>
+                          </div>
+                          <div class="col-md-7">
+                            <input class="form-control" placeholder="1000">
+                          </div>
+                        </div>
+                        <div class="form-group col-md-12" style="padding: 0px; margin-bottom: 10px;">
+                          <div class="col-md-5 control-label" style="padding-left: 50px; padding-top: 6px;">
+                            <label>Score:</label>
+                          </div>
+                          <div class="col-md-7">
+                            <input class="form-control" placeholder="1000">
+                          </div>
+                        </div>
+                        <button class="btn btn-primary-f btn-primary btn-block">Submit</button>
+                          </form>
+                        </div>
+                       
+                      
+                    
+                    </div>
+                    </div>
+                </div>
+              </div>
+         </div>
+
+          
+            <!-- /.tab-pane -->
+            <div class="tab-pane" id="mlmplan">
+                <div class="col-md-12" style="padding: 0px;">
+                    <div class="box box-default" style="border-top: none;">
+                        <div class="box-header">
+                          <h3 class="box-title">MLM Plan</h3>
+                        </div>
+                      <!-- /.box-header -->
+                      <div class="box-body" style="padding: 0px; padding-bottom: 20px;">
+                        <form>
+                            <div class="form-row col-md-12" style="padding: 0px; padding-left: 15px; margin-bottom: 10px; display: grid;" >
+                                <label>MLM Plan</label>
+                              </div>
+        
+                              <div class="form-row col-md-12" style="padding: 0px;" >
+                                <div  class="form-group col-md-3"  >
+                         
+                                    <select id="" class="form-control select2" style="width: 100% !important;">
+                                      <option >Binary Plan</option>
+                                      <option>...</option>
+                                    </select>
+                                  </div>
+                               
+                            <div  class="form-group col-md-1"   >
+                                <button class="btn btn-primary btn-primary-f">Request</button>
+                                </div>
+
+                            <div  class="form-group col-md-6 res-cui-lp" style="padding: 0px; margin-left: 20px;" >
+                                <label style="color: #7F8FA4 !important; margin-top: 10px;">Ticket: <a style="color: #0599CA;">#1000001</a></label>
+                                        
+                                </div>
+
+                              </div>
+                              <div  class="form-group col-md-3"  >
+                                 <span style="float: right;"><a class="tab-table-Id">Need Help?</a></span>
+                              </div>
+                            
+                        </form>
+                            
+                      <!-- /.box-body -->
+                   
+                    </div>
+                    <!-- /.box -->
+                   </div>
+                  
+                  </div>
+
+            </div>
+            <!-- /.tab-pane -->
+            <div class="tab-pane" id="customreq">
+                <div class="col-md-12" style="padding:0px !important;">
+                    <div>
+                      <div style=" padding: 15px 0px;">
+                        <div>
+                          <span class="info-box-text" style="float: right;">
+                           <button class="btn btn-primary btn-primary-f-tick" data-toggle="modal" data-target="#modal-add-tickets">Submit Ticket</button>
+                          </span>
+                        </div>
+                        <span class="" style="padding-top: 10px;">
+                        <p style="color:#CA2027;"><b>Staging Website:</b> <span>https://staging-admin.companya.com</span></p>
+                        </span>
+                       
+                      </div>
+                      <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                  </div>
+                  <!-- /.col -->
+      
+                  <div class="col-md-12" style="padding: 5px 0px !important;
+              background-color: #fff;
+              border-radius: 8px;">
+                <div class="box" style="border-top: none; margin-bottom: 0px;">
+                  <div class="box-header">
+                    <h3 class="box-title">Tickets</h3> <small style="color: #7F8FA4; padding-left: 10px;">43 results</small>
+                    <div class="box-tools hidden-box-tools">
+                      <select class="form-control select2  order-history-header-widget" >
+                        <option class="history-widget-style" >Nov 1 - Nov 15</option>
+                        <option>Dec 1 - Dec 30</option>
+                      </select>
+                     
+                    </div>
+                  </div>
+                  </div>
+                  <!-- /.box-header -->
+                  <div class="box-body no-padding table-responsive">
+                    <table class="table ">
+                      <tr style="background: #F5F8FA;">
+                        <th class="table-header-tab table-pl" >Ticket ID</th>
+                        <th class="table-header-tab">Date</th>
+                        <th class="table-header-tab">Subject</th>
+                        <th class="table-header-tab" >Created by</th>
+                        <th class="table-header-tab" >Priority</th>
+                        <th class="table-header-tab" >Status</th>
+                      </tr>
+                      <tr>
+                        <td class="table-table-tab tab-table-Id table-vl-middle table-pl" >3853141</td>
+                        <td class="table-table-tab table-vl-middle" >10/09/2019</td>
+                        <td class="table-table-tab table-vl-middle" >Custom Request</td>
+                        <td class="table-table-tab table-vl-middle" >Waqas</td>
+                        <td class="table-table-tab table-vl-middle" ><span class="label label-warning">MEDIUM</span></td>
+                        <td class="table-table-tab table-vl-middle" ><span class="label label-info" style="padding-right: 10px;padding-left: 10px;">PENDING</span></td>
+      
+                      </tr>
+                      <tr>
+                        <td class="table-table-tab tab-table-Id table-vl-middle table-pl" >3853141</td>
+                        <td class="table-table-tab table-vl-middle" >10/09/2019</td>
+                        <td class="table-table-tab table-vl-middle" >Custom Request</td>
+                        <td class="table-table-tab table-vl-middle" >Waqas</td>
+                        <td class="table-table-tab table-vl-middle" ><span class="label label-danger">URGENT</span></td>
+                        <td class="table-table-tab table-vl-middle" ><span class="label label-success">RESOLVED</span></td>
+      
+                      </tr>
+                      <tr>
+                        <td class="table-table-tab tab-table-Id table-vl-middle table-pl" >3853141</td>
+                        <td class="table-table-tab table-vl-middle" >10/09/2019</td>
+                        <td class="table-table-tab table-vl-middle" >Custom Request</td>
+                        <td class="table-table-tab table-vl-middle" >Waqas</td>
+                        <td class="table-table-tab table-vl-middle" ><span class="label label-danger" style="padding-right: 15px; padding-left: 16px; background-color: #FCCA3E !important;">LOW</span></td>
+                        <td class="table-table-tab table-vl-middle" ><span class="label label-info" style="padding-right: 10px;padding-left: 10px;">PENDING</span></td>
+      
+                      </tr>
+                      <tr>
+                        <td class="table-table-tab tab-table-Id table-vl-middle table-pl" >3853141</td>
+                        <td class="table-table-tab table-vl-middle" >10/09/2019</td>
+                        <td class="table-table-tab table-vl-middle" >Custom Request</td>
+                        <td class="table-table-tab table-vl-middle" >Waqas</td>
+                        <td class="table-table-tab table-vl-middle" ><span class="label label-warning">MEDIUM</span></td>
+                        <td class="table-table-tab table-vl-middle" ><span class="label label-success">RESOLVED</span></td>
+      
+                      </tr>
+                      <tr>
+                        <td class="table-table-tab tab-table-Id table-vl-middle table-pl" >3853141</td>
+                        <td class="table-table-tab table-vl-middle" >10/09/2019</td>
+                        <td class="table-table-tab table-vl-middle" >Custom website bug fix</td>
+                        <td class="table-table-tab table-vl-middle" >Waqas</td>
+                        <td class="table-table-tab table-vl-middle" ><span class="label label-warning">MEDIUM</span></td>
+                        <td class="table-table-tab table-vl-middle" ><span class="label label-info" style="padding-right: 10px;padding-left: 10px;">PENDING</span></td>
+      
+                      </tr>
+                      <tr>
+                        <td class="table-table-tab tab-table-Id table-vl-middle table-pl" >3853141</td>
+                        <td class="table-table-tab table-vl-middle" >10/09/2019</td>
+                        <td class="table-table-tab table-vl-middle" >Custom website build</td>
+                        <td class="table-table-tab table-vl-middle" >Waqas</td>
+                        <td class="table-table-tab table-vl-middle" ><span class="label label-danger">URGENT</span></td>
+                        <td class="table-table-tab table-vl-middle" ><span class="label label-success">RESOLVED</span></td>
+      
+                      </tr>
+                      <tr>
+                        <td class="table-table-tab tab-table-Id table-vl-middle table-pl" >3853141</td>
+                        <td class="table-table-tab table-vl-middle" >10/09/2019</td>
+                        <td class="table-table-tab table-vl-middle" >Custom website build</td>
+                        <td class="table-table-tab table-vl-middle" >Waqas</td>
+                        <td class="table-table-tab table-vl-middle" ><span class="label label-danger" style="padding-right: 15px; padding-left: 16px; background-color: #FCCA3E !important;">LOW</span></td>
+                        <td class="table-table-tab table-vl-middle" ><span class="label label-info" style="padding-right: 10px;padding-left: 10px;">PENDING</span></td>
+      
+                      </tr>
+                      <tr>
+                        <td class="table-table-tab tab-table-Id table-vl-middle table-pl" >3853141</td>
+                        <td class="table-table-tab table-vl-middle" >10/09/2019</td>
+                        <td class="table-table-tab table-vl-middle" >Custom website build</td>
+                        <td class="table-table-tab table-vl-middle" >Waqas</td>
+                        <td class="table-table-tab table-vl-middle" ><span class="label label-warning">MEDIUM</span></td>
+                        <td class="table-table-tab table-vl-middle" ><span class="label label-success">RESOLVED</span></td>
+      
+                      </tr>
+                     
+                    </table>
+                  </div>
+                  <!-- /.box-body -->
+                </div>
+            </div>
+
+            <div class="tab-pane" id="defaultr">
+                 <div class="box">
+                     <div class="box-header">
+                        <h3 class="box-title">Default Referer</h3>
+                     </div>
+                     <div class="box-body">
+                       <form>
+                        <div class="form-row col-md-12" >
+                          <div  class="form-group user-search-inputp col-md-4"  style="display: flex;" >
+                            <label for="" style="width: 124px;
+                            margin-top: 6px;">First Name:</label>
+                            <input type="text" class="form-control" placeholder="waqas" >
+                          </div>
+                        </div>
+                        <div class="form-row col-md-12" >
+                          <div  class="form-group user-search-inputp col-md-4"  style="display: flex;" >
+                            <label for="" style="width: 124px;
+                            margin-top: 6px;">Last Name:</label>
+                            <input type="text" class="form-control" placeholder="C" >
+                          </div>
+                        </div>
+                        <div class="form-row col-md-12" >
+                          <div  class="form-group user-search-inputp col-md-4"  style="display: flex;" >
+                            <label for="" style="width: 124px;
+                            margin-top: 6px;">Username:</label>
+                            <input type="text" class="form-control" placeholder="username" >
+                          </div>
+                        </div>
+                        <div class="col-md-12" >
+                    <div class="col-md-4" style="padding: 0px;">
+                      <button class="btn btn-primary" style="float: right;">Update</button>
+                          
+                    </div>
+                        </div>
+                       </form>
+                     </div>
+                 </div>
+            </div>
+            
+          </div>
+          <!-- /.tab-content -->
+        </div>
+        <!-- /.nav-tabs-custom -->
+      </div>
+      <!-- /.col -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+
+ 
+ 
+  <!-- Add the sidebar's background. This div must be placed
+  immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED JS SCRIPTS -->
+
+<!-- jQuery 3 -->
+<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- App -->
+<script src="assets/dist/js/adminlte.min.js"></script>
+
+<!-- Select2 -->
+<script src="assets/bower_components/select2/dist/js/select2.full.min.js"></script>
+<!-- InputMask -->
+<script src="assets/plugins/input-mask/jquery.inputmask.js"></script>
+<script src="assets/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="assets/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. -->
+     <script>
+      $(function () {
+        //Initialize Select2 Elements
+        $('.select2').select2()
+        //iCheck for checkbox and radio inputs
+        $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+          checkboxClass: 'icheckbox_minimal-blue',
+          radioClass   : 'iradio_minimal-blue'
+        })
+        //Red color scheme for iCheck
+        $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+          checkboxClass: 'icheckbox_minimal-red',
+          radioClass   : 'iradio_minimal-red'
+        })
+        //Flat red color scheme for iCheck
+        $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+          checkboxClass: 'icheckbox_flat-green',
+          radioClass   : 'iradio_flat-green'
+        })
+  
+      })
+    </script>
+
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. -->
+</body>
+</html>

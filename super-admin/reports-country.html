@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sudo 2</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="assets/bower_components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="assets/dist/css/AdminLTE.min.css">
+    <!-- We have chosen the skin-blue for this starter
+          page. However, you can choose any other skin. Make sure you
+          apply the skin class to the body tag so the changes take effect. -->
+    <link rel="stylesheet" href="assets/dist/css/skins/skin-blue.min.css">
+    <link rel="stylesheet" href="assets/dist/css/mystyle.css">
+
+
+    <!-- Select2 -->
+    <link rel="stylesheet" href="assets/bower_components/select2/dist/css/select2.min.css">
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="assets/plugins/iCheck/all.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        @font-face {
+            font-family: "proxima-nova";
+            src: url(assets/dist/fonts/FontsFree-Net-ProximaNova-Regular.ttf);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        label,
+        a,
+        button,
+        span {
+            font-family: "proxima-nova" !important;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .list-group-item {
+            position: none;
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 10px 10px;
+            margin-bottom: 0px;
+            background-color: #fff;
+            color: #354052;
+            border: none;
+        }
+    </style>
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Main Header -->
+        <header class="main-header">
+
+            <!-- Logo -->
+            <a href="dashboard.html" class="logo">
+
+                <!-- logo for regular state and mobile devices -->
+                <span><img src="assets/dist/img/company-dashboard-logo.png"></span>
+                <!-- <span class="logo-lg">YOUR LOGO</span> -->
+            </a>
+
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <div class="toggle-responsive">
+                    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <!-- Navbar left Menu -->
+                <div class="navbar-custom-menu" style="float:left;">
+                    <h3 class=" user-ohd-heading res-header-h" style="padding-left: 18px; padding-top: 10px;"><a
+                            style="color: #0599CA;">Clients</a> <b class="res-h-hide">> Company One</b></h3>
+
+                </div>
+
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+
+                    <ul class="nav navbar-nav">
+                        <!-- User Account Menu -->
+                        <li class="dropdown notifications-menu header-h-md-s"
+                            style=" margin-top: 22px; margin-right: 8px;">
+                            <select class="form-control select2">
+                                <option>English</option>
+                                <option>Urdu</option>
+                            </select>
+                        </li>
+                        <li class="dropdown notifications-menu header-h-md-s" style=" margin-top: 13px;">
+                            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                <hr class="header-hr">
+                            </a>
+                        </li>
+                        <li class="dropdown notifications-menu header-h-md-s" style=" margin-top: 13px;">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                <img src="assets/dist/img/noti-header-icon.png">
+                                <span class="label label-o-blue">1</span>
+                            </a>
+                        </li>
+                        <li class="dropdown dropdown tasks-menu header-h-md-s" style="margin-top: 13px;">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                <img src="assets/dist/img/setting-header-icon.png">
+                            </a>
+                        </li>
+                        <li class="dropdown user user-menu hidden-small">
+                            <!-- Menu Toggle Button -->
+                            <a href="#">
+                                <!-- The user image in the navbar-->
+                                <div class="admin-profile-h">
+                                    <img src="assets/dist/img/s-admin.png" class="user-image" alt="User Image">
+                                    <div style="padding-right: 10px;">
+                                        <p class="admin-name adminprof-no-mb">kadin Vaccaro</p>
+                                        <p style="float: left;">Super Admin</p>
+                                    </div>
+                                    <i class="fa fa-caret-down adminpro-icon-pt "></i>
+                                </div>
+                            </a>
+
+                        </li>
+                        <!-- Control Sidebar Toggle Button -->
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+
+                <!-- Sidebar Menu -->
+                <ul class="sidebar-menu" data-widget="tree">
+                    <!-- Optionally, you can add icons to the links -->
+                    <li class=""><a href="dashboard2.html"><img src="assets/dist/img/dashboard-icon.png">
+                            <span>Dashboard</span></a></li>
+                    <li class=""><a href="clients.html"><img src="assets/dist/img/clients-icon.png">
+                            <span>Clients</span></a></li>
+                    <li class=""><a href="administrators-tile.html"><img src="assets/dist/img/s-admin-icon.png">
+                            <span>Super Administrators</span></a></li>
+                    <li class=""><a href="global-user-search.html"><img src="assets/dist/img/search-icon.png">
+                            <span>User Search</span></a></li>
+                    <li class=""><a href="website-themes.html"><img src="assets/dist/img/w-theme-icon.png"> <span>Web
+                                Themes</span></a></li>
+                    <li class=""><a href="notifications.html"><img src="assets/dist/img/sidebar-noti-icon.png">
+                            <span>Notifications</span></a></li>
+                    <li class=""><a href="support.html"><img src="assets/dist/img/support-icon.png">
+                            <span>Support</span></a></li>
+
+                </ul>
+                <!-- /.sidebar-menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper main-content" style="padding: 0px !important;">
+            <!-- Content Header (Page header) -->
+            <section class="content-header" style="padding: 0px; background-color: #fff !important;">
+                <ul class="nav nav-tabs nav-border nav-tabs-fit-med">
+                    <li ><a href="#sudo" data-toggle="tab">Sudo</a></li>
+                    <li><a href="#changecompanyinfo" data-toggle="tab">Change Company Info</a></li>
+                    <li><a href="#invoic" data-toggle="tab">Invoicing</a></li>
+                    <li class="active"><a href="#reports" data-toggle="tab">Reports</a></li>
+                    <li><a href="#servers" data-toggle="tab">Server Setting</a></li>
+                    <li><a href="#action" data-toggle="tab">Action</a></li>
+                </ul>
+
+            </section>
+
+            <!-- Main content -->
+            <section class="content container-fluid">
+
+                <!-- /.col -->
+                <div class="col-md-12" style="padding: 0px;">
+                    <div class="nav-tabs-custom" style="background: transparent;">
+                        <div class="tab-content" style="background: transparent;">
+                            <div class=" tab-pane" id="sudo">
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                        <div class="info-box" style="border-radius: 8px;">
+                                            <div class="info-box-content">
+                                                <span class="info-box-text" style="padding-top: 10px;">Total
+                                                    Admin</span>
+                                                <p class="info-box-number" style="padding-top: 8px;">47</p>
+                                            </div>
+                                            <!-- /.info-box-content -->
+                                        </div>
+                                        <!-- /.info-box -->
+                                    </div>
+                                    <!-- /.col -->
+
+                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                        <div class="info-box" style="border-radius: 8px;">
+                                            <div class="info-box-content">
+                                                <div style="">
+                                                    <span class="info-box-text"
+                                                        style="float: right; color: #FF4040; font-weight:bold; padding-top: 10px;">-17%</span>
+                                                </div>
+                                                <span class="info-box-text" style="padding-top: 10px;">Total
+                                                    Affiliates</span>
+                                                <p class="info-box-number" style="padding-top: 8px;">$108,382</p>
+                                            </div>
+                                            <!-- /.info-box-content -->
+                                        </div>
+                                        <!-- /.info-box -->
+                                    </div>
+                                    <!-- /.col -->
+
+                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                        <div class="info-box" style="border-radius: 8px;">
+                                            <div class="info-box-content">
+                                                <div style="">
+                                                    <span class="info-box-text"
+                                                        style="float: right; color: #1F932A; font-weight:bold; padding-top: 10px;">+13%</span>
+                                                </div>
+                                                <span class="info-box-text" style="padding-top: 10px;">Total Prefferred
+                                                    Customers</span>
+                                                <p class="info-box-number" style="padding-top: 8px;">$322,981</p>
+                                            </div>
+                                            <!-- /.info-box-content -->
+                                        </div>
+                                        <!-- /.info-box -->
+                                    </div>
+                                    <!-- /.col -->
+
+                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                        <div class="info-box" style="border-radius: 8px;">
+                                            <div class="info-box-content">
+                                                <div style="">
+                                                    <span class="info-box-text"
+                                                        style="float: right; color: #1F932A; font-weight:bold; padding-top: 10px;">+13%</span>
+                                                </div>
+                                                <span class="info-box-text" style="padding-top: 10px;">Total Retail
+                                                    customers</span>
+                                                <p class="info-box-number" style="padding-top: 8px;">$285,943</p>
+                                            </div>
+                                            <!-- /.info-box-content -->
+                                        </div>
+                                        <!-- /.info-box -->
+                                    </div>
+                                    <!-- /.col -->
+
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+
+                                        <!-- Profile Image -->
+                                        <div class="box">
+                                            <div class="box-body box-profile">
+
+                                                <img class="img-responsive sudo-c-admin"
+                                                    src="assets/dist/img/company-one.png" alt="User profile picture">
+
+                                                <h3 class="profile-username text-center">Company One</h3>
+
+                                                <p class="profile-sb-name text-muted text-center"
+                                                    style="font-weight: normal;">United States</p>
+
+                                                <p class="text-muted text-center label-success label-active">Active</p>
+                                                <br>
+
+                                                <ul class="list-group list-group-unbordered admin-info-us"
+                                                    style="margin-bottom: 0px;">
+                                                    <li class="list-group-item prof-info-l-st">
+                                                        Compensation Plan: <a class="pull-right prof-info-r-st">Plan
+                                                            B</a>
+                                                    </li>
+                                                    <li class="list-group-item prof-info-l-st">
+                                                        Registered at: <a class="pull-right prof-info-r-st">11/27/19</a>
+                                                    </li>
+                                                    <li class="list-group-item prof-info-l-st">
+                                                        Corporate Website: <a
+                                                            class="pull-right prof-info-r-st tab-table-Id">www.website.com</a>
+                                                    </li>
+
+                                                </ul>
+
+                                                <ul class="list-group list-group-unbordered admin-info-us"
+                                                    style="margin-bottom: 0px;">
+
+                                                    <li class="list-group-item prof-info-l-st">
+                                                        Email: <a
+                                                            class="pull-right prof-info-r-st  ">contact@website.com</a>
+                                                    </li>
+                                                    <li class="list-group-item prof-info-l-st">
+                                                        Phone: <a class="pull-right prof-info-r-st">+1 971 485 3888</a>
+                                                    </li>
+                                                    <li class="list-group-item prof-info-l-st">
+                                                        Telegram: <a class="pull-right prof-info-r-st">@username</a>
+                                                    </li>
+                                                    <li class="list-group-item prof-info-l-st">
+                                                        Skype: <a class="pull-right prof-info-r-st">@username</a>
+                                                    </li>
+                                                    <li class="list-group-item prof-info-l-st ">
+                                                        Whatsapp:<a class="pull-right prof-info-r-st ">+1 971 485
+                                                            3888</a>
+                                                    </li>
+                                                </ul>
+
+
+                                            </div>
+                                            <!-- /.box-body -->
+                                        </div>
+                                        <!-- /.box -->
+
+
+                                        <!-- /.box -->
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col-md-8">
+                                        <div class="col-md-12" style="padding: 0px;">
+                                            <div class="box" style="border-top: none;">
+                                                <div class="box-header">
+                                                    <h3 class="box-title">Replicated Websites</h3>
+                                                </div>
+                                                <!-- /.box-header -->
+                                                <div class="box-body no-padding table-responsive">
+                                                    <table class="table ">
+                                                        <tr style="background: #F5F8FA;">
+                                                            <th class="table-header-tab" style="width: 50%;">URL</th>
+                                                            <th class="table-header-tab" style="width: 50%;">Type</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab table-vl-middle tab-table-Id">
+                                                                www.replicatedwebsite.com</td>
+                                                            <td class="table-table-tab table-vl-middle">Pre-Enrollee
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab table-vl-middle tab-table-Id">
+                                                                www.replicatedwebsite.com</td>
+                                                            <td class="table-table-tab table-vl-middle">Pre-Enrollee
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab table-vl-middle tab-table-Id">
+                                                                www.replicatedwebsite.com</td>
+                                                            <td class="table-table-tab table-vl-middle">Pre-Enrollee
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab table-vl-middle tab-table-Id">
+                                                                www.replicatedwebsite.com</td>
+                                                            <td class="table-table-tab table-vl-middle">Pre-Enrollee
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab table-vl-middle tab-table-Id">
+                                                                www.replicatedwebsite.com</td>
+                                                            <td class="table-table-tab table-vl-middle">Pre-Enrollee
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab table-vl-middle tab-table-Id">
+                                                                www.replicatedwebsite.com</td>
+                                                            <td class="table-table-tab table-vl-middle">Pre-Enrollee
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab table-vl-middle tab-table-Id">
+                                                                www.replicatedwebsite.com</td>
+                                                            <td class="table-table-tab table-vl-middle">Pre-Enrollee
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab table-vl-middle tab-table-Id">
+                                                                www.replicatedwebsite.com</td>
+                                                            <td class="table-table-tab table-vl-middle">Pre-Enrollee
+                                                            </td>
+                                                        </tr>
+
+                                                    </table>
+                                                </div>
+
+                                                <div class="box-footer" style="display:block; position: relative;">
+                                                    <h3 class="box-footer-txt">Showing Results 1-10 of 107</h3>
+
+                                                    <div class="box-tools box-f-tool-b">
+                                                        <ul class="pagination pagination-sm no-margin pull-right">
+                                                            <li><a href="#">
+                                                                    <</a> </li> <li><a href="#">1</a></li>
+                                                            <li><a href="#" class="text-black">2</a></li>
+                                                            <li><a href="#">3</a></li>
+                                                            <li><a href="#">...</a></li>
+                                                            <li><a href="#">6</a></li>
+                                                            <li><a href="#">></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!-- /.box-body -->
+                                            </div>
+                                            <!-- /.box -->
+                                        </div>
+                                    </div>
+                                    <!-- /.col -->
+                                </div>
+                                <!-- /.row -->
+                            </div>
+
+                            <div class=" tab-pane" id="changecompanyinfo">
+
+                                <div class="col-md-12" style="padding: 0px;">
+                                    <div class="box box-default" style="border-top: none;">
+                                        <div class="box-header">
+                                            <h3 class="box-title" style="padding-left: 15px !important;">User
+                                                Information</h3>
+                                        </div>
+                                        <div class="box-body">
+                                            <form>
+                                                <div class="form-row col-md-12" style="padding: 0px;">
+                                                    <div class="form-group col-md-4">
+                                                        <label for="">Name</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <label for="">Country</label>
+                                                        <select id="" class="form-control select2"
+                                                            style="width: 100% !important;">
+                                                            <option selected>Select Country</option>
+                                                            <option>...</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <label for="">Product Indurstry</label>
+                                                        <select id="" class="form-control select2"
+                                                            style="width: 100% !important;">
+                                                            <option selected>Select Indurstry</option>
+                                                            <option>...</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+
+
+                                                <div class="form-row col-md-12"
+                                                    style="padding: 0px; padding-left: 15px; margin-bottom: 10px; display: grid;">
+                                                    <label>Logo</label>
+                                                </div>
+                                                <div class="change-c-info-st">
+                                                    <img class="img-responsive sudo-c-sm-admin"
+                                                        src="assets/dist/img/company-one-sm.png"
+                                                        alt="User profile picture">
+                                                    <span class="change-c-info-btn-st">
+                                                        <button class="btn btn-primary btn-primary-f"
+                                                            style="margin-right: 10px;">Upload Photo</button>
+                                                        <button class="btn btn-gray btn-primary-f">Replace</button>
+                                                    </span>
+                                                </div>
+
+                                            </form>
+
+                                            <!-- /.box-body -->
+
+                                        </div>
+                                        <!-- /.box -->
+                                    </div>
+                                    <div style="float: right;">
+                                        <button class="btn btn-reset">Reset</button>
+                                        <button class="btn btn-primary">Save</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- /.tab-pane -->
+                            <div class=" tab-pane" id="invoic">
+                                <section class="content-header">
+
+                                    <div class="col-md-12" style="padding:0px !important;">
+                                        <div>
+                                            <div style=" padding: 0px 0px 15px 0px;">
+                                                <div class="">
+                                                    <span class="info-box-text"
+                                                        style="float: right; display: flex; margin-top: 4px;">
+                                                        <a href="" class="btn btn-primary btn-primary-f-tick">Add
+                                                            Invoice <img style="margin-left: 10px;"
+                                                                src="assets/dist/img/plus-icon.png"></a>
+                                                    </span>
+                                                </div>
+                                                <span class="info-box-text">
+                                                    <form class="stick-set-w">
+                                                        <div class="input-group input-group-st">
+                                                            <span class="input-group-addon"><i class="fa  fa-search"
+                                                                    style="color: #9AA0A9;"></i></span>
+                                                            <input type="text" class="form-control"
+                                                                style="border: none !important; border-radius: none !important;"
+                                                                placeholder="Search invoice....">
+
+                                                        </div>
+                                                    </form>
+                                                </span>
+
+                                            </div>
+                                            <!-- /.info-box-content -->
+                                        </div>
+                                        <!-- /.info-box -->
+                                    </div>
+                                    <!-- /.col -->
+
+                                </section>
+                                <section class="content container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-12" style="padding: 0px;">
+                                            <div class="box" style="border-top: none;">
+                                                <div class="box-header">
+                                                    <h3 class="box-title">Invoices</h3>
+                                                </div>
+                                                <!-- /.box-header -->
+                                                <div class="box-body no-padding table-responsive">
+                                                    <table class="table ">
+                                                        <tr style="background: #F5F8FA;">
+                                                            <th class="table-header-tab">Company</th>
+                                                            <th class="table-header-tab">Invoiced by</th>
+                                                            <th class="table-header-tab">Invoiced at</th>
+                                                            <th class="table-header-tab">Licensing Fee</th>
+                                                            <th class="table-header-tab">Status</th>
+                                                            <th class="table-header-tab"></th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab"
+                                                                style="font-weight:bold !important;"><span><img
+                                                                        src="assets/dist/img/client-img-1.png"
+                                                                        style="margin-right: 15px;"></span>Company One
+                                                            </td>
+
+                                                            <td class="table-table-tab table-vl-middle">Waqas</td>
+                                                            <td class="table-table-tab table-vl-middle">11/27/16</td>
+                                                            <td class="table-table-tab table-vl-middle">$24.99</td>
+                                                            <td class="table-table-tab table-vl-middle"><span
+                                                                    class="text-center label-success label-active"
+                                                                    style="text-transform: uppercase;">Completed <i
+                                                                        class="fa fa-caret-down"
+                                                                        style="color: #fff; padding-left: 2px;"></i></span>
+                                                            </td>
+                                                            <td class="table-table-tab table-vl-middle"><span><a href=""
+                                                                        class="btn btn-primary btn-primary-f m-r-10">Detail</a><a
+                                                                        href=""
+                                                                        class="btn btn-primary btn-primary-f">Send
+                                                                        Email</a></span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab"
+                                                                style="font-weight:bold !important;"><span><img
+                                                                        src="assets/dist/img/client-img-1.png"
+                                                                        style="margin-right: 15px;"></span>Company One
+                                                            </td>
+
+                                                            <td class="table-table-tab table-vl-middle">Waqas</td>
+                                                            <td class="table-table-tab table-vl-middle">11/27/16</td>
+                                                            <td class="table-table-tab table-vl-middle">$24.99</td>
+                                                            <td class="table-table-tab table-vl-middle"><span
+                                                                    class="text-center label-success label-active"
+                                                                    style="text-transform: uppercase;">Completed <i
+                                                                        class="fa fa-caret-down"
+                                                                        style="color: #fff; padding-left: 2px;"></i></span>
+                                                            </td>
+                                                            <td class="table-table-tab table-vl-middle"><span><a href=""
+                                                                        class="btn btn-primary btn-primary-f m-r-10">Detail</a><a
+                                                                        href=""
+                                                                        class="btn btn-primary btn-primary-f">Send
+                                                                        Email</a></span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab"
+                                                                style="font-weight:bold !important;"><span><img
+                                                                        src="assets/dist/img/client-img-1.png"
+                                                                        style="margin-right: 15px;"></span>Company One
+                                                            </td>
+
+                                                            <td class="table-table-tab table-vl-middle">Waqas</td>
+                                                            <td class="table-table-tab table-vl-middle">11/27/16</td>
+                                                            <td class="table-table-tab table-vl-middle">$24.99</td>
+                                                            <td class="table-table-tab table-vl-middle"><span
+                                                                    class="text-center label-success label-active"
+                                                                    style="text-transform: uppercase;">Completed <i
+                                                                        class="fa fa-caret-down"
+                                                                        style="color: #fff; padding-left: 2px;"></i></span>
+                                                            </td>
+                                                            <td class="table-table-tab table-vl-middle"><span><a href=""
+                                                                        class="btn btn-primary btn-primary-f m-r-10">Detail</a><a
+                                                                        href=""
+                                                                        class="btn btn-primary btn-primary-f">Send
+                                                                        Email</a></span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab"
+                                                                style="font-weight:bold !important;"><span><img
+                                                                        src="assets/dist/img/client-img-1.png"
+                                                                        style="margin-right: 15px;"></span>Company One
+                                                            </td>
+
+                                                            <td class="table-table-tab table-vl-middle">Waqas</td>
+                                                            <td class="table-table-tab table-vl-middle">11/27/16</td>
+                                                            <td class="table-table-tab table-vl-middle">$24.99</td>
+                                                            <td class="table-table-tab table-vl-middle"><span
+                                                                    class="text-center label-success label-active"
+                                                                    style="text-transform: uppercase;">Completed <i
+                                                                        class="fa fa-caret-down"
+                                                                        style="color: #fff; padding-left: 2px;"></i></span>
+                                                            </td>
+                                                            <td class="table-table-tab table-vl-middle"><span><a href=""
+                                                                        class="btn btn-primary btn-primary-f m-r-10">Detail</a><a
+                                                                        href=""
+                                                                        class="btn btn-primary btn-primary-f">Send
+                                                                        Email</a></span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab"
+                                                                style="font-weight:bold !important;"><span><img
+                                                                        src="assets/dist/img/client-img-1.png"
+                                                                        style="margin-right: 15px;"></span>Company One
+                                                            </td>
+
+                                                            <td class="table-table-tab table-vl-middle">Waqas</td>
+                                                            <td class="table-table-tab table-vl-middle">11/27/16</td>
+                                                            <td class="table-table-tab table-vl-middle">$24.99</td>
+                                                            <td class="table-table-tab table-vl-middle"><span
+                                                                    class="text-center label-success label-active"
+                                                                    style="text-transform: uppercase;">Completed <i
+                                                                        class="fa fa-caret-down"
+                                                                        style="color: #fff; padding-left: 2px;"></i></span>
+                                                            </td>
+                                                            <td class="table-table-tab table-vl-middle"><span><a href=""
+                                                                        class="btn btn-primary btn-primary-f m-r-10">Detail</a><a
+                                                                        href=""
+                                                                        class="btn btn-primary btn-primary-f">Send
+                                                                        Email</a></span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab"
+                                                                style="font-weight:bold !important;"><span><img
+                                                                        src="assets/dist/img/client-img-1.png"
+                                                                        style="margin-right: 15px;"></span>Company One
+                                                            </td>
+
+                                                            <td class="table-table-tab table-vl-middle">Waqas</td>
+                                                            <td class="table-table-tab table-vl-middle">11/27/16</td>
+                                                            <td class="table-table-tab table-vl-middle">$24.99</td>
+                                                            <td class="table-table-tab table-vl-middle"><span
+                                                                    class="text-center label-success label-active"
+                                                                    style="text-transform: uppercase;">Completed <i
+                                                                        class="fa fa-caret-down"
+                                                                        style="color: #fff; padding-left: 2px;"></i></span>
+                                                            </td>
+                                                            <td class="table-table-tab table-vl-middle"><span><a href=""
+                                                                        class="btn btn-primary btn-primary-f m-r-10">Detail</a><a
+                                                                        href=""
+                                                                        class="btn btn-primary btn-primary-f">Send
+                                                                        Email</a></span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab"
+                                                                style="font-weight:bold !important;"><span><img
+                                                                        src="assets/dist/img/client-img-1.png"
+                                                                        style="margin-right: 15px;"></span>Company One
+                                                            </td>
+
+                                                            <td class="table-table-tab table-vl-middle">Waqas</td>
+                                                            <td class="table-table-tab table-vl-middle">11/27/16</td>
+                                                            <td class="table-table-tab table-vl-middle">$24.99</td>
+                                                            <td class="table-table-tab table-vl-middle"><span
+                                                                    class="text-center label-success label-active"
+                                                                    style="text-transform: uppercase;">Completed <i
+                                                                        class="fa fa-caret-down"
+                                                                        style="color: #fff; padding-left: 2px;"></i></span>
+                                                            </td>
+                                                            <td class="table-table-tab table-vl-middle"><span><a href=""
+                                                                        class="btn btn-primary btn-primary-f m-r-10">Detail</a><a
+                                                                        href=""
+                                                                        class="btn btn-primary btn-primary-f">Send
+                                                                        Email</a></span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab"
+                                                                style="font-weight:bold !important;"><span><img
+                                                                        src="assets/dist/img/client-img-1.png"
+                                                                        style="margin-right: 15px;"></span>Company One
+                                                            </td>
+
+                                                            <td class="table-table-tab table-vl-middle">Waqas</td>
+                                                            <td class="table-table-tab table-vl-middle">11/27/16</td>
+                                                            <td class="table-table-tab table-vl-middle">$24.99</td>
+                                                            <td class="table-table-tab table-vl-middle"><span
+                                                                    class="text-center label-success label-active"
+                                                                    style="text-transform: uppercase;">Completed <i
+                                                                        class="fa fa-caret-down"
+                                                                        style="color: #fff; padding-left: 2px;"></i></span>
+                                                            </td>
+                                                            <td class="table-table-tab table-vl-middle"><span><a href=""
+                                                                        class="btn btn-primary btn-primary-f m-r-10">Detail</a><a
+                                                                        href=""
+                                                                        class="btn btn-primary btn-primary-f">Send
+                                                                        Email</a></span></td>
+                                                        </tr>
+
+                                                    </table>
+                                                </div>
+
+                                                <div class="box-footer" style="display:block; position: relative;">
+                                                    <h3 class="box-footer-txt">Showing Results 1-10 of 107</h3>
+
+                                                    <div class="box-tools box-f-tool-b">
+                                                        <ul class="pagination pagination-sm no-margin pull-right">
+                                                            <li><a href="#">
+                                                                    <</a> </li> <li><a href="#">1</a></li>
+                                                            <li><a href="#" class="text-black">2</a></li>
+                                                            <li><a href="#">3</a></li>
+                                                            <li><a href="#">...</a></li>
+                                                            <li><a href="#">6</a></li>
+                                                            <li><a href="#">></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!-- /.box-body -->
+                                            </div>
+                                            <!-- /.box -->
+                                        </div>
+                                    </div>
+
+                                </section>
+
+                            </div>
+                            <!-- /.tab-pane -->
+
+                            <div class="active tab-pane" id="reports">
+                                <section class="content container-fluid" style="padding: 0px;">
+                                    <!-- /.col -->
+                                    <div class="col-md-12" style="padding: 0px;">
+                                      <div class="nav-tabs-custom">
+                                        <div class="box-header" style="padding:0px !important;">
+                                          <ul class="nav nav-tabs nav-border">
+                                            <li><a href="#payoutr" data-toggle="tab">Payout Reports</a></li>
+                                            <li><a href="#salesr" data-toggle="tab">Sales reports</a></li>
+                                            <li class="active"><a href="#countryr" data-toggle="tab">Country Reports</a></li>
+                                            <li><a href="#rankr" data-toggle="tab">Rank Reports</a></li>
+                                            
+                                          </ul>
+                                          <div class="box-tools hidden-box-tools-md" style="top: 10px !important; width: 34%;">
+                                            <select class="form-control select2  order-history-header-widget" style="width: 275%; margin-right: 10px;">
+                                                <option class="history-widget-style" >United States</option>
+                                                <option>USA</option>
+                                              </select>
+                                            <select class="form-control select2  order-history-header-widget" style="width: 275%; margin-right: 10px;">
+                                              <option class="history-widget-style" >Nov 1 - Nov 30</option>
+                                              <option>Dec 1 - Dec 30</option>
+                                            </select>
+                                            <button type="button" class="btn btn-block btn-primary">Get Report</button>
+                                          </div>
+                                        </div>
+                                       
+                                        <div class="tab-content" style="padding-top:0px; padding-bottom:0px;">
+                                          <div class="tab-pane" id="payoutr">
+                                            <div class="row">
+                                              <div class="col-md-12" style="padding: 0 5px !important;">
+                                             
+                                                  <div class="box-body no-padding table-responsive">
+                                                    <table class="table ">
+                                                      <tr style="background: #F5F8FA;">
+                                                        <th class="table-header-tab table-pl" style="width:20%;" >Sales Revenue</th>
+                                                        <th class="table-header-tab" style="width:20%;">Volume</th>
+                                                        <th class="table-header-tab" style="width:20%;">Payouts</th>
+                                                        <th class="table-header-tab" style="width:20%;">% of Volume</th>
+                                                        <th class="table-header-tab" style="width:15%;">% of Sale</th>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="table-table-tab table-vl-middle table-pl" >$22,483,871,22</td>
+                                                        <td class="table-table-tab table-vl-middle" >100,000,000</td>
+                                                        <td class="table-table-tab table-vl-middle" >$12,433,988,22</td>
+                                                        <td class="table-table-tab table-vl-middle" >32%</td>
+                                                        <td class="table-table-tab table-vl-middle" >24%</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="table-table-tab table-vl-middle table-pl" >$22,483,871,22</td>
+                                                        <td class="table-table-tab table-vl-middle" >100,000,000</td>
+                                                        <td class="table-table-tab table-vl-middle" >$12,433,988,22</td>
+                                                        <td class="table-table-tab table-vl-middle" >32%</td>
+                                                        <td class="table-table-tab table-vl-middle" >24%</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="table-table-tab table-vl-middle table-pl" >$22,483,871,22</td>
+                                                        <td class="table-table-tab table-vl-middle" >100,000,000</td>
+                                                        <td class="table-table-tab table-vl-middle" >$12,433,988,22</td>
+                                                        <td class="table-table-tab table-vl-middle" >32%</td>
+                                                        <td class="table-table-tab table-vl-middle" >24%</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="table-table-tab table-vl-middle table-pl" >$22,483,871,22</td>
+                                                        <td class="table-table-tab table-vl-middle" >100,000,000</td>
+                                                        <td class="table-table-tab table-vl-middle" >$12,433,988,22</td>
+                                                        <td class="table-table-tab table-vl-middle" >32%</td>
+                                                        <td class="table-table-tab table-vl-middle" >24%</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="table-table-tab table-vl-middle table-pl" >$22,483,871,22</td>
+                                                        <td class="table-table-tab table-vl-middle" >100,000,000</td>
+                                                        <td class="table-table-tab table-vl-middle" >$12,433,988,22</td>
+                                                        <td class="table-table-tab table-vl-middle" >32%</td>
+                                                        <td class="table-table-tab table-vl-middle" >24%</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="table-table-tab table-vl-middle table-pl" >$22,483,871,22</td>
+                                                        <td class="table-table-tab table-vl-middle" >100,000,000</td>
+                                                        <td class="table-table-tab table-vl-middle" >$12,433,988,22</td>
+                                                        <td class="table-table-tab table-vl-middle" >32%</td>
+                                                        <td class="table-table-tab table-vl-middle" >24%</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="table-table-tab table-vl-middle table-pl" >$22,483,871,22</td>
+                                                        <td class="table-table-tab table-vl-middle" >100,000,000</td>
+                                                        <td class="table-table-tab table-vl-middle" >$12,433,988,22</td>
+                                                        <td class="table-table-tab table-vl-middle" >32%</td>
+                                                        <td class="table-table-tab table-vl-middle" >24%</td>
+                                                      </tr>
+                                                     
+                                                    </table>
+                                                  </div>
+                                                  
+                            <div class="box-footer" style="display:block; position: relative;">
+                                <h3 class="box-footer-txt">Showing Results 1-10 of 107</h3>
+
+                                <div class="box-tools box-f-tool-b">
+                                    <ul class="pagination pagination-sm no-margin pull-right">
+                                        <li><a href="#">
+                                                <</a> </li> <li><a href="#">1</a></li>
+                                        <li><a href="#" class="text-black">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">...</a></li>
+                                        <li><a href="#">6</a></li>
+                                        <li><a href="#">></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                                                  <!-- /.box-body -->
+                                                </div>
+                                                <!-- /.box -->
+                                              </div>
+                                          </div>
+                                          <!-- /.tab-pane -->
+                                          <div class="tab-pane" id="salesr">
+                                            <div class="row">
+                                                <div class="col-md-12" style="padding: 0 5px !important;">
+                                               
+                                                    <div class="box-body no-padding table-responsive">
+                                                      <table class="table ">
+                                                        <tr style="background: #F5F8FA;">
+                                                          <th class="table-header-tab table-pl" style="width:20%;" >Date</th>
+                                                          <th class="table-header-tab" style="width:20%;">Product</th>
+                                                          <th class="table-header-tab" style="width:20%;">SKU</th>
+                                                          <th class="table-header-tab" style="width:20%;">Count</th>
+                                                          <th class="table-header-tab" style="width:15%;">Amount</th>
+                                                        </tr>
+                                                        <tr>
+                                                          <td class="table-table-tab table-vl-middle table-pl" >10/24/19</td>
+                                                          <td class="table-table-tab table-vl-middle" >Product One</td>
+                                                          <td class="table-table-tab table-vl-middle" >productone-orange</td>
+                                                          <td class="table-table-tab table-vl-middle" >500,000</td>
+                                                          <td class="table-table-tab table-vl-middle" >$10,000,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab table-vl-middle table-pl" >10/24/19</td>
+                                                            <td class="table-table-tab table-vl-middle" >Product One</td>
+                                                            <td class="table-table-tab table-vl-middle" >productone-orange</td>
+                                                            <td class="table-table-tab table-vl-middle" >500,000</td>
+                                                            <td class="table-table-tab table-vl-middle" >$10,000,000</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td class="table-table-tab table-vl-middle table-pl" >10/24/19</td>
+                                                            <td class="table-table-tab table-vl-middle" >Product One</td>
+                                                            <td class="table-table-tab table-vl-middle" >productone-orange</td>
+                                                            <td class="table-table-tab table-vl-middle" >500,000</td>
+                                                            <td class="table-table-tab table-vl-middle" >$10,000,000</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td class="table-table-tab table-vl-middle table-pl" >10/24/19</td>
+                                                            <td class="table-table-tab table-vl-middle" >Product One</td>
+                                                            <td class="table-table-tab table-vl-middle" >productone-orange</td>
+                                                            <td class="table-table-tab table-vl-middle" >500,000</td>
+                                                            <td class="table-table-tab table-vl-middle" >$10,000,000</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td class="table-table-tab table-vl-middle table-pl" >10/24/19</td>
+                                                            <td class="table-table-tab table-vl-middle" >Product One</td>
+                                                            <td class="table-table-tab table-vl-middle" >productone-orange</td>
+                                                            <td class="table-table-tab table-vl-middle" >500,000</td>
+                                                            <td class="table-table-tab table-vl-middle" >$10,000,000</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td class="table-table-tab table-vl-middle table-pl" >10/24/19</td>
+                                                            <td class="table-table-tab table-vl-middle" >Product One</td>
+                                                            <td class="table-table-tab table-vl-middle" >productone-orange</td>
+                                                            <td class="table-table-tab table-vl-middle" >500,000</td>
+                                                            <td class="table-table-tab table-vl-middle" >$10,000,000</td>
+                                                          </tr>
+                                                          
+                                                       
+                                                      </table>
+                                                    </div>
+                                                    
+                              <div class="box-footer" style="display:block; position: relative;">
+                                  <h3 class="box-footer-txt">Showing Results 1-10 of 107</h3>
+  
+                                  <div class="box-tools box-f-tool-b">
+                                      <ul class="pagination pagination-sm no-margin pull-right">
+                                          <li><a href="#">
+                                                  <</a> </li> <li><a href="#">1</a></li>
+                                          <li><a href="#" class="text-black">2</a></li>
+                                          <li><a href="#">3</a></li>
+                                          <li><a href="#">...</a></li>
+                                          <li><a href="#">6</a></li>
+                                          <li><a href="#">></a></li>
+                                      </ul>
+                                  </div>
+                              </div>
+                                                    <!-- /.box-body -->
+                                                  </div>
+                                                  <!-- /.box -->
+                                                </div>
+                                          
+                                          </div>
+                                          <!-- /.tab-pane -->
+                                          <div class="active tab-pane" id="countryr">
+                                            <div class="row">
+                                                <div class="col-md-12" style="padding: 0 5px !important;">
+                                               
+                                                    <div class="box-body no-padding table-responsive">
+                                                      <table class="table ">
+                                                        <tr style="background: #F5F8FA;">
+                                                          <th class="table-header-tab table-pl" style="width:25%;" >Country</th>
+                                                          <th class="table-header-tab" style="width:20%;">Date</th>
+                                                          <th class="table-header-tab" style="width:20%;">Count</th>
+                                                          <th class="table-header-tab" style="width:20%;">Amount</th>
+                                                          <th class="table-header-tab" style="width:15%;">Total</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab"><span><img
+                                                                src="assets/dist/img/flag1.png"
+                                                                style="margin-right: 15px;;"></span>United States</td>
+                                                          <td class="table-table-tab table-vl-middle" >10/24/19</td>
+                                                          <td class="table-table-tab table-vl-middle" >500,000</td>
+                                                          <td class="table-table-tab table-vl-middle" >$10,000,000</td>
+                                                          <td class="table-table-tab table-vl-middle" >$10,000,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab"><span><img
+                                                                src="assets/dist/img/flag1.png"
+                                                                style="margin-right: 15px;;"></span>United States</td>
+                                                          <td class="table-table-tab table-vl-middle" >10/24/19</td>
+                                                          <td class="table-table-tab table-vl-middle" >500,000</td>
+                                                          <td class="table-table-tab table-vl-middle" >$10,000,000</td>
+                                                          <td class="table-table-tab table-vl-middle" >$10,000,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab"><span><img
+                                                                src="assets/dist/img/flag1.png"
+                                                                style="margin-right: 15px;;"></span>United States</td>
+                                                          <td class="table-table-tab table-vl-middle" >10/24/19</td>
+                                                          <td class="table-table-tab table-vl-middle" >500,000</td>
+                                                          <td class="table-table-tab table-vl-middle" >$10,000,000</td>
+                                                          <td class="table-table-tab table-vl-middle" >$10,000,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab"><span><img
+                                                                src="assets/dist/img/flag1.png"
+                                                                style="margin-right: 15px;;"></span>United States</td>
+                                                          <td class="table-table-tab table-vl-middle" >10/24/19</td>
+                                                          <td class="table-table-tab table-vl-middle" >500,000</td>
+                                                          <td class="table-table-tab table-vl-middle" >$10,000,000</td>
+                                                          <td class="table-table-tab table-vl-middle" >$10,000,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab"><span><img
+                                                                src="assets/dist/img/flag1.png"
+                                                                style="margin-right: 15px;;"></span>United States</td>
+                                                          <td class="table-table-tab table-vl-middle" >10/24/19</td>
+                                                          <td class="table-table-tab table-vl-middle" >500,000</td>
+                                                          <td class="table-table-tab table-vl-middle" >$10,000,000</td>
+                                                          <td class="table-table-tab table-vl-middle" >$10,000,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab"><span><img
+                                                                src="assets/dist/img/flag1.png"
+                                                                style="margin-right: 15px;;"></span>United States</td>
+                                                          <td class="table-table-tab table-vl-middle" >10/24/19</td>
+                                                          <td class="table-table-tab table-vl-middle" >500,000</td>
+                                                          <td class="table-table-tab table-vl-middle" >$10,000,000</td>
+                                                          <td class="table-table-tab table-vl-middle" >$10,000,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab"><span><img
+                                                                src="assets/dist/img/flag1.png"
+                                                                style="margin-right: 15px;;"></span>United States</td>
+                                                          <td class="table-table-tab table-vl-middle" >10/24/19</td>
+                                                          <td class="table-table-tab table-vl-middle" >500,000</td>
+                                                          <td class="table-table-tab table-vl-middle" >$10,000,000</td>
+                                                          <td class="table-table-tab table-vl-middle" >$10,000,000</td>
+                                                        </tr>
+                                                       
+                                                      </table>
+                                                    </div>
+                                                    
+                              <div class="box-footer" style="display:block; position: relative;">
+                                  <h3 class="box-footer-txt">Showing Results 1-10 of 107</h3>
+  
+                                  <div class="box-tools box-f-tool-b">
+                                      <ul class="pagination pagination-sm no-margin pull-right">
+                                          <li><a href="#">
+                                                  <</a> </li> <li><a href="#">1</a></li>
+                                          <li><a href="#" class="text-black">2</a></li>
+                                          <li><a href="#">3</a></li>
+                                          <li><a href="#">...</a></li>
+                                          <li><a href="#">6</a></li>
+                                          <li><a href="#">></a></li>
+                                      </ul>
+                                  </div>
+                              </div>
+                                                    <!-- /.box-body -->
+                                                  </div>
+                                                  <!-- /.box -->
+                                                </div>
+                                            
+                                          </div>
+                                          <!-- /.tab-pane -->
+                                          <div class="tab-pane" id="rankr">
+                                            <div class="row">
+                                                <div class="col-md-12" style="padding: 0 5px !important;">
+                                               
+                                                    <div class="box-body no-padding table-responsive">
+                                                      <table class="table ">
+                                                        <tr style="background: #F5F8FA;">
+                                                          <th class="table-header-tab table-pl" style="width:30%;" >Username</th>
+                                                          <th class="table-header-tab" style="width:30%;">Rank</th>
+                                                          <th class="table-header-tab" style="width:30%;">Date</th>
+                                                          <th class="table-header-tab" style="width:10%;">Country</th>
+                                                         
+                                                        </tr>
+                                                        <tr>
+                                                          <td class="table-table-tab table-vl-middle table-pl" >Waqas</td>
+                                                          <td class="table-table-tab table-vl-middle" >Diamond</td>
+                                                          <td class="table-table-tab table-vl-middle" >10/24/19</td>
+                                                          <td class="table-table-tab table-vl-middle" ><img src="assets/dist/img/flag1.png"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table-table-tab table-vl-middle table-pl" >Waqas</td>
+                                                            <td class="table-table-tab table-vl-middle" >Diamond</td>
+                                                            <td class="table-table-tab table-vl-middle" >10/24/19</td>
+                                                            <td class="table-table-tab table-vl-middle" ><img src="assets/dist/img/flag1.png"></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td class="table-table-tab table-vl-middle table-pl" >Waqas</td>
+                                                            <td class="table-table-tab table-vl-middle" >Diamond</td>
+                                                            <td class="table-table-tab table-vl-middle" >10/24/19</td>
+                                                            <td class="table-table-tab table-vl-middle" ><img src="assets/dist/img/flag1.png"></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td class="table-table-tab table-vl-middle table-pl" >Waqas</td>
+                                                            <td class="table-table-tab table-vl-middle" >Diamond</td>
+                                                            <td class="table-table-tab table-vl-middle" >10/24/19</td>
+                                                            <td class="table-table-tab table-vl-middle" ><img src="assets/dist/img/flag1.png"></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td class="table-table-tab table-vl-middle table-pl" >Waqas</td>
+                                                            <td class="table-table-tab table-vl-middle" >Diamond</td>
+                                                            <td class="table-table-tab table-vl-middle" >10/24/19</td>
+                                                            <td class="table-table-tab table-vl-middle" ><img src="assets/dist/img/flag1.png"></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td class="table-table-tab table-vl-middle table-pl" >Waqas</td>
+                                                            <td class="table-table-tab table-vl-middle" >Diamond</td>
+                                                            <td class="table-table-tab table-vl-middle" >10/24/19</td>
+                                                            <td class="table-table-tab table-vl-middle" ><img src="assets/dist/img/flag1.png"></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td class="table-table-tab table-vl-middle table-pl" >Waqas</td>
+                                                            <td class="table-table-tab table-vl-middle" >Diamond</td>
+                                                            <td class="table-table-tab table-vl-middle" >10/24/19</td>
+                                                            <td class="table-table-tab table-vl-middle" ><img src="assets/dist/img/flag1.png"></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td class="table-table-tab table-vl-middle table-pl" >Waqas</td>
+                                                            <td class="table-table-tab table-vl-middle" >Diamond</td>
+                                                            <td class="table-table-tab table-vl-middle" >10/24/19</td>
+                                                            <td class="table-table-tab table-vl-middle" ><img src="assets/dist/img/flag1.png"></td>
+                                                          </tr>
+                                                       
+                                                      </table>
+                                                    </div>
+                                                    
+                              <div class="box-footer" style="display:block; position: relative;">
+                                  <h3 class="box-footer-txt">Showing Results 1-10 of 107</h3>
+  
+                                  <div class="box-tools box-f-tool-b">
+                                      <ul class="pagination pagination-sm no-margin pull-right">
+                                          <li><a href="#">
+                                                  <</a> </li> <li><a href="#">1</a></li>
+                                          <li><a href="#" class="text-black">2</a></li>
+                                          <li><a href="#">3</a></li>
+                                          <li><a href="#">...</a></li>
+                                          <li><a href="#">6</a></li>
+                                          <li><a href="#">></a></li>
+                                      </ul>
+                                  </div>
+                              </div>
+                                                    <!-- /.box-body -->
+                                                  </div>
+                                                  <!-- /.box -->
+                                                </div>
+                                          </div>
+                                          <!-- /.tab-pane -->
+                                          
+                                          </div>
+                                          <!-- /.tab-pane -->
+                                          
+                                        </div>
+                                        <!-- /.tab-content -->
+                                      </div>
+                              
+                              </section>
+                            </div>
+
+                            <div class=" tab-pane" id="servers">
+                                <div class="col-md-12" style="padding: 0px;">
+                                    <div class="box box-default" style="border-top: none;">
+                                      <div class="box-header">
+                                        <h3 class="box-title" style="padding-left: 15px !important;">DB Setting</h3>
+                              
+                                        
+                                      </div>
+                                      <!-- /.box-header -->
+                                      <div class="box-body" style="padding: 0px 20px 20px 20px;">
+                                        <form>
+                                          <div class="form-row col-md-12" style="padding: 0px;" >
+                                            <div  class="form-group col-md-3"   >
+                                              <label for="">Host</label>
+                                              <input type="text" class="form-control" >
+                                            </div>
+                                            <div  class="form-group col-md-3"   >
+                                                <label for="">Username</label>
+                                                <input type="text" class="form-control" >
+                                              </div>
+                                              <div  class="form-group col-md-3"   >
+                                                <label for="">Password</label>
+                                                <input type="text" class="form-control" >
+                                              </div>
+                                            <div  class="form-group col-md-3"   >
+                                                <label for="">DB Name</label>
+                                                <input type="text" class="form-control">
+                                              </div>
+                                          </div>
+                                          <div class="form-row col-md-12" style="padding: 0px;">
+                                              <div  class="form-group col-md-3"   >
+                                                  <label for="">Port</label>
+                                                  <input type="email" class="form-control" >
+                                                </div>
+                                            <div  class="form-group col-md-3"   >
+                                              <label for="">DB instance Type</label>
+                                              <input type="text" class="form-control" >
+                                            </div>
+                                          </div>
+                    
+                                          <div class="form-row col-md-12" style="padding: 0px;" >
+                                            <hr class="cui-line">
+                                          </div>
+                    
+                                          <div class="form-row col-md-12" style="padding: 0px; padding-left: 15px; margin-bottom: 10px;" >
+                                            <label class="cust-cui-l">Web Server Setting</label>
+                                          </div>
+                    
+                                          <div class="form-row col-md-12" style="padding: 0px;" >
+                                            <div  class="form-group col-md-3"   >
+                                              <label for="">Instance Type</label>
+                                              <input type="text" class="form-control" >
+                                            </div>
+                                            <div  class="form-group col-md-3"   >
+                                                <label for="">Public IP</label>
+                                                <input type="text" class="form-control" >
+                                              </div>
+                                              <div  class="form-group col-md-3"   >
+                                                <label for="">SSH Port</label>
+                                                <input type="text" class="form-control" >
+                                              </div>
+                                            <div  class="form-group col-md-3"   >
+                                                <label for="">SSH Username</label>
+                                                <input type="text" class="form-control">
+                                              </div>
+                                          </div>
+                                          <div class="form-row col-md-12" style="padding: 0px;">
+                                              <div  class="form-group col-md-3"   >
+                                                  <label for="">SSH Password</label>
+                                                  <input type="email" class="form-control" >
+                                                </div>
+                                            <div  class="form-group col-md-3"   >
+                                              <label for="">SSH Public Key File</label>
+                                              <input type="text" class="form-control" >
+                                            </div>
+                                          </div>
+                                        
+                                          <div class="form-row col-md-12" style="padding: 0px;" >
+                                            <hr class="cui-line">
+                                          </div>
+                    
+                                          <div class="form-row col-md-12" style="padding: 0px; padding-left: 15px; margin-bottom: 10px;" >
+                                            <label class="cust-cui-l">Domain Setting</label>
+                                          </div>
+                    
+                                          <div class="form-row col-md-12" style="padding: 0px;" >
+                                            <div  class="form-group col-md-3"   >
+                                              <label for="">Crop Website Domain</label>
+                                              <input type="text" class="form-control" >
+                                            </div>
+                                            <div  class="form-group col-md-3"   >
+                                                <label for="">Funnel Website Domain</label>
+                                                <input type="text" class="form-control" >
+                                              </div>
+                                              <div  class="form-group col-md-3"   >
+                                                <label for="">Cature Pages Domain</label>
+                                                <input type="text" class="form-control" >
+                                              </div>
+                                            <div  class="form-group col-md-3"   >
+                                                <label for="">Pree Enrollee Pages Domain</label>
+                                                <input type="text" class="form-control">
+                                              </div>
+                                          </div>
+                                          <div class="form-row col-md-12" style="padding: 0px;">
+                                              <div  class="form-group col-md-3"   >
+                                                  <label for="">S3 Bucket</label>
+                                                  <input type="email" class="form-control" >
+                                                </div>
+                                            
+                                          </div>
+                    
+                                        
+                    
+                                        </form>
+                                            
+                                      <!-- /.box-body -->
+                                   
+                                    </div>
+                                    <!-- /.box -->
+                                   </div>
+                                   <div style="float: right;">
+                                    <button class="btn btn-reset">Reset</button>
+                                     <button class="btn btn-primary">Save</button>
+                                   </div>
+                                  </div>
+                            </div>
+                            <!-- /.tab-pane -->
+
+
+                            <div class=" tab-pane" id="action">
+                                <div class="col-md-12" style="padding: 0px;">
+                                    <div class="box box-default" style="border-top: none;">
+                                        <div class="box-header">
+                                            <h3 class="box-title" style="padding-left: 15px !important;">Actions</h3>
+                                          </div>
+                                        <!-- /.box-header -->
+                                        <div class="box-body" style="padding: 0px 28px 24px 28px;">
+                                            <span><button class="btn btn-primary btn-primary-f" >Activate</button><span style="padding-right: 10px;"></span><button class="btn btn-danger btn-primary-f">Suspend</button></span>
+                                            <form style="margin-top: 20px;">
+                                                <div class="form-row col-md-12" style="padding: 0px;">
+                                                    <div class="form-group col-md-4" style="padding: 0px;">
+                                                        <label for="">Change Compensation Plan</label>
+                                                        <select id="" class="form-control select2"
+                                                            style="width: 100% !important;">
+                                                            <option selected>Select Plan</option>
+                                                            <option>...</option>
+                                                        </select>
+                                                    </div>
+                                                  
+
+                                                </div>
+                                            </form>
+
+                                            <!-- /.box-body -->
+
+                                        </div>
+                                        <!-- /.box -->
+                                    </div>
+                                    <div style="float: right;">
+                                        <button class="btn btn-reset">Reset</button>
+                                        <button class="btn btn-primary">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.tab-pane -->
+                          
+
+
+
+                            <!-- /.tab-pane -->
+
+                        </div>
+                        <!-- /.tab-content -->
+                    </div>
+                    <!-- /.nav-tabs-custom -->
+                </div>
+                <!-- /.col -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+
+
+        <!-- Add the sidebar's background. This div must be placed
+  immediately after the control sidebar -->
+        <div class="control-sidebar-bg"></div>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- REQUIRED JS SCRIPTS -->
+
+    <!-- Select2 -->
+    <script src="assets/bower_components/select2/dist/js/select2.full.min.js"></script>
+    <!-- InputMask -->
+    <script src="assets/plugins/input-mask/jquery.inputmask.js"></script>
+    <script src="assets/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+    <script src="assets/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+    <!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. -->
+    <script>
+        $(function () {
+            //Initialize Select2 Elements
+            $('.select2').select2()
+            //iCheck for checkbox and radio inputs
+            $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+                checkboxClass: 'icheckbox_minimal-blue',
+                radioClass: 'iradio_minimal-blue'
+            })
+            //Red color scheme for iCheck
+            $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+                checkboxClass: 'icheckbox_minimal-red',
+                radioClass: 'iradio_minimal-red'
+            })
+            //Flat red color scheme for iCheck
+            $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+                checkboxClass: 'icheckbox_flat-green',
+                radioClass: 'iradio_flat-green'
+            })
+
+        })
+    </script>
+
+
+    <!-- jQuery 3 -->
+    <script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- App -->
+    <script src="assets/dist/js/adminlte.min.js"></script>
+
+    <!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. -->
+</body>
+
+</html>

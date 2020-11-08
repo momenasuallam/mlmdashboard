@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>User Search Results</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="assets/bower_components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="assets/dist/css/AdminLTE.min.css">
+    <!-- We have chosen the skin-blue for this starter
+          page. However, you can choose any other skin. Make sure you
+          apply the skin class to the body tag so the changes take effect. -->
+    <link rel="stylesheet" href="assets/dist/css/skins/skin-blue.min.css">
+    <link rel="stylesheet" href="assets/dist/css/mystyle.css">
+   
+<style>
+  @font-face {
+    font-family: "proxima-nova";
+    src: url(assets/dist/fonts/FontsFree-Net-ProximaNova-Regular.ttf);
+}
+h1, h2, h3, h4, h5, h6, p, label, a, button, span {
+  font-family: "proxima-nova" !important;
+}
+label {
+  font-size: 14px;
+  font-weight: 500;
+}
+.table-table-tab 
+{
+  font-size: 12px !important;
+}
+</style>
+
+      </head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <!-- Main Header -->
+  <header class="main-header">
+
+    <!-- Logo -->
+    <a href="dashboard.html" class="logo">
+
+      <!-- logo for regular state and mobile devices -->
+      <span><img src="assets/dist/img/company-dashboard-logo.png"></span>
+     <!-- <span class="logo-lg">YOUR LOGO</span> -->
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+    <div class="toggle-responsive">
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button" >
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </a>
+    </div>
+       <!-- Navbar left Menu -->
+       <div class="navbar-custom-menu" style="float:left;">
+        <h3 style="padding-left: 18px; padding-top: 10px;">User Search</h3>
+        </div>
+     
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+
+        <ul class="nav navbar-nav">
+          <!-- User Account Menu -->
+          <li class="dropdown user user-menu hidden-small">
+            <!-- Menu Toggle Button -->
+            <a href="#">
+              <!-- The user image in the navbar-->
+              <div class="admin-profile-h">   
+                <div style="padding-right: 10px;">
+                  <p class="admin-name adminprof-no-mb">kadin Vaccaro</p>
+                  <p style="float: right;">Marketing</p>
+                </div>
+                <img src="assets/dist/img/user3-128x128.jpg" class="user-image" alt="User Image">
+                <i class="fa fa-caret-down adminpro-icon-pt "></i>
+              </div>  
+            </a>
+            
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+         
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar" >
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <!-- Optionally, you can add icons to the links -->
+        <li class=""><a href="dashboard.html" ><img src="assets/dist/img/dashboard-icon.png"> <span >Dashboard</span></a></li>
+        <li class=""><a href="User-Search.html"><img src="assets/dist/img/search-icon.png"> <span>User Search</span></a></li>
+        <li class=""><a href="adminstrators.html"><img src="assets/dist/img/administrator-icon.png"> <span>Administrators</span></a></li>
+        <li class="treeview">
+          <a href="#"><img src="assets/dist/img/products-icon.png"> <span>Products</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-down pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="products.html">Active Products</a></li>
+            <li><a href="add-product.html">Add Products</a></li>
+          </ul>
+        </li>
+        <li class=""><a href="distribution-center.html"><img src="assets/dist/img/dc-icon.png"> <span>Distribution Centers</span></a></li>
+        <li class=""><a href="inventory.html"><img src="assets/dist/img/inventory-icon.png"> <span>Inventory</span></a></li>
+        <li class="treeview">
+            <a href="#"><img src="assets/dist/img/email-icon.png"> <span>Email Campaigns</span>
+              <span class="pull-right-container">
+                  <i class="fa fa-angle-down pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="system-emails.html">System Email</a></li>
+              <li><a href="email-broadcast.html">Email Boardcaster</a></li>
+            </ul>
+          </li>
+          <li class=""><a href="merchants.html"><img src="assets/dist/img/merchants-icon.png"> <span>Merchants</span></a></li>
+          <li class="treeview">
+              <a href="#"><img src="assets/dist/img/reports-tool-icon.png"> <span>Reports</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-down pull-right"></i>
+                  </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="payout-reports.html">Payout Report</a></li>
+                <li><a href="country-revenue.html">Country Revenue</a></li>
+                <li><a href="rank-reports.html">Rank Report</a></li>
+                <li><a href="sales-report.html">Sales Report</a></li>
+                <li><a href="fraud-reports.html">Fraud Report</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+                <a href="#"><img src="assets/dist/img/reports-tool-icon.png"> <span>Tools</span>
+                  <span class="pull-right-container">
+                      <i class="fa fa-angle-down pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="events.html">Events</a></li>
+                  <li><a href="news.html">News</a></li>
+                  <li><a href="resources.html">Resources</a></li>
+                  <li><a href="videos.html">Videos</a></li>
+                  <li><a href="promotions.html">Promotion</a></li>
+                </ul>
+              </li>
+          <li class=""><a href="support.html"><img src="assets/dist/img/support-icon.png"> <span>Support</span></a></li>
+      
+      </ul>
+      <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper main-content">
+    <!-- Content Header (Page header) -->
+
+
+    <!-- Main content -->
+    <section class="content container-fluid">
+
+      <!-- row-->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box" style="border-top: none;">
+            <div class="box-header">
+              <h3 class="box-title">Search Results</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body no-padding table-responsive">
+              <table class="table ">
+                <tr style="background: #F5F8FA;">
+                  <th class="table-header-tab table-pl" >ID</th>
+                  <th class="table-header-tab">Type</th>
+                  <th class="table-header-tab">Status</th>
+                  <th class="table-header-tab" >Username</th>
+                  <th class="table-header-tab" >Name</th>
+                  <th class="table-header-tab" >Email</th>
+                  <th class="table-header-tab" >Phone</th>
+                  <th class="table-header-tab" >Country</th>
+                  <th class="table-header-tab" >Address</th>
+                  <th class="table-header-tab table-pr" >State</th>
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" ><a href="user-profile.html">3853141</a></td>
+                  <td class="table-table-tab table-vl-middle" >D</td>
+                  <td class="table-table-tab table-vl-middle" >A</td>
+                  <td class="table-table-tab table-vl-middle" >CBDHanny</td>
+                  <td class="table-table-tab table-vl-middle" >Davis Stanton</td>
+                  <td class="table-table-tab table-vl-middle" >Brightvida4@gmail.com</td>
+                  <td class="table-table-tab table-vl-middle" >404 389 4007</td>
+                  <td class="table-table-tab table-vl-middle" style="font-weight:bold !important;"><span><img src="assets/dist/img/flag1.png" ></span</td>
+                  <td class="table-table-tab table-vl-middle" >1940 SE Willon Oak Dr, Unit#4901</td>
+                  <td class="table-table-tab table-vl-middle" >TX</td>
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" ><a href="user-profile.html">3853141</a></td>
+                  <td class="table-table-tab table-vl-middle" >D</td>
+                  <td class="table-table-tab table-vl-middle" >A</td>
+                  <td class="table-table-tab table-vl-middle" >CBDHanny</td>
+                  <td class="table-table-tab table-vl-middle" >Davis Stanton</td>
+                  <td class="table-table-tab table-vl-middle" >Brightvida4@gmail.com</td>
+                  <td class="table-table-tab table-vl-middle" >404 389 4007</td>
+                  <td class="table-table-tab table-vl-middle" style="font-weight:bold !important;"><span><img src="assets/dist/img/flag2.png" ></span</td>
+                  <td class="table-table-tab table-vl-middle" >1940 SE Willon Oak Dr, Unit#4901</td>
+                  <td class="table-table-tab table-vl-middle" >TX</td>
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" ><a href="user-profile.html">3853141</a></td>
+                  <td class="table-table-tab table-vl-middle" >D</td>
+                  <td class="table-table-tab table-vl-middle" >A</td>
+                  <td class="table-table-tab table-vl-middle" >CBDHanny</td>
+                  <td class="table-table-tab table-vl-middle" >Davis Stanton</td>
+                  <td class="table-table-tab table-vl-middle" >Brightvida4@gmail.com</td>
+                  <td class="table-table-tab table-vl-middle" >404 389 4007</td>
+                  <td class="table-table-tab table-vl-middle" style="font-weight:bold !important;"><span><img src="assets/dist/img/flag3.png" ></span</td>
+                  <td class="table-table-tab table-vl-middle" >1940 SE Willon Oak Dr, Unit#4901</td>
+                  <td class="table-table-tab table-vl-middle" >TX</td>
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" ><a href="user-profile.html">3853141</a></td>
+                  <td class="table-table-tab table-vl-middle" >D</td>
+                  <td class="table-table-tab table-vl-middle" >A</td>
+                  <td class="table-table-tab table-vl-middle" >CBDHanny</td>
+                  <td class="table-table-tab table-vl-middle" >Davis Stanton</td>
+                  <td class="table-table-tab table-vl-middle" >Brightvida4@gmail.com</td>
+                  <td class="table-table-tab table-vl-middle" >404 389 4007</td>
+                  <td class="table-table-tab table-vl-middle" style="font-weight:bold !important;"><span><img src="assets/dist/img/flag1.png" ></span</td>
+                  <td class="table-table-tab table-vl-middle" >1940 SE Willon Oak Dr, Unit#4901</td>
+                  <td class="table-table-tab table-vl-middle" >TX</td>
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" ><a href="user-profile.html">3853141</a></td>
+                  <td class="table-table-tab table-vl-middle" >D</td>
+                  <td class="table-table-tab table-vl-middle" >A</td>
+                  <td class="table-table-tab table-vl-middle" >CBDHanny</td>
+                  <td class="table-table-tab table-vl-middle" >Davis Stanton</td>
+                  <td class="table-table-tab table-vl-middle" >Brightvida4@gmail.com</td>
+                  <td class="table-table-tab table-vl-middle" >404 389 4007</td>
+                  <td class="table-table-tab table-vl-middle" style="font-weight:bold !important;"><span><img src="assets/dist/img/flag2.png" ></span</td>
+                  <td class="table-table-tab table-vl-middle" >1940 SE Willon Oak Dr, Unit#4901</td>
+                  <td class="table-table-tab table-vl-middle" >TX</td>
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" ><a href="user-profile.html">3853141</a></td>
+                  <td class="table-table-tab table-vl-middle" >D</td>
+                  <td class="table-table-tab table-vl-middle" >A</td>
+                  <td class="table-table-tab table-vl-middle" >CBDHanny</td>
+                  <td class="table-table-tab table-vl-middle" >Davis Stanton</td>
+                  <td class="table-table-tab table-vl-middle" >Brightvida4@gmail.com</td>
+                  <td class="table-table-tab table-vl-middle" >404 389 4007</td>
+                  <td class="table-table-tab table-vl-middle" style="font-weight:bold !important;"><span><img src="assets/dist/img/flag3.png" ></span</td>
+                  <td class="table-table-tab table-vl-middle" >1940 SE Willon Oak Dr, Unit#4901</td>
+                  <td class="table-table-tab table-vl-middle" >TX</td>
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" ><a href="user-profile.html">3853141</a></td>
+                  <td class="table-table-tab table-vl-middle" >D</td>
+                  <td class="table-table-tab table-vl-middle" >A</td>
+                  <td class="table-table-tab table-vl-middle" >CBDHanny</td>
+                  <td class="table-table-tab table-vl-middle" >Davis Stanton</td>
+                  <td class="table-table-tab table-vl-middle" >Brightvida4@gmail.com</td>
+                  <td class="table-table-tab table-vl-middle" >404 389 4007</td>
+                  <td class="table-table-tab table-vl-middle" style="font-weight:bold !important;"><span><img src="assets/dist/img/flag1.png" ></span</td>
+                  <td class="table-table-tab table-vl-middle" >1940 SE Willon Oak Dr, Unit#4901</td>
+                  <td class="table-table-tab table-vl-middle" >TX</td>
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" ><a href="user-profile.html">3853141</a></td>
+                  <td class="table-table-tab table-vl-middle" >D</td>
+                  <td class="table-table-tab table-vl-middle" >A</td>
+                  <td class="table-table-tab table-vl-middle" >CBDHanny</td>
+                  <td class="table-table-tab table-vl-middle" >Davis Stanton</td>
+                  <td class="table-table-tab table-vl-middle" >Brightvida4@gmail.com</td>
+                  <td class="table-table-tab table-vl-middle" >404 389 4007</td>
+                  <td class="table-table-tab table-vl-middle" style="font-weight:bold !important;"><span><img src="assets/dist/img/flag2.png" ></span</td>
+                  <td class="table-table-tab table-vl-middle" >1940 SE Willon Oak Dr, Unit#4901</td>
+                  <td class="table-table-tab table-vl-middle" >TX</td>
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" ><a href="user-profile.html">3853141</a></td>
+                  <td class="table-table-tab table-vl-middle" >D</td>
+                  <td class="table-table-tab table-vl-middle" >A</td>
+                  <td class="table-table-tab table-vl-middle" >CBDHanny</td>
+                  <td class="table-table-tab table-vl-middle" >Davis Stanton</td>
+                  <td class="table-table-tab table-vl-middle" >Brightvida4@gmail.com</td>
+                  <td class="table-table-tab table-vl-middle" >404 389 4007</td>
+                  <td class="table-table-tab table-vl-middle" style="font-weight:bold !important;"><span><img src="assets/dist/img/flag3.png" ></span</td>
+                  <td class="table-table-tab table-vl-middle" >1940 SE Willon Oak Dr, Unit#4901</td>
+                  <td class="table-table-tab table-vl-middle" >TX</td>
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" ><a href="user-profile.html">3853141</a></td>
+                  <td class="table-table-tab table-vl-middle" >D</td>
+                  <td class="table-table-tab table-vl-middle" >A</td>
+                  <td class="table-table-tab table-vl-middle" >CBDHanny</td>
+                  <td class="table-table-tab table-vl-middle" >Davis Stanton</td>
+                  <td class="table-table-tab table-vl-middle" >Brightvida4@gmail.com</td>
+                  <td class="table-table-tab table-vl-middle" >404 389 4007</td>
+                  <td class="table-table-tab table-vl-middle" style="font-weight:bold !important;"><span><img src="assets/dist/img/flag1.png" ></span</td>
+                  <td class="table-table-tab table-vl-middle" >1940 SE Willon Oak Dr, Unit#4901</td>
+                  <td class="table-table-tab table-vl-middle" >TX</td>
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" ><a href="user-profile.html">3853141</a></td>
+                  <td class="table-table-tab table-vl-middle" >D</td>
+                  <td class="table-table-tab table-vl-middle" >A</td>
+                  <td class="table-table-tab table-vl-middle" >CBDHanny</td>
+                  <td class="table-table-tab table-vl-middle" >Davis Stanton</td>
+                  <td class="table-table-tab table-vl-middle" >Brightvida4@gmail.com</td>
+                  <td class="table-table-tab table-vl-middle" >404 389 4007</td>
+                  <td class="table-table-tab table-vl-middle" style="font-weight:bold !important;"><span><img src="assets/dist/img/flag2.png" ></span</td>
+                  <td class="table-table-tab table-vl-middle" >1940 SE Willon Oak Dr, Unit#4901</td>
+                  <td class="table-table-tab table-vl-middle" >TX</td>
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" ><a href="user-profile.html">3853141</a></td>
+                  <td class="table-table-tab table-vl-middle" >D</td>
+                  <td class="table-table-tab table-vl-middle" >A</td>
+                  <td class="table-table-tab table-vl-middle" >CBDHanny</td>
+                  <td class="table-table-tab table-vl-middle" >Davis Stanton</td>
+                  <td class="table-table-tab table-vl-middle" >Brightvida4@gmail.com</td>
+                  <td class="table-table-tab table-vl-middle" >404 389 4007</td>
+                  <td class="table-table-tab table-vl-middle" style="font-weight:bold !important;"><span><img src="assets/dist/img/flag3.png" ></span</td>
+                  <td class="table-table-tab table-vl-middle" >1940 SE Willon Oak Dr, Unit#4901</td>
+                  <td class="table-table-tab table-vl-middle" >TX</td>
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" ><a href="user-profile.html">3853141</a></td>
+                  <td class="table-table-tab table-vl-middle" >D</td>
+                  <td class="table-table-tab table-vl-middle" >A</td>
+                  <td class="table-table-tab table-vl-middle" >CBDHanny</td>
+                  <td class="table-table-tab table-vl-middle" >Davis Stanton</td>
+                  <td class="table-table-tab table-vl-middle" >Brightvida4@gmail.com</td>
+                  <td class="table-table-tab table-vl-middle" >404 389 4007</td>
+                  <td class="table-table-tab table-vl-middle" style="font-weight:bold !important;"><span><img src="assets/dist/img/flag1.png" ></span</td>
+                  <td class="table-table-tab table-vl-middle" >1940 SE Willon Oak Dr, Unit#4901</td>
+                  <td class="table-table-tab table-vl-middle" >TX</td>
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" ><a href="user-profile.html">3853141</a></td>
+                  <td class="table-table-tab table-vl-middle" >D</td>
+                  <td class="table-table-tab table-vl-middle" >A</td>
+                  <td class="table-table-tab table-vl-middle" >CBDHanny</td>
+                  <td class="table-table-tab table-vl-middle" >Davis Stanton</td>
+                  <td class="table-table-tab table-vl-middle" >Brightvida4@gmail.com</td>
+                  <td class="table-table-tab table-vl-middle" >404 389 4007</td>
+                  <td class="table-table-tab table-vl-middle" style="font-weight:bold !important;"><span><img src="assets/dist/img/flag2.png" ></span</td>
+                  <td class="table-table-tab table-vl-middle" >1940 SE Willon Oak Dr, Unit#4901</td>
+                  <td class="table-table-tab table-vl-middle" >TX</td>
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" ><a href="user-profile.html">3853141</a></td>
+                  <td class="table-table-tab table-vl-middle" >D</td>
+                  <td class="table-table-tab table-vl-middle" >A</td>
+                  <td class="table-table-tab table-vl-middle" >CBDHanny</td>
+                  <td class="table-table-tab table-vl-middle" >Davis Stanton</td>
+                  <td class="table-table-tab table-vl-middle" >Brightvida4@gmail.com</td>
+                  <td class="table-table-tab table-vl-middle" >404 389 4007</td>
+                  <td class="table-table-tab table-vl-middle" style="font-weight:bold !important;"><span><img src="assets/dist/img/flag3.png" ></span</td>
+                  <td class="table-table-tab table-vl-middle" >1940 SE Willon Oak Dr, Unit#4901</td>
+                  <td class="table-table-tab table-vl-middle" >TX</td>
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" ><a href="user-profile.html">3853141</a></td>
+                  <td class="table-table-tab table-vl-middle" >D</td>
+                  <td class="table-table-tab table-vl-middle" >A</td>
+                  <td class="table-table-tab table-vl-middle" >CBDHanny</td>
+                  <td class="table-table-tab table-vl-middle" >Davis Stanton</td>
+                  <td class="table-table-tab table-vl-middle" >Brightvida4@gmail.com</td>
+                  <td class="table-table-tab table-vl-middle" >404 389 4007</td>
+                  <td class="table-table-tab table-vl-middle" style="font-weight:bold !important;"><span><img src="assets/dist/img/flag1.png" ></span</td>
+                  <td class="table-table-tab table-vl-middle" >1940 SE Willon Oak Dr, Unit#4901</td>
+                  <td class="table-table-tab table-vl-middle" >TX</td>
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" ><a href="user-profile.html">3853141</a></td>
+                  <td class="table-table-tab table-vl-middle" >D</td>
+                  <td class="table-table-tab table-vl-middle" >A</td>
+                  <td class="table-table-tab table-vl-middle" >CBDHanny</td>
+                  <td class="table-table-tab table-vl-middle" >Davis Stanton</td>
+                  <td class="table-table-tab table-vl-middle" >Brightvida4@gmail.com</td>
+                  <td class="table-table-tab table-vl-middle" >404 389 4007</td>
+                  <td class="table-table-tab table-vl-middle" style="font-weight:bold !important;"><span><img src="assets/dist/img/flag2.png" ></span</td>
+                  <td class="table-table-tab table-vl-middle" >1940 SE Willon Oak Dr, Unit#4901</td>
+                  <td class="table-table-tab table-vl-middle" >TX</td>
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" ><a href="user-profile.html">3853141</a></td>
+                  <td class="table-table-tab table-vl-middle" >D</td>
+                  <td class="table-table-tab table-vl-middle" >A</td>
+                  <td class="table-table-tab table-vl-middle" >CBDHanny</td>
+                  <td class="table-table-tab table-vl-middle" >Davis Stanton</td>
+                  <td class="table-table-tab table-vl-middle" >Brightvida4@gmail.com</td>
+                  <td class="table-table-tab table-vl-middle" >404 389 4007</td>
+                  <td class="table-table-tab table-vl-middle" style="font-weight:bold !important;"><span><img src="assets/dist/img/flag3.png" ></span</td>
+                  <td class="table-table-tab table-vl-middle" >1940 SE Willon Oak Dr, Unit#4901</td>
+                  <td class="table-table-tab table-vl-middle" >TX</td>
+                </tr>
+      
+           
+         
+         
+               
+              
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+      </div>
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+
+
+ 
+  <!-- Add the sidebar's background. This div must be placed
+  immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED JS SCRIPTS -->
+
+<!-- jQuery 3 -->
+<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- App -->
+<script src="assets/dist/js/adminlte.min.js"></script>
+
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. -->
+</body>
+</html>

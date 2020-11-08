@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Inventory</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="assets/bower_components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="assets/dist/css/AdminLTE.min.css">
+    <!-- We have chosen the skin-blue for this starter
+          page. However, you can choose any other skin. Make sure you
+          apply the skin class to the body tag so the changes take effect. -->
+    <link rel="stylesheet" href="assets/dist/css/skins/skin-blue.min.css">
+    <link rel="stylesheet" href="assets/dist/css/mystyle.css">
+   
+<style>
+  @font-face {
+    font-family: "proxima-nova";
+    src: url(assets/dist/fonts/FontsFree-Net-ProximaNova-Regular.ttf);
+}
+h1, h2, h3, h4, h5, h6, p, label, a, button, span {
+  font-family: "proxima-nova" !important;
+}
+label {
+  font-size: 14px;
+  font-weight: 500 !important;
+}
+</style>
+
+      </head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <!-- Main Header -->
+  <header class="main-header">
+
+    <!-- Logo -->
+    <a href="dashboard.html" class="logo">
+
+      <!-- logo for regular state and mobile devices -->
+      <span><img src="assets/dist/img/company-dashboard-logo.png"></span>
+     <!-- <span class="logo-lg">YOUR LOGO</span> -->
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+    <div class="toggle-responsive">
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button" >
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </a>
+    </div>
+       <!-- Navbar left Menu -->
+       <div class="navbar-custom-menu" style="float:left;">
+        <h3 class="user-ohd-heading" style="padding-left: 18px; padding-top: 10px;">Daily Unit Amount</h3>
+        </div>
+     
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+
+        <ul class="nav navbar-nav">
+          <!-- User Account Menu -->
+          <li class="dropdown user user-menu hidden-small">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <!-- The user image in the navbar-->
+              <div class="admin-profile-h">   
+                <div style="padding-right: 10px;">
+                  <p class="admin-name adminprof-no-mb">kadin Vaccaro</p>
+                  <p style="float: right;">Marketing</p>
+                </div>
+                <img src="assets/dist/img/user3-128x128.jpg" class="user-image" alt="User Image">
+                <i class="fa fa-caret-down adminpro-icon-pt "></i>
+              </div>  
+            </a>
+          
+         
+         
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar" >
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <!-- Optionally, you can add icons to the links -->
+        <li class=""><a href="dashboard.html" ><img src="assets/dist/img/dashboard-icon.png"> <span >Dashboard</span></a></li>
+        <li class=""><a href="User-Search.html"><img src="assets/dist/img/search-icon.png"> <span>User Search</span></a></li>
+        <li class=""><a href="adminstrators.html"><img src="assets/dist/img/administrator-icon.png"> <span>Administrators</span></a></li>
+        <li class="treeview">
+          <a href="#"><img src="assets/dist/img/products-icon.png"> <span>Products</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-down pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="products.html">Active Products</a></li>
+            <li><a href="add-product.html">Add Products</a></li>
+          </ul>
+        </li>
+        <li class=""><a href="distribution-center.html"><img src="assets/dist/img/dc-icon.png"> <span>Distribution Centers</span></a></li>
+        <li class=""><a href="inventory.html"><img src="assets/dist/img/inventory-icon.png"> <span>Inventory</span></a></li>
+        <li class="treeview">
+            <a href="#"><img src="assets/dist/img/email-icon.png"> <span>Email Campaigns</span>
+              <span class="pull-right-container">
+                  <i class="fa fa-angle-down pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="system-emails.html">System Email</a></li>
+              <li><a href="email-broadcast.html">Email Boardcaster</a></li>
+            </ul>
+          </li>
+          <li class=""><a href="merchants.html"><img src="assets/dist/img/merchants-icon.png"> <span>Merchants</span></a></li>
+          <li class="treeview">
+              <a href="#"><img src="assets/dist/img/reports-tool-icon.png"> <span>Reports</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-down pull-right"></i>
+                  </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="payout-reports.html">Payout Report</a></li>
+                <li><a href="country-revenue.html">Country Revenue</a></li>
+                <li><a href="rank-reports.html">Rank Report</a></li>
+                <li><a href="sales-report.html">Sales Report</a></li>
+                <li><a href="fraud-reports.html">Fraud Report</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+                <a href="#"><img src="assets/dist/img/reports-tool-icon.png"> <span>Tools</span>
+                  <span class="pull-right-container">
+                      <i class="fa fa-angle-down pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="events.html">Events</a></li>
+                  <li><a href="news.html">News</a></li>
+                  <li><a href="resources.html">Resources</a></li>
+                  <li><a href="videos.html">Videos</a></li>
+                  <li><a href="promotions.html">Promotion</a></li>
+                </ul>
+              </li>
+          <li class=""><a href="support.html"><img src="assets/dist/img/support-icon.png"> <span>Support</span></a></li>
+      
+      </ul>
+      <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper ">
+    <!-- Content Header (Page header) -->
+      <!-- Content Header (Page header) -->
+      <section class="content-header" style="padding: 0px; background-color: #fff !important;">
+        <ul class="nav nav-tabs nav-border nav-tabs-fit-med">
+          <li><a href="#inventoryle" data-toggle="tab">Inventory Levels</a></li>
+          <li><a href="#inventorylo" data-toggle="tab">Inventory Log</a></li>
+          <li class="active"><a href="#dua" data-toggle="tab">Daily Unit Amount</a></li>
+        
+        </ul>
+        
+      </section>
+
+    <!-- Main content -->
+    <section class="content container-fluid">
+       
+      <!-- /.col -->
+      <div class="col-md-12">
+        <div class="nav-tabs-custom" style="background: transparent;">
+       
+          <div class="tab-content" style="background: transparent;">
+            <div class=" tab-pane" id="inventoryle">
+              <div class="row">
+                <div>
+                  <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                      <div class="info-box box-st-yellow">
+                        <div class="info-box-content">
+                          <span class="info-box-text" style="padding-top: 10px; text-transform: capitalize;">Products</span>
+                          <p class="info-box-number" style="padding-top: 8px;">187</p>
+                        </div>
+                        <!-- /.info-box-content -->
+                      </div>
+                      <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+            
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                      <div class="info-box box-st-orange">
+                        <div class="info-box-content">
+                          <span class="info-box-text" style="padding-top: 10px; text-transform: capitalize;">Low Stock</span>
+                          <p class="info-box-number" style="padding-top: 8px;">24</p>
+                        </div>
+                        <!-- /.info-box-content -->
+                      </div>
+                      <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+            
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                      <div class="info-box box-st-green">
+                        <div class="info-box-content">
+                          <span class="info-box-text" style="padding-top: 10px; text-transform: capitalize;">Cost of Goods</span>
+                          <p class="info-box-number" style="padding-top: 8px;">$736,897.34</p>
+                        </div>
+                        <!-- /.info-box-content -->
+                      </div>
+                      <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+            
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                      <div class="info-box box-st-blue">
+                        <div class="info-box-content">
+                          <span class="info-box-text" style="padding-top: 10px; text-transform: capitalize;">Retail Value</span>
+                          <p class="info-box-number" style="padding-top: 8px;">$456,788,981.99</p>
+                        </div>
+                        <!-- /.info-box-content -->
+                      </div>
+                      <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+                    
+                   
+                  </div>
+                  <!-- /.row -->
+                </div>
+                <div class="col-md-4" style="padding: 0px !important;">
+                <div class="col-md-12" style="padding: 0px !important;">
+                  <div class="box box-info">
+                    <div class="box-header">
+                      <h3 class="box-title">Distribution Center</h3>
+                    </div>
+                    <div class="box-body" style="padding: 0px 20px 20px 20px;">
+                      <form>
+                        <div class="form-group">
+                          <label>Select Center</label>
+                          <select class="form-control select2 inventory-input-st" style="width: 100%;">
+                            <option selected="selected">Landmark USA</option>
+                            <option>Alaska</option>
+                            <option>California</option>
+                          </select>
+                        </div>
+                        <button class="btn btn-primary btn-block btn-primary-f">Search</button>
+                      </form>
+                    </div>
+                
+                </div>
+                </div>
+                <div class="col-md-12" style="padding: 0px !important;">
+                  <div class="box box-info">
+                    <div class="box-header">
+                      <h3 class="box-title">Manage Inventory</h3>
+                    </div>
+                    <div class="box-body" style="padding: 0px 20px 20px 20px;">
+                      <form>
+                        <div class="form-group">
+                          <label>Inventory Type</label>
+                          <select class="form-control select2 inventory-input-st" style="width: 100%;">
+                            <option selected="selected">Add Inventory to Existing</option>
+                            <option>Alaska</option>
+                            <option>California</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label>Product</label>
+                          <select class="form-control select2 inventory-input-st" style="width: 100%;">
+                            <option selected="selected">750 Peppermint</option>
+                            <option>Alaska</option>
+                            <option>California</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label>Count</label>
+                          <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label>Cost of Goods (Per Unit)</label>
+                          <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label>Retail Price (Per Unit)</label>
+                          <input type="text" class="form-control">
+                        </div>
+                        <button class="btn btn-primary btn-block btn-primary-f">Add Inventory</button>
+                      </form>
+                    </div>
+                
+                </div>
+                </div>
+
+                </div>
+                <!-- /.col -->
+                <div class="col-md-8">
+                  <div class="col-md-12" style="padding: 5px 0px !important;
+                  background-color: #fff;
+                  border-radius: 8px;">
+                    <div class="box" style="border-top: none; margin-bottom: 0px;">
+                      <div class="box-header">
+                        <h3 class="box-title">Inventory Levels</h3>
+                        <div class="box-tools hidden-box-tools" style="top: 10px;">
+                          <button class="btn btn-primary btn-primary-f">Export</button>
+                        </div>
+                      </div>
+                      </div>
+                      <!-- /.box-header -->
+                      <div class="box-body no-padding table-responsive">
+                        <table class="table ">
+                          <tr style="background: #F5F8FA;">
+                            <th class="table-header-tab table-pl" >Product</th>
+                            <th class="table-header-tab">On Hand</th>
+                            <th class="table-header-tab">30 Day Count</th>
+                            <th class="table-header-tab" >90 Day Count</th>
+                           </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl text-center" >750 Peppermint Tincture</td>
+                            <td class="table-table-tab table-vl-middle" >75,835</td>
+                            <td class="table-table-tab table-vl-middle" >34,264</td>
+                            <td class="table-table-tab table-vl-middle" >102,885</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl text-center" >750 Peppermint Tincture</td>
+                            <td class="table-table-tab table-vl-middle" >75,835</td>
+                            <td class="table-table-tab table-vl-middle" >34,264</td>
+                            <td class="table-table-tab table-vl-middle" >102,885</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl text-center" >750 Peppermint Tincture</td>
+                            <td class="table-table-tab table-vl-middle" >75,835</td>
+                            <td class="table-table-tab table-vl-middle" >34,264</td>
+                            <td class="table-table-tab table-vl-middle" >102,885</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl text-center" >750 Peppermint Tincture</td>
+                            <td class="table-table-tab table-vl-middle" >75,835</td>
+                            <td class="table-table-tab table-vl-middle" >34,264</td>
+                            <td class="table-table-tab table-vl-middle" >102,885</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl text-center" >750 Peppermint Tincture</td>
+                            <td class="table-table-tab table-vl-middle" >75,835</td>
+                            <td class="table-table-tab table-vl-middle" >34,264</td>
+                            <td class="table-table-tab table-vl-middle" >102,885</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl text-center" >750 Peppermint Tincture</td>
+                            <td class="table-table-tab table-vl-middle" >75,835</td>
+                            <td class="table-table-tab table-vl-middle" >34,264</td>
+                            <td class="table-table-tab table-vl-middle" >102,885</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl text-center" >750 Peppermint Tincture</td>
+                            <td class="table-table-tab table-vl-middle" >75,835</td>
+                            <td class="table-table-tab table-vl-middle" >34,264</td>
+                            <td class="table-table-tab table-vl-middle" >102,885</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl text-center" >750 Peppermint Tincture</td>
+                            <td class="table-table-tab table-vl-middle" >75,835</td>
+                            <td class="table-table-tab table-vl-middle" >34,264</td>
+                            <td class="table-table-tab table-vl-middle" >102,885</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl text-center" >750 Peppermint Tincture</td>
+                            <td class="table-table-tab table-vl-middle" >75,835</td>
+                            <td class="table-table-tab table-vl-middle" >34,264</td>
+                            <td class="table-table-tab table-vl-middle" >102,885</td>
+                          </tr>
+                          <tr>
+                            <td class="table-table-tab table-vl-middle table-pl text-center" >750 Peppermint Tincture</td>
+                            <td class="table-table-tab table-vl-middle" >75,835</td>
+                            <td class="table-table-tab table-vl-middle" >34,264</td>
+                            <td class="table-table-tab table-vl-middle" >102,885</td>
+                          </tr>
+                          <tr>
+               
+                         
+                        </table>
+                      </div>
+                      <div class="box-footer" style="display:block; position: relative;">
+                        <h3 class="box-footer-txt">Showing Results 1-10 of 36</h3>
+          
+                        <div class="box-tools box-f-tool-b">
+                          <ul class="pagination pagination-sm no-margin pull-right">
+                            <li><a href="#"><</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">...</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /.box-body -->
+                    </div>
+                </div>
+                <!-- /.col -->
+              
+              <!-- /.row -->
+            </div>
+
+            </div>
+            <!-- /.tab-pane -->
+            <div class="tab-pane" id="inventorylo">
+               <!-- row-->
+            <div class="row">
+        <div class="col-md-12" style="padding: 5px 0px !important;
+        background-color: #fff;
+        border-radius: 8px;">
+          <div class="box" style="border-top: none; margin-bottom: 0px;">
+            <div class="box-header">
+              <h3 class="box-title">Inventory Log</h3>
+              <div class="box-tools hidden-box-tools">
+                <select class="form-control select2  order-history-header-widget" style="width: 125%; margin-right: 10px;">
+                  <option class="history-widget-style" >Nov 1 - Nov 30</option>
+                  <option>Dec 1 - Dec 30</option>
+                </select>
+              <button class="btn btn-primary btn-primary-f">Export</button>
+              </div>
+            </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body no-padding table-responsive">
+              <table class="table ">
+                <tr style="background: #F5F8FA;">
+                  <th class="table-header-tab table-pl" >Admin</th>
+                  <th class="table-header-tab">Date</th>
+                  <th class="table-header-tab">Product</th>
+                  <th class="table-header-tab" >Action</th>
+                  <th class="table-header-tab" >Discription</th>
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" > waqas20</td>
+                  <td class="table-table-tab table-vl-middle" >10/09/2019 12:13:51</td>
+                  <td class="table-table-tab table-vl-middle" >CBD Botanical Face Mask</td>
+                  <td class="table-table-tab table-vl-middle" >Altered Inventory level by 5000</td>
+                  <td class="table-table-tab table-vl-middle" >Recived 16/05</td>
+                 
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" > waqas20</td>
+                  <td class="table-table-tab table-vl-middle" >10/09/2019 12:13:51</td>
+                  <td class="table-table-tab table-vl-middle" >CBD Botanical Face Mask</td>
+                  <td class="table-table-tab table-vl-middle" >Altered Inventory level by 5000</td>
+                  <td class="table-table-tab table-vl-middle" >Recived 16/05</td>
+                 
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" > waqas20</td>
+                  <td class="table-table-tab table-vl-middle" >10/09/2019 12:13:51</td>
+                  <td class="table-table-tab table-vl-middle" >CBD Botanical Face Mask</td>
+                  <td class="table-table-tab table-vl-middle" >Altered Inventory level by 5000</td>
+                  <td class="table-table-tab table-vl-middle" >Recived 16/05</td>
+                 
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" > waqas20</td>
+                  <td class="table-table-tab table-vl-middle" >10/09/2019 12:13:51</td>
+                  <td class="table-table-tab table-vl-middle" >CBD Botanical Face Mask</td>
+                  <td class="table-table-tab table-vl-middle" >Altered Inventory level by 5000</td>
+                  <td class="table-table-tab table-vl-middle" >Recived 16/05</td>
+                 
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" > waqas20</td>
+                  <td class="table-table-tab table-vl-middle" >10/09/2019 12:13:51</td>
+                  <td class="table-table-tab table-vl-middle" >CBD Botanical Face Mask</td>
+                  <td class="table-table-tab table-vl-middle" >Altered Inventory level by 5000</td>
+                  <td class="table-table-tab table-vl-middle" >Recived 16/05</td>
+                 
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" > waqas20</td>
+                  <td class="table-table-tab table-vl-middle" >10/09/2019 12:13:51</td>
+                  <td class="table-table-tab table-vl-middle" >CBD Botanical Face Mask</td>
+                  <td class="table-table-tab table-vl-middle" >Altered Inventory level by 5000</td>
+                  <td class="table-table-tab table-vl-middle" >Recived 16/05</td>
+                 
+                </tr>
+                <tr>
+                  <td class="table-table-tab tab-table-Id table-vl-middle table-pl" > waqas20</td>
+                  <td class="table-table-tab table-vl-middle" >10/09/2019 12:13:51</td>
+                  <td class="table-table-tab table-vl-middle" >CBD Botanical Face Mask</td>
+                  <td class="table-table-tab table-vl-middle" >Altered Inventory level by 5000</td>
+                  <td class="table-table-tab table-vl-middle" >Recived 16/05</td>
+                 
+                </tr>
+      
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+           </div>
+            </div>
+            <div class="active tab-pane" id="dua">
+              <div class="row">
+                <div class="col-md-12" style="padding: 5px 0px !important;
+                background-color: #fff;
+                border-radius: 8px;">
+                  <div class="box" style="border-top: none; margin-bottom: 0px;">
+                    <div class="box-header">
+                      <h3 class="box-title">Daily Unit Amount</h3>
+                      <div class="box-tools hidden-box-tools">
+                        <select class="form-control select2  order-history-header-widget" style="width: 125%; margin-right: 10px;">
+                          <option class="history-widget-style" >Nov 1 - Nov 30</option>
+                          <option>Dec 1 - Dec 30</option>
+                        </select>
+                      <button class="btn btn-primary btn-primary-f">Export</button>
+                      </div>
+                    </div>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body no-padding table-responsive">
+                      <table class="table ">
+                        <tr style="background: #F5F8FA;">
+                          <th class="table-header-tab table-pl" >Product</th>
+                          <th class="table-header-tab">11/01/20</th>
+                          <th class="table-header-tab">11/01/20</th>
+                          <th class="table-header-tab">11/01/20</th>
+                          <th class="table-header-tab">11/01/20</th>
+                          <th class="table-header-tab">11/01/20</th>
+                          <th class="table-header-tab">11/01/20</th>
+                          <th class="table-header-tab">11/01/20</th>
+                          <th class="table-header-tab" >Total</th>
+                        </tr>
+                        <tr>
+                          <td class="table-table-tab table-vl-middle table-pl" >Revive Topical Cream (15ml)</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >12,378</td>
+                         
+                        </tr>
+                        <tr>
+                          <td class="table-table-tab table-vl-middle table-pl" >Revive Topical Cream (15ml)</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >12,378</td>
+                         
+                        </tr>
+                        <tr>
+                          <td class="table-table-tab table-vl-middle table-pl" >Revive Topical Cream (15ml)</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >12,378</td>
+                         
+                        </tr>
+                        <tr>
+                          <td class="table-table-tab table-vl-middle table-pl" >Revive Topical Cream (15ml)</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >12,378</td>
+                         
+                        </tr>
+                        <tr>
+                          <td class="table-table-tab table-vl-middle table-pl" >Revive Topical Cream (15ml)</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >12,378</td>
+                         
+                        </tr>
+                        <tr>
+                          <td class="table-table-tab table-vl-middle table-pl" >Revive Topical Cream (15ml)</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >12,378</td>
+                         
+                        </tr>
+                        <tr>
+                          <td class="table-table-tab table-vl-middle table-pl" >Revive Topical Cream (15ml)</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >12,378</td>
+                         
+                        </tr>
+                        <tr>
+                          <td class="table-table-tab table-vl-middle table-pl" >Revive Topical Cream (15ml)</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >2,086</td>
+                          <td class="table-table-tab table-vl-middle" >12,378</td>
+                         
+                        </tr>
+              
+                      </table>
+                    </div>
+                    <!-- /.box-body -->
+                  </div>
+                  <!-- /.box -->
+                   </div>
+            </div>
+            </div>
+            <!-- /.tab-pane -->
+            
+          </div>
+          <!-- /.tab-content -->
+        </div>
+        <!-- /.nav-tabs-custom -->
+      </div>
+      <!-- /.col -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <div class="modal fade" id="modal-order-history">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <i class="fa fa-times" aria-hidden="true"></i></button>
+          <h4 class="modal-title">Order ID# 3824151</h4>
+        </div>
+        <div class="modal-body" style="padding:20px  30px!important;">
+            <div style="">
+              <span class="info-box-text label label-success" style="float: right;font-weight:normal; font-size:10px;">Complete</span>
+            </div>
+            <span style="color: #354052 !important;">Status: <span class="tab-table-Id">5676757898367</span></span>
+            <div class="row">
+                   <!-- /.col -->
+              <div class="col-md-12">
+                <div class="box" style="border-top: none;">
+                  <div class="box-header" style="padding: 15px 0px; !important" >
+                    <h3 class="box-title">Products</h3>
+                  </div>
+                  <!-- /.box-header -->
+                  <div class="box-body no-padding table-responsive">
+                    <table class="table">
+                      <tr style="background: #F5F8FA;">
+                        <th class="table-header-tab table-pl" >#</th>
+                        <th class="table-header-tab ">Name</th>
+                        <th class="table-header-tab">Amount</th>
+                        <th class="table-header-tab" >Volume</th>
+                      </tr>
+                      <tr>
+                        <td class="table-table-tab table-pl" >1</td>
+                        <td class="table-table-tab" style="font-weight: 600;">750 Peppermint Tincture</td>
+                        <td class="table-table-tab" >$67.95</td>
+                        <td class="table-table-tab" >60BV</td>
+                      </tr>
+                      <tr>
+                        <td class="table-table-tab table-pl" >2</td>
+                        <td class="table-table-tab" style="font-weight: 600;">750 Peppermint Tincture</td>
+                        <td class="table-table-tab" >$67.95</td>
+                        <td class="table-table-tab" >60BV</td>
+                      </tr>
+                      <tr>
+                        <td class="table-table-tab table-pl" >3</td>
+                        <td class="table-table-tab" style="font-weight: 600;">750 Peppermint Tincture</td>
+                        <td class="table-table-tab" >$67.95</td>
+                        <td class="table-table-tab" >60BV</td>
+                      </tr>
+                      <tr>
+                        <td class="table-table-tab table-pl" >4</td>
+                        <td class="table-table-tab" style="font-weight: 600;">750 Peppermint Tincture</td>
+                        <td class="table-table-tab" >$67.95</td>
+                        <td class="table-table-tab" >60BV</td>
+                      </tr>
+           
+                    
+                    </table>
+                  </div>
+                  <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+              </div>
+              <!-- /.col -->
+              <div class="col-md-12">
+                <div class="box-header" style="padding: 15px 0px; !important" >
+                  <h3 class="box-title">Refund Type</h3>
+                </div>
+              </div>
+              <form style="padding: 15px;">
+                <div class="form-row">
+                  <div  class="form-group user-search-inputp col-md-6" >
+                    <select class="form-control select2  order-history-header-widget">
+                      <option >Partial Refund</option>
+                      <option>Partial Refund</option>
+                    </select>
+                  </div>
+                  <div  class="form-group user-search-inputp col-md-6">
+                    <div class="input-group input-group-st">
+                      <span class="input-group-addon"><i class="fa fa-dollar" style="color: #354052; opacity: 0.5;"></i></span>
+                      <input type="text" class="form-control">
+                      
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-block btn-primary btn-lg" style="width:167px; margin:auto;">Update Order</button>
+              </form>
+
+            </div>
+            
+         
+          </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+ 
+ 
+  <!-- Add the sidebar's background. This div must be placed
+  immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED JS SCRIPTS -->
+
+<!-- jQuery 3 -->
+<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- App -->
+<script src="assets/dist/js/adminlte.min.js"></script>
+
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. -->
+</body>
+</html>
